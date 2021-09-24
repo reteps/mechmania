@@ -15,14 +15,83 @@ from model.upgrade_type import UpgradeType
 from model.game_state import GameState
 from model.player import Player
 from api.constants import Constants
+from enum import Enum
+from dataclasses import dataclass
 
 import random
 
 logger = Logger()
 constants = Constants()
+    
+class TOP_LEVEL_ACTION(Enum):
+    BUY_SEEDS = 'Buying Seeds'
+    PLANT_CROPS = 'Planting Crops'
+    WAIT_FOR_CROPS = 'Waiting for crops to finish growing'
+    HARVEST_CROPS = 'Harvesting crops'
+BUY_SEEDS = TOP_LEVEL_ACTION.BUY_SEEDS
+PLANT_CROPS = TOP_LEVEL_ACTION.PLANT_CROPS
+WAIT_FOR_CROPS = TOP_LEVEL_ACTION.WAIT_FOR_CROPS
+HARVEST_CROPS = TOP_LEVEL_ACTION.HARVEST_CROPS
+phase_transitions = {
+    BUY_SEEDS: PLANT_CROPS,
+    PLANT_CROPS: WAIT_FOR_CROPS,
+    WAIT_FOR_CROPS: HARVEST_CROPS,
+    HARVEST_CROPS: BUY_SEEDS
+}
 
 
-def get_move_decision(game: Game) -> MoveDecision:
+
+def get_decision_maker(phase: TOP_LEVEL_ACTION):
+    return phase_to_decision[phase]
+
+def get_next_phase(phase: TOP_LEVEL_ACTION):
+    return phase_transitions[phase]
+
+current_phase: TOP_LEVEL_ACTION = BUY_SEEDS
+
+@dataclass
+class Move:
+    move: MoveDecision
+    will_complete: bool 
+
+
+@dataclass
+class Action:
+    action: ActionDecision
+    will_complete: bool
+
+def get_grocer_move(pos: Position) -> Move:
+    '''
+    Return the move to the grocer
+    '''
+    green_grocer_location = Position(constants.BOARD_WIDTH // 2, 0)
+    
+    if game_util.distance(pos, green_grocer_location) == 0:
+        return Move(pos, False)
+    else:
+        decision = MoveDecision(game_util.get_best_move(pos, green_grocer_location))
+        return Move(decision, False)
+
+def buy_seeds_decision(game: Game) -> Move:
+    player = game.get_game_state().get_my_player()
+    return get_grocer_move(game.player)       
+
+def plant_crops_decision(game: Game) -> Move:
+    pass
+
+def wait_for_crops_decision(game: Game) -> Move:
+    pass
+
+def harvest_crops_decision(game: Game) -> Move:
+    pass
+    
+phase_to_decision = {
+    BUY_SEEDS: buy_seeds_decision,
+    PLANT_CROPS: plant_crops_decision,
+    WAIT_FOR_CROPS: wait_for_crops_decision,
+    HARVEST_CROPS: harvest_crops_decision
+}
+def get_move_decision(game: Game) -> Move:
     """
     Returns a move decision for the turn given the current game state.
     This is part 1 of 2 of the turn.
@@ -36,6 +105,7 @@ def get_move_decision(game: Game) -> MoveDecision:
     :param: game The object that contains the game state and other related information
     :returns: MoveDecision A location for the bot to move to this turn
     """
+
     game_state: GameState = game.get_game_state()
     logger.debug(
         f"[Turn {game_state.turn}] Feedback received from engine: {game_state.feedback}")
@@ -44,25 +114,18 @@ def get_move_decision(game: Game) -> MoveDecision:
     my_player: Player = game_state.get_my_player()
     pos: Position = my_player.position
     logger.info(f"Currently at {my_player.position}")
+    
+    move = get_decision_maker(current_phase)(game)
+    # sum(my_player.seed_inventory.values()) == 0 or
+    #          len(my_player.harvested_inventory)):
+    logger.info(f'current phase: [{current_phase}]')
+    if move.will_complete:
+        current_phase = get_next_phase(current_phase)
+        logger.info('moved on to next phase')
 
-    # If we have something to sell that we harvested, then try to move towards the green grocer tiles
-    green_grocer_location = Position(
-        constants.BOARD_WIDTH // 2, max(0, pos.y - constants.MAX_MOVEMENT))
-    if random.random() < 0.5 and \
-            (sum(my_player.seed_inventory.values()) == 0 or
-             len(my_player.harvested_inventory)):
-        logger.debug("Moving towards green grocer")
-        decision = MoveDecision(
-            game_util.get_best_move(pos, green_grocer_location))
-    # If not, then move randomly within the range of locations we can move to
-    else:
-        pos = random.choice(game_util.within_move_range(
-            game_state, my_player.name))
-        logger.debug("Moving randomly")
-        decision = MoveDecision(pos)
-
-    logger.debug(f"[Turn {game_state.turn}] Sending MoveDecision: {decision}")
-    return decision
+    logger.debug(f"[Turn {game_state.turn}] Sending MoveDecision: {move.move}")
+    
+    return move.move
 
 
 def get_action_decision(game: Game) -> ActionDecision:
@@ -145,3 +208,26 @@ def main():
 
 if __name__ == "__main__":
     main()
+
+
+
+
+"""
+
+start -> buy seeds
+
+buy seeds -> plant seeds
+
+plant seeds
+- move to specific row
+- plant 3x3 grid of Q fruit
+
+wait 15 turns
+
+then harvest seeds (1 turn)
+then move back to grocer and sell
+
+buy seeds again
+
+repeat
+"""
