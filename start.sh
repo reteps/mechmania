@@ -4,3 +4,5 @@ java -jar engine/mm27-engine.jar -n "team-honestpotatofarmers" -N "team-starter-
 mv team*.json logs/
 mv game.json logs/
 mv engine.json logs/
+
+cd logs; python3 format.py; cd ..

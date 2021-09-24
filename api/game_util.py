@@ -30,6 +30,27 @@ def distance(pos1: Position, pos2: Position) -> int:
     return abs(pos1.x - pos2.x) + abs(pos1.y - pos2.y)
 
 
+def get_best_move(pos1: Position, pos2: Position, limit=10) -> Position:
+    """
+    Returns the best possible move we can make with the movement limit of 10
+    from: pos1
+    to: pos2
+    """
+    if (distance(pos1, pos2) <= 10):
+        return pos2
+
+    x_change = abs(pos1.x - pos2.x)
+    y_change = abs(pos1.y - pos2.y)
+
+    # for simplicity, prefer x_change
+
+    x_change_performed = max(x_change, 10)
+    y_change_performed = max(y_change, 10 - x_change_performed)
+    out = Position(pos1.x + x_change_performed, pos1.y + y_change_performed)
+    assert distance(pos1, out) <= 10
+    return out
+
+
 def get_player_from_name(game_state: GameState, name: str) -> Player:
     """
     Get the player representing the name given a game state
@@ -52,7 +73,7 @@ def within_move_range(game_state: GameState, name: str) -> List[Position]:
     res = []
 
     for i in range(my_player.position.y - speed, my_player.position.y + speed):
-        leftover_travel = max(0, speed - abs(my_player.position.y - i));
+        leftover_travel = max(0, speed - abs(my_player.position.y - i))
         for j in range(my_player.position.x - leftover_travel, my_player.position.x + leftover_travel):
             pos = Position(j, i)
             if valid_position(pos):
@@ -88,8 +109,9 @@ def tile_type_on_turn(turn: int, game_state: GameState, coord: Position) -> Tile
     :param coord: Coordinate to check at
     :return: TileType corresponding to the tile type of the tile given by coord
     """
-    shifts = (turn - 1 - constants.F_BAND_INIT_DELAY) / constants.F_BAND_MOVE_DELAY;
-    shifts = max(0, shifts);
+    shifts = (turn - 1 - constants.F_BAND_INIT_DELAY) / \
+        constants.F_BAND_MOVE_DELAY
+    shifts = max(0, shifts)
 
     row = coord.y
     newType = TileType.ARID
@@ -97,7 +119,7 @@ def tile_type_on_turn(turn: int, game_state: GameState, coord: Position) -> Tile
     # Offset records how far into the fertility zone a row is (negative indicates below)
     # Init position indicates the first row that will * become * part of a band after the first shift
     # e.g. 0 = > fertility band starts off the map while 1 = > fertility band starts with 1 row on the map int
-    offset = shifts - row - 1 + constants.F_BAND_INIT_POSITION;
+    offset = shifts - row - 1 + constants.F_BAND_INIT_POSITION
     if (offset < 0):
         # Below fertility band
         newType = TileType.SOIL

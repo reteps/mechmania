@@ -37,7 +37,8 @@ def get_move_decision(game: Game) -> MoveDecision:
     :returns: MoveDecision A location for the bot to move to this turn
     """
     game_state: GameState = game.get_game_state()
-    logger.debug(f"[Turn {game_state.turn}] Feedback received from engine: {game_state.feedback}")
+    logger.debug(
+        f"[Turn {game_state.turn}] Feedback received from engine: {game_state.feedback}")
 
     # Select your decision here!
     my_player: Player = game_state.get_my_player()
@@ -45,14 +46,18 @@ def get_move_decision(game: Game) -> MoveDecision:
     logger.info(f"Currently at {my_player.position}")
 
     # If we have something to sell that we harvested, then try to move towards the green grocer tiles
+    green_grocer_location = Position(
+        constants.BOARD_WIDTH // 2, max(0, pos.y - constants.MAX_MOVEMENT))
     if random.random() < 0.5 and \
             (sum(my_player.seed_inventory.values()) == 0 or
              len(my_player.harvested_inventory)):
         logger.debug("Moving towards green grocer")
-        decision = MoveDecision(Position(constants.BOARD_WIDTH // 2, max(0, pos.y - constants.MAX_MOVEMENT)))
+        decision = MoveDecision(
+            game_util.get_best_move(pos, green_grocer_location))
     # If not, then move randomly within the range of locations we can move to
     else:
-        pos = random.choice(game_util.within_move_range(game_state, my_player.name))
+        pos = random.choice(game_util.within_move_range(
+            game_state, my_player.name))
         logger.debug("Moving randomly")
         decision = MoveDecision(pos)
 
@@ -74,7 +79,8 @@ def get_action_decision(game: Game) -> ActionDecision:
     :returns: ActionDecision A decision for the bot to make this turn
     """
     game_state: GameState = game.get_game_state()
-    logger.debug(f"[Turn {game_state.turn}] Feedback received from engine: {game_state.feedback}")
+    logger.debug(
+        f"[Turn {game_state.turn}] Feedback received from engine: {game_state.feedback}")
 
     # Select your decision here!
     my_player: Player = game_state.get_my_player()
@@ -104,7 +110,7 @@ def get_action_decision(game: Game) -> ActionDecision:
     # If we don't have that seed, but we have the money to buy it, then move towards the
     # green grocer to buy it
     elif my_player.money >= crop.get_seed_price() and \
-        game_state.tile_map.get_tile(pos.x, pos.y).type == TileType.GREEN_GROCER:
+            game_state.tile_map.get_tile(pos.x, pos.y).type == TileType.GREEN_GROCER:
         logger.debug(f"Buy 1 of {crop}")
         decision = BuyDecision([crop], [1])
     # If we can't do any of that, then just do nothing (move around some more)
@@ -112,7 +118,8 @@ def get_action_decision(game: Game) -> ActionDecision:
         logger.debug(f"Couldn't find anything to do, waiting for move step")
         decision = DoNothingDecision()
 
-    logger.debug(f"[Turn {game_state.turn}] Sending ActionDecision: {decision}")
+    logger.debug(
+        f"[Turn {game_state.turn}] Sending ActionDecision: {decision}")
     return decision
 
 

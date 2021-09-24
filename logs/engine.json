@@ -1,1 +1,27 @@
-{"Logs":[{"Turn":0,"Info":["Successful player initialization"],"Exception":[]},{"Turn":1,"Info":["Finished game loop"],"Exception":["Player 1: Failed to move to position (15,0), greater than allowed movement (15 > 10)","PlayerDecisionParseException: Error while getting player decision from player 1","Stack Trace: mech.mania.engine.model.PlayerDecisionParseException: Unrecognized action: do_nothing","\tat mech.mania.engine.util.PlayerCommunicationUtils.parseDecision(PlayerCommunicationUtils.java:90)","\tat mech.mania.engine.networking.PlayerCommunicationInfo.getPlayerDecision(PlayerCommunicationInfo.java:167)","\tat mech.mania.engine.Main.gameLoop(Main.java:429)","\tat mech.mania.engine.Main.main(Main.java:132)","PlayerDecisionParseException: Error while getting player decision from player 2","Stack Trace: mech.mania.engine.model.PlayerDecisionParseException: Unrecognized action: do_nothing","\tat mech.mania.engine.util.PlayerCommunicationUtils.parseDecision(PlayerCommunicationUtils.java:90)","\tat mech.mania.engine.networking.PlayerCommunicationInfo.getPlayerDecision(PlayerCommunicationInfo.java:167)","\tat mech.mania.engine.Main.gameLoop(Main.java:442)","\tat mech.mania.engine.Main.main(Main.java:132)"]}]}
+{
+  "Logs": [
+    {
+      "Turn": 0,
+      "Info": [
+        "Successful player initialization"
+      ],
+      "Exception": []
+    },
+    {
+      "Turn": 1,
+      "Info": [
+        "Finished game loop"
+      ],
+      "Exception": [
+        "IllegalThreadStateException: Error while getting move action from player 1",
+        "Stack Trace: java.lang.IllegalThreadStateException: read timed out",
+        "\tat mech.mania.engine.networking.SafeBufferedReader.waitReady(SafeBufferedReader.java:112)",
+        "\tat mech.mania.engine.networking.SafeBufferedReader.readLine(SafeBufferedReader.java:37)",
+        "\tat mech.mania.engine.networking.PlayerCommunicationInfo.safeGetLine(PlayerCommunicationInfo.java:136)",
+        "\tat mech.mania.engine.networking.PlayerCommunicationInfo.getPlayerDecision(PlayerCommunicationInfo.java:157)",
+        "\tat mech.mania.engine.Main.gameLoop(Main.java:355)",
+        "\tat mech.mania.engine.Main.main(Main.java:132)"
+      ]
+    }
+  ]
+}

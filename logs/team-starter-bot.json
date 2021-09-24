@@ -1,1 +1,22 @@
-{"Logs":[{"Turn":0,"Info":[],"Debug":[],"Exception":[]},{"Turn":1,"Info":["Currently at (29,0)"],"Debug":["[Turn 1] Feedback received from engine: []","Moving randomly","[Turn 1] Sending MoveDecision: MoveDecision((28,5))","[Turn 1] Feedback received from engine: []","Possible harvest locations=[]","Couldn't find anything to do, waiting for move step","[Turn 1] Sending ActionDecision: DoNothingDecision()"],"Exception":[]}]}
+{
+  "Logs": [
+    {
+      "Turn": 0,
+      "Info": [],
+      "Debug": [],
+      "Exception": []
+    },
+    {
+      "Turn": 1,
+      "Info": [
+        "Currently at (29,0)"
+      ],
+      "Debug": [
+        "[Turn 1] Feedback received from engine: []",
+        "Moving randomly",
+        "[Turn 1] Sending MoveDecision: MoveDecision((22,3))"
+      ],
+      "Exception": []
+    }
+  ]
+}
