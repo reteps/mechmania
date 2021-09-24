@@ -1,3 +1,9 @@
+# Running
+
+Simulate bot: `./start.sh`. This will generate logs into `./logs`
+Start web server: `./web/start.sh`. Select `./logs/game.json`.
+Upload: `mm push ./`
+
 # Python-Starterpack
 
 Thank you for coming out to the 27th edition of MechMania!
