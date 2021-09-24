@@ -36,7 +36,7 @@ def get_best_move(pos1: Position, pos2: Position, limit=10) -> Position:
     from: pos1
     to: pos2
     """
-    if (distance(pos1, pos2) <= 10):
+    if (distance(pos1, pos2) <= limit):
         return pos2
 
     x_change = abs(pos1.x - pos2.x)
@@ -44,10 +44,10 @@ def get_best_move(pos1: Position, pos2: Position, limit=10) -> Position:
 
     # for simplicity, prefer x_change
 
-    x_change_performed = max(x_change, 10)
-    y_change_performed = max(y_change, 10 - x_change_performed)
+    x_change_performed = min(x_change, limit)
+    y_change_performed = min(y_change, limit - x_change_performed)
     out = Position(pos1.x + x_change_performed, pos1.y + y_change_performed)
-    assert distance(pos1, out) <= 10
+    assert distance(pos1, out) <= limit
     return out
 
 

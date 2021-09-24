@@ -10,18 +10,1662 @@
     {
       "Turn": 1,
       "Info": [
-        "Finished game loop"
+        "Player 1: Moved to (0,4)",
+        "Turn 1 took 399.40 milliseconds"
       ],
       "Exception": [
-        "IllegalThreadStateException: Error while getting move action from player 1",
-        "Stack Trace: java.lang.IllegalThreadStateException: read timed out",
-        "\tat mech.mania.engine.networking.SafeBufferedReader.waitReady(SafeBufferedReader.java:112)",
-        "\tat mech.mania.engine.networking.SafeBufferedReader.readLine(SafeBufferedReader.java:37)",
-        "\tat mech.mania.engine.networking.PlayerCommunicationInfo.safeGetLine(PlayerCommunicationInfo.java:136)",
-        "\tat mech.mania.engine.networking.PlayerCommunicationInfo.getPlayerDecision(PlayerCommunicationInfo.java:157)",
-        "\tat mech.mania.engine.Main.gameLoop(Main.java:355)",
-        "\tat mech.mania.engine.Main.main(Main.java:132)"
+        "Player 2: Failed to move to position (39,0), invalid destination"
       ]
+    },
+    {
+      "Turn": 2,
+      "Info": [
+        "Player 1: Moved to (4,3)",
+        "Player 2: Moved to (25,2)",
+        "Turn 2 took 239.48 milliseconds"
+      ],
+      "Exception": []
+    },
+    {
+      "Turn": 3,
+      "Info": [
+        "Player 1: Moved to (14,3)",
+        "Turn 3 took 252.42 milliseconds"
+      ],
+      "Exception": [
+        "Player 2: Failed to move to position (35,2), invalid destination"
+      ]
+    },
+    {
+      "Turn": 4,
+      "Info": [
+        "Player 1: Moved to (15,0)",
+        "Player 1: Selling inventory",
+        "Player 2: Moved to (29,4)",
+        "Player 1: Bought 1 NONE seeds for $0.00",
+        "Turn 4 took 241.77 milliseconds"
+      ],
+      "Exception": []
+    },
+    {
+      "Turn": 5,
+      "Info": [
+        "Player 1: Moved to (19,5)",
+        "Player 2: Moved to (28,6)",
+        "Turn 5 took 227.16 milliseconds"
+      ],
+      "Exception": []
+    },
+    {
+      "Turn": 6,
+      "Info": [
+        "Player 1: Moved to (19,9)",
+        "Turn 6 took 229.46 milliseconds"
+      ],
+      "Exception": [
+        "Player 2: Failed to move to position (38,6), invalid destination"
+      ]
+    },
+    {
+      "Turn": 7,
+      "Info": [
+        "Player 1: Moved to (19,17)",
+        "Player 2: Moved to (23,1)",
+        "Turn 7 took 226.23 milliseconds"
+      ],
+      "Exception": []
+    },
+    {
+      "Turn": 8,
+      "Info": [
+        "Player 1: Moved to (18,13)",
+        "Player 2: Moved to (24,7)",
+        "Turn 8 took 233.74 milliseconds"
+      ],
+      "Exception": []
+    },
+    {
+      "Turn": 9,
+      "Info": [
+        "Player 1: Moved to (27,13)",
+        "Player 2: Moved to (22,11)",
+        "Turn 9 took 228.52 milliseconds"
+      ],
+      "Exception": []
+    },
+    {
+      "Turn": 10,
+      "Info": [
+        "Player 1: Moved to (21,14)",
+        "Player 2: Moved to (29,14)",
+        "Turn 10 took 229.60 milliseconds"
+      ],
+      "Exception": []
+    },
+    {
+      "Turn": 11,
+      "Info": [
+        "Player 1: Moved to (14,16)",
+        "Player 2: Moved to (27,16)",
+        "Turn 11 took 226.90 milliseconds"
+      ],
+      "Exception": []
+    },
+    {
+      "Turn": 12,
+      "Info": [
+        "Player 1: Moved to (14,20)",
+        "Player 2: Moved to (24,16)",
+        "Turn 12 took 226.85 milliseconds"
+      ],
+      "Exception": []
+    },
+    {
+      "Turn": 13,
+      "Info": [
+        "Player 1: Moved to (10,16)",
+        "Player 2: Moved to (21,17)",
+        "Turn 13 took 225.57 milliseconds"
+      ],
+      "Exception": []
+    },
+    {
+      "Turn": 14,
+      "Info": [
+        "Player 1: Moved to (5,17)",
+        "Player 2: Moved to (27,21)",
+        "Turn 14 took 225.26 milliseconds"
+      ],
+      "Exception": []
+    },
+    {
+      "Turn": 15,
+      "Info": [
+        "Player 1: Moved to (10,21)",
+        "Player 2: Moved to (22,25)",
+        "Turn 15 took 225.72 milliseconds"
+      ],
+      "Exception": []
+    },
+    {
+      "Turn": 16,
+      "Info": [
+        "Player 1: Moved to (12,25)",
+        "Player 2: Moved to (20,30)",
+        "Turn 16 took 224.03 milliseconds"
+      ],
+      "Exception": []
+    },
+    {
+      "Turn": 17,
+      "Info": [
+        "Player 1: Moved to (9,21)",
+        "Player 2: Moved to (25,35)",
+        "Turn 17 took 234.38 milliseconds"
+      ],
+      "Exception": []
+    },
+    {
+      "Turn": 18,
+      "Info": [
+        "Player 1: Moved to (8,26)",
+        "Player 2: Moved to (25,29)",
+        "Turn 18 took 235.53 milliseconds"
+      ],
+      "Exception": []
+    },
+    {
+      "Turn": 19,
+      "Info": [
+        "Player 1: Moved to (8,25)",
+        "Turn 19 took 234.71 milliseconds"
+      ],
+      "Exception": [
+        "Player 2: Failed to move to position (35,29), invalid destination"
+      ]
+    },
+    {
+      "Turn": 20,
+      "Info": [
+        "Player 1: Moved to (8,21)",
+        "Player 2: Moved to (29,30)",
+        "Turn 20 took 229.70 milliseconds"
+      ],
+      "Exception": []
+    },
+    {
+      "Turn": 21,
+      "Info": [
+        "Player 1: Moved to (11,27)",
+        "Turn 21 took 227.88 milliseconds"
+      ],
+      "Exception": [
+        "Player 2: Failed to move to position (39,30), invalid destination"
+      ]
+    },
+    {
+      "Turn": 22,
+      "Info": [
+        "Player 1: Moved to (6,30)",
+        "Turn 22 took 221.76 milliseconds"
+      ],
+      "Exception": [
+        "Player 2: Failed to move to position (39,30), invalid destination"
+      ]
+    },
+    {
+      "Turn": 23,
+      "Info": [
+        "Player 1: Moved to (7,28)",
+        "Turn 23 took 224.75 milliseconds"
+      ],
+      "Exception": [
+        "Player 2: Failed to move to position (39,30), invalid destination"
+      ]
+    },
+    {
+      "Turn": 24,
+      "Info": [
+        "Player 1: Moved to (10,31)",
+        "Turn 24 took 230.61 milliseconds"
+      ],
+      "Exception": [
+        "Player 2: Failed to move to position (39,30), invalid destination"
+      ]
+    },
+    {
+      "Turn": 25,
+      "Info": [
+        "Player 1: Moved to (6,34)",
+        "Turn 25 took 227.07 milliseconds"
+      ],
+      "Exception": [
+        "Player 2: Failed to move to position (39,30), invalid destination"
+      ]
+    },
+    {
+      "Turn": 26,
+      "Info": [
+        "Player 1: Moved to (5,29)",
+        "Turn 26 took 226.08 milliseconds"
+      ],
+      "Exception": [
+        "Player 2: Failed to move to position (39,30), invalid destination"
+      ]
+    },
+    {
+      "Turn": 27,
+      "Info": [
+        "Player 1: Moved to (8,27)",
+        "Player 2: Moved to (26,36)",
+        "Turn 27 took 219.15 milliseconds"
+      ],
+      "Exception": []
+    },
+    {
+      "Turn": 28,
+      "Info": [
+        "Player 1: Moved to (6,35)",
+        "Turn 28 took 223.80 milliseconds"
+      ],
+      "Exception": [
+        "Player 2: Failed to move to position (36,36), invalid destination"
+      ]
+    },
+    {
+      "Turn": 29,
+      "Info": [
+        "Player 1: Moved to (12,33)",
+        "Turn 29 took 225.31 milliseconds"
+      ],
+      "Exception": [
+        "Player 2: Failed to move to position (36,36), invalid destination"
+      ]
+    },
+    {
+      "Turn": 30,
+      "Info": [
+        "Player 1: Moved to (7,37)",
+        "Player 2: Moved to (23,36)",
+        "Turn 30 took 222.64 milliseconds"
+      ],
+      "Exception": []
+    },
+    {
+      "Turn": 31,
+      "Info": [
+        "Player 1: Moved to (6,44)",
+        "Turn 31 took 227.42 milliseconds"
+      ],
+      "Exception": [
+        "Player 2: Failed to move to position (31,38), invalid destination"
+      ]
+    },
+    {
+      "Turn": 32,
+      "Info": [
+        "Player 1: Moved to (13,44)",
+        "Player 2: Moved to (18,39)",
+        "Turn 32 took 228.82 milliseconds"
+      ],
+      "Exception": []
+    },
+    {
+      "Turn": 33,
+      "Info": [
+        "Player 1: Moved to (8,45)",
+        "Player 2: Moved to (18,38)",
+        "Turn 33 took 231.28 milliseconds"
+      ],
+      "Exception": []
+    },
+    {
+      "Turn": 34,
+      "Info": [
+        "Player 1: Moved to (13,42)",
+        "Player 2: Moved to (10,38)",
+        "Turn 34 took 219.53 milliseconds"
+      ],
+      "Exception": []
+    },
+    {
+      "Turn": 35,
+      "Info": [
+        "Player 1: Moved to (10,45)",
+        "Player 2: Moved to (10,38)",
+        "Turn 35 took 219.49 milliseconds"
+      ],
+      "Exception": []
+    },
+    {
+      "Turn": 36,
+      "Info": [
+        "Player 1: Moved to (13,45)",
+        "Player 2: Moved to (9,29)",
+        "Turn 36 took 220.95 milliseconds"
+      ],
+      "Exception": []
+    },
+    {
+      "Turn": 37,
+      "Info": [
+        "Player 1: Moved to (20,43)",
+        "Player 2: Moved to (8,26)",
+        "Turn 37 took 223.08 milliseconds"
+      ],
+      "Exception": []
+    },
+    {
+      "Turn": 38,
+      "Info": [
+        "Player 1: Moved to (20,45)",
+        "Player 2: Moved to (7,25)",
+        "Turn 38 took 222.89 milliseconds"
+      ],
+      "Exception": []
+    },
+    {
+      "Turn": 39,
+      "Info": [
+        "Player 1: Moved to (24,40)",
+        "Player 2: Moved to (15,27)",
+        "Turn 39 took 222.87 milliseconds"
+      ],
+      "Exception": []
+    },
+    {
+      "Turn": 40,
+      "Info": [
+        "Player 1: Moved to (23,38)",
+        "Player 2: Moved to (15,17)",
+        "Turn 40 took 231.38 milliseconds"
+      ],
+      "Exception": []
+    },
+    {
+      "Turn": 41,
+      "Info": [
+        "Player 1: Moved to (17,42)",
+        "Player 2: Moved to (6,17)",
+        "Turn 41 took 223.75 milliseconds"
+      ],
+      "Exception": []
+    },
+    {
+      "Turn": 42,
+      "Info": [
+        "Player 1: Moved to (16,48)",
+        "Player 2: Moved to (15,18)",
+        "Turn 42 took 223.16 milliseconds"
+      ],
+      "Exception": []
+    },
+    {
+      "Turn": 43,
+      "Info": [
+        "Player 1: Moved to (12,45)",
+        "Player 2: Moved to (16,21)",
+        "Turn 43 took 222.32 milliseconds"
+      ],
+      "Exception": []
+    },
+    {
+      "Turn": 44,
+      "Info": [
+        "Player 1: Moved to (20,46)",
+        "Player 2: Moved to (7,20)",
+        "Turn 44 took 221.62 milliseconds"
+      ],
+      "Exception": []
+    },
+    {
+      "Turn": 45,
+      "Info": [
+        "Player 1: Moved to (26,46)",
+        "Player 2: Moved to (8,26)",
+        "Turn 45 took 227.64 milliseconds"
+      ],
+      "Exception": []
+    },
+    {
+      "Turn": 46,
+      "Info": [
+        "Player 1: Moved to (19,46)",
+        "Player 2: Moved to (5,28)",
+        "Turn 46 took 219.38 milliseconds"
+      ],
+      "Exception": []
+    },
+    {
+      "Turn": 47,
+      "Info": [
+        "Player 1: Moved to (15,40)",
+        "Player 2: Moved to (0,26)",
+        "Turn 47 took 218.55 milliseconds"
+      ],
+      "Exception": []
+    },
+    {
+      "Turn": 48,
+      "Info": [
+        "Player 1: Moved to (14,40)",
+        "Player 2: Moved to (0,31)",
+        "Turn 48 took 218.39 milliseconds"
+      ],
+      "Exception": []
+    },
+    {
+      "Turn": 49,
+      "Info": [
+        "Player 1: Moved to (10,40)",
+        "Player 2: Moved to (2,29)",
+        "Turn 49 took 226.29 milliseconds"
+      ],
+      "Exception": []
+    },
+    {
+      "Turn": 50,
+      "Info": [
+        "Player 1: Moved to (8,32)",
+        "Player 2: Moved to (12,29)",
+        "Turn 50 took 222.27 milliseconds"
+      ],
+      "Exception": []
+    },
+    {
+      "Turn": 51,
+      "Info": [
+        "Player 1: Moved to (1,35)",
+        "Player 2: Moved to (11,25)",
+        "Turn 51 took 219.75 milliseconds"
+      ],
+      "Exception": []
+    },
+    {
+      "Turn": 52,
+      "Info": [
+        "Player 1: Moved to (3,40)",
+        "Player 2: Moved to (17,27)",
+        "Turn 52 took 219.13 milliseconds"
+      ],
+      "Exception": []
+    },
+    {
+      "Turn": 53,
+      "Info": [
+        "Player 1: Moved to (5,34)",
+        "Player 2: Moved to (14,21)",
+        "Turn 53 took 220.41 milliseconds"
+      ],
+      "Exception": []
+    },
+    {
+      "Turn": 54,
+      "Info": [
+        "Player 1: Moved to (8,29)",
+        "Player 2: Moved to (15,30)",
+        "Turn 54 took 220.09 milliseconds"
+      ],
+      "Exception": []
+    },
+    {
+      "Turn": 55,
+      "Info": [
+        "Player 1: Moved to (10,26)",
+        "Player 2: Moved to (15,20)",
+        "Turn 55 took 221.04 milliseconds"
+      ],
+      "Exception": []
+    },
+    {
+      "Turn": 56,
+      "Info": [
+        "Player 1: Moved to (7,33)",
+        "Player 2: Moved to (8,21)",
+        "Turn 56 took 219.80 milliseconds"
+      ],
+      "Exception": []
+    },
+    {
+      "Turn": 57,
+      "Info": [
+        "Player 1: Moved to (1,37)",
+        "Player 2: Moved to (9,18)",
+        "Turn 57 took 222.18 milliseconds"
+      ],
+      "Exception": []
+    },
+    {
+      "Turn": 58,
+      "Info": [
+        "Player 1: Moved to (1,36)",
+        "Player 2: Moved to (12,18)",
+        "Turn 58 took 226.33 milliseconds"
+      ],
+      "Exception": []
+    },
+    {
+      "Turn": 59,
+      "Info": [
+        "Player 1: Moved to (2,31)",
+        "Player 2: Moved to (14,15)",
+        "Turn 59 took 220.00 milliseconds"
+      ],
+      "Exception": []
+    },
+    {
+      "Turn": 60,
+      "Info": [
+        "Player 1: Moved to (5,27)",
+        "Player 2: Moved to (15,24)",
+        "Turn 60 took 220.56 milliseconds"
+      ],
+      "Exception": []
+    },
+    {
+      "Turn": 61,
+      "Info": [
+        "Player 1: Moved to (8,24)",
+        "Player 2: Moved to (16,29)",
+        "Turn 61 took 218.88 milliseconds"
+      ],
+      "Exception": []
+    },
+    {
+      "Turn": 62,
+      "Info": [
+        "Player 1: Moved to (7,23)",
+        "Player 2: Moved to (11,32)",
+        "Turn 62 took 220.14 milliseconds"
+      ],
+      "Exception": []
+    },
+    {
+      "Turn": 63,
+      "Info": [
+        "Player 1: Moved to (2,18)",
+        "Player 2: Moved to (15,38)",
+        "Player 1: Planted NONE at (2,18)",
+        "Turn 63 took 229.47 milliseconds"
+      ],
+      "Exception": []
+    },
+    {
+      "Turn": 64,
+      "Info": [
+        "Player 1: Moved to (1,24)",
+        "Player 2: Moved to (11,37)",
+        "Turn 64 took 222.46 milliseconds"
+      ],
+      "Exception": []
+    },
+    {
+      "Turn": 65,
+      "Info": [
+        "Player 1: Moved to (3,31)",
+        "Player 2: Moved to (5,38)",
+        "Turn 65 took 220.11 milliseconds"
+      ],
+      "Exception": []
+    },
+    {
+      "Turn": 66,
+      "Info": [
+        "Player 1: Moved to (0,37)",
+        "Player 2: Moved to (15,38)",
+        "Turn 66 took 221.12 milliseconds"
+      ],
+      "Exception": []
+    },
+    {
+      "Turn": 67,
+      "Info": [
+        "Player 1: Moved to (10,37)",
+        "Player 2: Moved to (15,28)",
+        "Turn 67 took 228.08 milliseconds"
+      ],
+      "Exception": []
+    },
+    {
+      "Turn": 68,
+      "Info": [
+        "Player 1: Moved to (15,42)",
+        "Player 2: Moved to (15,18)",
+        "Turn 68 took 221.77 milliseconds"
+      ],
+      "Exception": []
+    },
+    {
+      "Turn": 69,
+      "Info": [
+        "Player 1: Moved to (15,32)",
+        "Player 2: Moved to (15,8)",
+        "Turn 69 took 228.70 milliseconds"
+      ],
+      "Exception": []
+    },
+    {
+      "Turn": 70,
+      "Info": [
+        "Player 1: Moved to (7,31)",
+        "Player 2: Moved to (15,0)",
+        "Player 2: Selling inventory",
+        "Player 2: Bought 1 CORN seeds for $5.00",
+        "Turn 70 took 221.51 milliseconds"
+      ],
+      "Exception": []
+    },
+    {
+      "Turn": 71,
+      "Info": [
+        "Player 1: Moved to (15,33)",
+        "Player 2: Moved to (16,4)",
+        "Turn 71 took 222.70 milliseconds"
+      ],
+      "Exception": []
+    },
+    {
+      "Turn": 72,
+      "Info": [
+        "Player 1: Moved to (18,36)",
+        "Player 2: Moved to (11,1)",
+        "Turn 72 took 224.87 milliseconds"
+      ],
+      "Exception": []
+    },
+    {
+      "Turn": 73,
+      "Info": [
+        "Player 1: Moved to (17,40)",
+        "Player 2: Moved to (9,8)",
+        "Turn 73 took 219.93 milliseconds"
+      ],
+      "Exception": []
+    },
+    {
+      "Turn": 74,
+      "Info": [
+        "Player 1: Moved to (19,48)",
+        "Player 2: Moved to (10,4)",
+        "Turn 74 took 224.32 milliseconds"
+      ],
+      "Exception": []
+    },
+    {
+      "Turn": 75,
+      "Info": [
+        "Player 1: Moved to (10,48)",
+        "Player 2: Moved to (15,1)",
+        "Turn 75 took 225.25 milliseconds"
+      ],
+      "Exception": []
+    },
+    {
+      "Turn": 76,
+      "Info": [
+        "Player 1: Moved to (4,48)",
+        "Player 2: Moved to (7,3)",
+        "Turn 76 took 224.78 milliseconds"
+      ],
+      "Exception": []
+    },
+    {
+      "Turn": 77,
+      "Info": [
+        "Player 1: Moved to (7,44)",
+        "Player 2: Moved to (8,0)",
+        "Turn 77 took 229.59 milliseconds"
+      ],
+      "Exception": []
+    },
+    {
+      "Turn": 78,
+      "Info": [
+        "Player 1: Moved to (4,38)",
+        "Player 2: Moved to (3,0)",
+        "Turn 78 took 221.46 milliseconds"
+      ],
+      "Exception": []
+    },
+    {
+      "Turn": 79,
+      "Info": [
+        "Player 1: Moved to (11,36)",
+        "Player 2: Moved to (3,6)",
+        "Turn 79 took 235.99 milliseconds"
+      ],
+      "Exception": []
+    },
+    {
+      "Turn": 80,
+      "Info": [
+        "Player 1: Moved to (8,37)",
+        "Player 2: Moved to (10,7)",
+        "Turn 80 took 222.26 milliseconds"
+      ],
+      "Exception": []
+    },
+    {
+      "Turn": 81,
+      "Info": [
+        "Player 1: Moved to (1,39)",
+        "Player 2: Moved to (6,6)",
+        "Turn 81 took 222.18 milliseconds"
+      ],
+      "Exception": []
+    },
+    {
+      "Turn": 82,
+      "Info": [
+        "Player 1: Moved to (8,40)",
+        "Player 2: Moved to (7,3)",
+        "Turn 82 took 228.41 milliseconds"
+      ],
+      "Exception": []
+    },
+    {
+      "Turn": 83,
+      "Info": [
+        "Player 1: Moved to (15,43)",
+        "Player 2: Moved to (15,4)",
+        "Turn 83 took 223.51 milliseconds"
+      ],
+      "Exception": []
+    },
+    {
+      "Turn": 84,
+      "Info": [
+        "Player 1: Moved to (15,33)",
+        "Player 2: Moved to (15,8)",
+        "Turn 84 took 227.76 milliseconds"
+      ],
+      "Exception": []
+    },
+    {
+      "Turn": 85,
+      "Info": [
+        "Player 1: Moved to (21,34)",
+        "Player 2: Moved to (15,9)",
+        "Turn 85 took 225.89 milliseconds"
+      ],
+      "Exception": []
+    },
+    {
+      "Turn": 86,
+      "Info": [
+        "Player 1: Moved to (27,38)",
+        "Player 2: Moved to (11,11)",
+        "Turn 86 took 219.85 milliseconds"
+      ],
+      "Exception": []
+    },
+    {
+      "Turn": 87,
+      "Info": [
+        "Player 1: Moved to (26,41)",
+        "Player 2: Moved to (5,9)",
+        "Turn 87 took 224.02 milliseconds"
+      ],
+      "Exception": []
+    },
+    {
+      "Turn": 88,
+      "Info": [
+        "Player 1: Moved to (24,40)",
+        "Player 2: Moved to (8,9)",
+        "Turn 88 took 238.71 milliseconds"
+      ],
+      "Exception": []
+    },
+    {
+      "Turn": 89,
+      "Info": [
+        "Player 2: Moved to (11,14)",
+        "Turn 89 took 222.41 milliseconds"
+      ],
+      "Exception": [
+        "Player 1: Failed to move to position (33,41), invalid destination"
+      ]
+    },
+    {
+      "Turn": 90,
+      "Info": [
+        "Player 2: Moved to (11,19)",
+        "Turn 90 took 223.40 milliseconds"
+      ],
+      "Exception": [
+        "Player 1: Failed to move to position (33,41), invalid destination"
+      ]
+    },
+    {
+      "Turn": 91,
+      "Info": [
+        "Player 1: Moved to (27,36)",
+        "Player 2: Moved to (11,16)",
+        "Turn 91 took 226.29 milliseconds"
+      ],
+      "Exception": []
+    },
+    {
+      "Turn": 92,
+      "Info": [
+        "Player 2: Moved to (9,12)",
+        "Turn 92 took 235.20 milliseconds"
+      ],
+      "Exception": [
+        "Player 1: Failed to move to position (37,36), invalid destination"
+      ]
+    },
+    {
+      "Turn": 93,
+      "Info": [
+        "Player 1: Moved to (23,33)",
+        "Player 2: Moved to (11,18)",
+        "Turn 93 took 226.46 milliseconds"
+      ],
+      "Exception": []
+    },
+    {
+      "Turn": 94,
+      "Info": [
+        "Player 1: Moved to (16,33)",
+        "Player 2: Moved to (12,24)",
+        "Player 2: Planted CORN at (12,24)",
+        "Turn 94 took 220.69 milliseconds"
+      ],
+      "Exception": []
+    },
+    {
+      "Turn": 95,
+      "Info": [
+        "Player 1: Moved to (11,38)",
+        "Player 2: Moved to (15,31)",
+        "Turn 95 took 225.04 milliseconds"
+      ],
+      "Exception": []
+    },
+    {
+      "Turn": 96,
+      "Info": [
+        "Player 1: Moved to (10,37)",
+        "Player 2: Moved to (14,22)",
+        "Player 2: ",
+        "Turn 96 took 227.44 milliseconds"
+      ],
+      "Exception": []
+    },
+    {
+      "Turn": 97,
+      "Info": [
+        "Player 1: Moved to (15,42)",
+        "Player 2: Moved to (11,18)",
+        "Turn 97 took 226.44 milliseconds"
+      ],
+      "Exception": []
+    },
+    {
+      "Turn": 98,
+      "Info": [
+        "Player 1: Moved to (15,32)",
+        "Player 2: Moved to (9,25)",
+        "Turn 98 took 220.05 milliseconds"
+      ],
+      "Exception": []
+    },
+    {
+      "Turn": 99,
+      "Info": [
+        "Player 1: Moved to (15,22)",
+        "Player 2: Moved to (15,29)",
+        "Turn 99 took 236.07 milliseconds"
+      ],
+      "Exception": []
+    },
+    {
+      "Turn": 100,
+      "Info": [
+        "Player 1: Moved to (18,16)",
+        "Player 2: Moved to (19,30)",
+        "Turn 100 took 230.08 milliseconds"
+      ],
+      "Exception": []
+    },
+    {
+      "Turn": 101,
+      "Info": [
+        "Player 1: Moved to (22,17)",
+        "Player 2: Moved to (23,36)",
+        "Turn 101 took 224.31 milliseconds"
+      ],
+      "Exception": []
+    },
+    {
+      "Turn": 102,
+      "Info": [
+        "Player 1: Moved to (17,22)",
+        "Player 2: Moved to (21,38)",
+        "Turn 102 took 218.79 milliseconds"
+      ],
+      "Exception": []
+    },
+    {
+      "Turn": 103,
+      "Info": [
+        "Player 1: Moved to (19,30)",
+        "Player 2: Moved to (15,38)",
+        "Turn 103 took 219.12 milliseconds"
+      ],
+      "Exception": []
+    },
+    {
+      "Turn": 104,
+      "Info": [
+        "Player 1: Moved to (23,36)",
+        "Player 2: Moved to (15,28)",
+        "Turn 104 took 221.14 milliseconds"
+      ],
+      "Exception": []
+    },
+    {
+      "Turn": 105,
+      "Info": [
+        "Player 1: Moved to (19,34)",
+        "Player 2: Moved to (21,30)",
+        "Turn 105 took 228.54 milliseconds"
+      ],
+      "Exception": []
+    },
+    {
+      "Turn": 106,
+      "Info": [
+        "Player 1: Moved to (19,32)",
+        "Player 2: Moved to (27,34)",
+        "Turn 106 took 221.42 milliseconds"
+      ],
+      "Exception": []
+    },
+    {
+      "Turn": 107,
+      "Info": [
+        "Player 1: Moved to (23,38)",
+        "Turn 107 took 232.25 milliseconds"
+      ],
+      "Exception": [
+        "Player 2: Failed to move to position (37,34), invalid destination"
+      ]
+    },
+    {
+      "Turn": 108,
+      "Info": [
+        "Player 1: Moved to (23,37)",
+        "Turn 108 took 219.66 milliseconds"
+      ],
+      "Exception": [
+        "Player 2: Failed to move to position (37,34), invalid destination"
+      ]
+    },
+    {
+      "Turn": 109,
+      "Info": [
+        "Player 2: Moved to (18,33)",
+        "Turn 109 took 234.50 milliseconds"
+      ],
+      "Exception": [
+        "Player 1: Failed to move to position (31,39), invalid destination"
+      ]
+    },
+    {
+      "Turn": 110,
+      "Info": [
+        "Player 1: Moved to (20,33)",
+        "Player 2: Moved to (14,36)",
+        "Turn 110 took 229.16 milliseconds"
+      ],
+      "Exception": []
+    },
+    {
+      "Turn": 111,
+      "Info": [
+        "Player 1: Moved to (14,33)",
+        "Player 2: Moved to (15,45)",
+        "Turn 111 took 233.73 milliseconds"
+      ],
+      "Exception": []
+    },
+    {
+      "Turn": 112,
+      "Info": [
+        "Player 1: Moved to (15,42)",
+        "Player 2: Moved to (15,35)",
+        "Turn 112 took 218.70 milliseconds"
+      ],
+      "Exception": []
+    },
+    {
+      "Turn": 113,
+      "Info": [
+        "Player 1: Moved to (15,32)",
+        "Player 2: Moved to (15,25)",
+        "Turn 113 took 218.02 milliseconds"
+      ],
+      "Exception": []
+    },
+    {
+      "Turn": 114,
+      "Info": [
+        "Player 1: Moved to (15,22)",
+        "Player 2: Moved to (15,15)",
+        "Turn 114 took 229.31 milliseconds"
+      ],
+      "Exception": []
+    },
+    {
+      "Turn": 115,
+      "Info": [
+        "Player 1: Moved to (15,12)",
+        "Player 2: Moved to (15,5)",
+        "Turn 115 took 228.66 milliseconds"
+      ],
+      "Exception": []
+    },
+    {
+      "Turn": 116,
+      "Info": [
+        "Player 1: Moved to (15,2)",
+        "Player 2: Moved to (15,0)",
+        "Player 2: Selling inventory",
+        "Player 2: Bought 1 POTATO seeds for $5.00",
+        "Turn 116 took 230.81 milliseconds"
+      ],
+      "Exception": []
+    },
+    {
+      "Turn": 117,
+      "Info": [
+        "Player 1: Moved to (15,0)",
+        "Player 1: Selling inventory",
+        "Player 2: Moved to (17,4)",
+        "Player 1: Bought 1 GRAPE seeds for $15.00",
+        "Turn 117 took 218.96 milliseconds"
+      ],
+      "Exception": []
+    },
+    {
+      "Turn": 118,
+      "Info": [
+        "Player 1: Moved to (9,4)",
+        "Player 2: Moved to (18,6)",
+        "Turn 118 took 219.39 milliseconds"
+      ],
+      "Exception": []
+    },
+    {
+      "Turn": 119,
+      "Info": [
+        "Player 1: Moved to (9,0)",
+        "Player 2: Moved to (17,14)",
+        "Turn 119 took 226.27 milliseconds"
+      ],
+      "Exception": []
+    },
+    {
+      "Turn": 120,
+      "Info": [
+        "Player 1: Moved to (9,5)",
+        "Player 2: Moved to (14,7)",
+        "Turn 120 took 228.33 milliseconds"
+      ],
+      "Exception": []
+    },
+    {
+      "Turn": 121,
+      "Info": [
+        "Player 1: Moved to (6,4)",
+        "Player 2: Moved to (7,4)",
+        "Turn 121 took 225.38 milliseconds"
+      ],
+      "Exception": []
+    },
+    {
+      "Turn": 122,
+      "Info": [
+        "Player 1: Moved to (11,5)",
+        "Player 2: Moved to (3,8)",
+        "Turn 122 took 220.61 milliseconds"
+      ],
+      "Exception": []
+    },
+    {
+      "Turn": 123,
+      "Info": [
+        "Player 1: Moved to (3,5)",
+        "Player 2: Moved to (1,9)",
+        "Turn 123 took 223.16 milliseconds"
+      ],
+      "Exception": []
+    },
+    {
+      "Turn": 124,
+      "Info": [
+        "Player 1: Moved to (1,2)",
+        "Player 2: Moved to (1,1)",
+        "Turn 124 took 235.78 milliseconds"
+      ],
+      "Exception": []
+    },
+    {
+      "Turn": 125,
+      "Info": [
+        "Player 1: Moved to (9,2)",
+        "Player 2: Moved to (6,4)",
+        "Turn 125 took 232.31 milliseconds"
+      ],
+      "Exception": []
+    },
+    {
+      "Turn": 126,
+      "Info": [
+        "Player 1: Moved to (11,9)",
+        "Player 2: Moved to (1,9)",
+        "Turn 126 took 221.03 milliseconds"
+      ],
+      "Exception": []
+    },
+    {
+      "Turn": 127,
+      "Info": [
+        "Player 1: Moved to (8,3)",
+        "Player 2: Moved to (3,16)",
+        "Turn 127 took 218.21 milliseconds"
+      ],
+      "Exception": []
+    },
+    {
+      "Turn": 128,
+      "Info": [
+        "Player 1: Moved to (13,3)",
+        "Player 2: Moved to (5,23)",
+        "Turn 128 took 228.55 milliseconds"
+      ],
+      "Exception": []
+    },
+    {
+      "Turn": 129,
+      "Info": [
+        "Player 1: Moved to (14,11)",
+        "Player 2: Moved to (6,24)",
+        "Turn 129 took 227.11 milliseconds"
+      ],
+      "Exception": []
+    },
+    {
+      "Turn": 130,
+      "Info": [
+        "Player 1: Moved to (9,15)",
+        "Player 2: Moved to (2,25)",
+        "Turn 130 took 240.59 milliseconds"
+      ],
+      "Exception": []
+    },
+    {
+      "Turn": 131,
+      "Info": [
+        "Player 1: Moved to (3,13)",
+        "Player 2: Moved to (4,28)",
+        "Turn 131 took 227.50 milliseconds"
+      ],
+      "Exception": []
+    },
+    {
+      "Turn": 132,
+      "Info": [
+        "Player 1: Moved to (9,12)",
+        "Player 2: Moved to (0,22)",
+        "Turn 132 took 223.00 milliseconds"
+      ],
+      "Exception": []
+    },
+    {
+      "Turn": 133,
+      "Info": [
+        "Player 1: Moved to (7,6)",
+        "Player 2: Moved to (0,31)",
+        "Turn 133 took 224.83 milliseconds"
+      ],
+      "Exception": []
+    },
+    {
+      "Turn": 134,
+      "Info": [
+        "Player 1: Moved to (1,6)",
+        "Player 2: Moved to (1,26)",
+        "Turn 134 took 224.09 milliseconds"
+      ],
+      "Exception": []
+    },
+    {
+      "Turn": 135,
+      "Info": [
+        "Player 1: Moved to (2,10)",
+        "Player 2: Moved to (0,32)",
+        "Turn 135 took 226.66 milliseconds"
+      ],
+      "Exception": []
+    },
+    {
+      "Turn": 136,
+      "Info": [
+        "Player 1: Moved to (4,8)",
+        "Player 2: Moved to (4,31)",
+        "Turn 136 took 222.55 milliseconds"
+      ],
+      "Exception": []
+    },
+    {
+      "Turn": 137,
+      "Info": [
+        "Player 1: Moved to (10,11)",
+        "Player 2: Moved to (4,38)",
+        "Player 2: Planted POTATO at (4,38)",
+        "Turn 137 took 220.93 milliseconds"
+      ],
+      "Exception": []
+    },
+    {
+      "Turn": 138,
+      "Info": [
+        "Player 1: Moved to (14,14)",
+        "Player 2: Moved to (7,42)",
+        "Turn 138 took 221.89 milliseconds"
+      ],
+      "Exception": []
+    },
+    {
+      "Turn": 139,
+      "Info": [
+        "Player 1: Moved to (12,12)",
+        "Player 2: Moved to (10,48)",
+        "Turn 139 took 226.87 milliseconds"
+      ],
+      "Exception": []
+    },
+    {
+      "Turn": 140,
+      "Info": [
+        "Player 1: Moved to (10,13)",
+        "Player 2: Moved to (6,44)",
+        "Turn 140 took 218.88 milliseconds"
+      ],
+      "Exception": []
+    },
+    {
+      "Turn": 141,
+      "Info": [
+        "Player 1: Moved to (16,14)",
+        "Player 2: Moved to (10,48)",
+        "Turn 141 took 233.22 milliseconds"
+      ],
+      "Exception": []
+    },
+    {
+      "Turn": 142,
+      "Info": [
+        "Player 1: Moved to (8,13)",
+        "Player 2: Moved to (11,43)",
+        "Turn 142 took 235.79 milliseconds"
+      ],
+      "Exception": []
+    },
+    {
+      "Turn": 143,
+      "Info": [
+        "Player 1: Moved to (11,12)",
+        "Player 2: Moved to (15,49)",
+        "Turn 143 took 219.35 milliseconds"
+      ],
+      "Exception": []
+    },
+    {
+      "Turn": 144,
+      "Info": [
+        "Player 1: Moved to (15,11)",
+        "Player 2: Moved to (15,39)",
+        "Turn 144 took 223.32 milliseconds"
+      ],
+      "Exception": []
+    },
+    {
+      "Turn": 145,
+      "Info": [
+        "Player 1: Moved to (10,14)",
+        "Player 2: Moved to (15,29)",
+        "Turn 145 took 226.24 milliseconds"
+      ],
+      "Exception": []
+    },
+    {
+      "Turn": 146,
+      "Info": [
+        "Player 1: Moved to (14,9)",
+        "Player 2: Moved to (13,21)",
+        "Turn 146 took 232.40 milliseconds"
+      ],
+      "Exception": []
+    },
+    {
+      "Turn": 147,
+      "Info": [
+        "Player 1: Moved to (14,13)",
+        "Player 2: Moved to (8,26)",
+        "Turn 147 took 220.33 milliseconds"
+      ],
+      "Exception": []
+    },
+    {
+      "Turn": 148,
+      "Info": [
+        "Player 1: Moved to (16,8)",
+        "Player 2: Moved to (7,21)",
+        "Turn 148 took 234.21 milliseconds"
+      ],
+      "Exception": []
+    },
+    {
+      "Turn": 149,
+      "Info": [
+        "Player 1: Moved to (16,12)",
+        "Player 2: Moved to (15,23)",
+        "Turn 149 took 222.87 milliseconds"
+      ],
+      "Exception": []
+    },
+    {
+      "Turn": 150,
+      "Info": [
+        "Player 1: Moved to (22,15)",
+        "Player 2: Moved to (15,13)",
+        "Turn 150 took 218.03 milliseconds"
+      ],
+      "Exception": []
+    },
+    {
+      "Turn": 151,
+      "Info": [
+        "Player 1: Moved to (25,11)",
+        "Player 2: Moved to (18,12)",
+        "Turn 151 took 222.60 milliseconds"
+      ],
+      "Exception": []
+    },
+    {
+      "Turn": 152,
+      "Info": [
+        "Player 1: Moved to (18,12)",
+        "Player 2: Moved to (14,14)",
+        "Turn 152 took 219.77 milliseconds"
+      ],
+      "Exception": []
+    },
+    {
+      "Turn": 153,
+      "Info": [
+        "Player 1: Moved to (26,13)",
+        "Player 2: Moved to (15,23)",
+        "Turn 153 took 216.81 milliseconds"
+      ],
+      "Exception": []
+    },
+    {
+      "Turn": 154,
+      "Info": [
+        "Player 1: Moved to (25,12)",
+        "Player 2: Moved to (15,13)",
+        "Turn 154 took 217.52 milliseconds"
+      ],
+      "Exception": []
+    },
+    {
+      "Turn": 155,
+      "Info": [
+        "Player 1: Moved to (20,8)",
+        "Player 2: Moved to (15,3)",
+        "Turn 155 took 225.44 milliseconds"
+      ],
+      "Exception": []
+    },
+    {
+      "Turn": 156,
+      "Info": [
+        "Player 1: Moved to (15,13)",
+        "Player 2: Moved to (15,0)",
+        "Player 2: Selling inventory",
+        "Player 2: Bought 1 QUADROTRITICALE seeds for $30.00",
+        "Turn 156 took 218.06 milliseconds"
+      ],
+      "Exception": []
+    },
+    {
+      "Turn": 157,
+      "Info": [
+        "Player 1: Moved to (15,22)",
+        "Player 2: Moved to (15,9)",
+        "Turn 157 took 220.81 milliseconds"
+      ],
+      "Exception": []
+    },
+    {
+      "Turn": 158,
+      "Info": [
+        "Player 1: Moved to (10,19)",
+        "Player 2: Moved to (8,10)",
+        "Turn 158 took 217.86 milliseconds"
+      ],
+      "Exception": []
+    },
+    {
+      "Turn": 159,
+      "Info": [
+        "Player 1: Moved to (16,22)",
+        "Player 2: Moved to (9,8)",
+        "Turn 159 took 219.48 milliseconds"
+      ],
+      "Exception": []
+    },
+    {
+      "Turn": 160,
+      "Info": [
+        "Player 1: Moved to (21,26)",
+        "Player 2: Moved to (7,9)",
+        "Turn 160 took 218.30 milliseconds"
+      ],
+      "Exception": []
+    },
+    {
+      "Turn": 161,
+      "Info": [
+        "Player 1: Moved to (21,26)",
+        "Player 2: Moved to (3,10)",
+        "Turn 161 took 218.13 milliseconds"
+      ],
+      "Exception": []
+    },
+    {
+      "Turn": 162,
+      "Info": [
+        "Player 1: Moved to (23,26)",
+        "Player 2: Moved to (5,3)",
+        "Turn 162 took 218.76 milliseconds"
+      ],
+      "Exception": []
+    },
+    {
+      "Turn": 163,
+      "Info": [
+        "Player 1: Moved to (28,24)",
+        "Player 2: Moved to (7,9)",
+        "Turn 163 took 224.33 milliseconds"
+      ],
+      "Exception": []
+    },
+    {
+      "Turn": 164,
+      "Info": [
+        "Player 1: Moved to (26,29)",
+        "Player 2: Moved to (4,11)",
+        "Turn 164 took 221.01 milliseconds"
+      ],
+      "Exception": []
+    },
+    {
+      "Turn": 165,
+      "Info": [
+        "Player 1: Moved to (21,29)",
+        "Player 2: Moved to (4,11)",
+        "Turn 165 took 218.57 milliseconds"
+      ],
+      "Exception": []
+    },
+    {
+      "Turn": 166,
+      "Info": [
+        "Player 1: Moved to (24,25)",
+        "Player 2: Moved to (8,11)",
+        "Turn 166 took 217.50 milliseconds"
+      ],
+      "Exception": []
+    },
+    {
+      "Turn": 167,
+      "Info": [
+        "Player 1: Moved to (27,23)",
+        "Player 2: Moved to (9,7)",
+        "Turn 167 took 223.80 milliseconds"
+      ],
+      "Exception": []
+    },
+    {
+      "Turn": 168,
+      "Info": [
+        "Player 1: Moved to (20,26)",
+        "Player 2: Moved to (10,14)",
+        "Turn 168 took 218.51 milliseconds"
+      ],
+      "Exception": []
+    },
+    {
+      "Turn": 169,
+      "Info": [
+        "Player 1: Moved to (17,30)",
+        "Player 2: Moved to (14,10)",
+        "Turn 169 took 219.01 milliseconds"
+      ],
+      "Exception": []
+    },
+    {
+      "Turn": 170,
+      "Info": [
+        "Player 1: Moved to (18,32)",
+        "Player 2: Moved to (16,3)",
+        "Turn 170 took 218.70 milliseconds"
+      ],
+      "Exception": []
+    },
+    {
+      "Turn": 171,
+      "Info": [
+        "Player 1: Moved to (17,38)",
+        "Player 2: Moved to (15,11)",
+        "Turn 171 took 221.77 milliseconds"
+      ],
+      "Exception": []
+    },
+    {
+      "Turn": 172,
+      "Info": [
+        "Player 1: Moved to (19,36)",
+        "Player 2: Moved to (18,16)",
+        "Turn 172 took 232.62 milliseconds"
+      ],
+      "Exception": []
+    },
+    {
+      "Turn": 173,
+      "Info": [
+        "Player 1: Moved to (27,37)",
+        "Player 2: Moved to (18,12)",
+        "Turn 173 took 218.02 milliseconds"
+      ],
+      "Exception": []
+    },
+    {
+      "Turn": 174,
+      "Info": [
+        "Player 1: Moved to (27,39)",
+        "Player 2: Moved to (26,13)",
+        "Turn 174 took 230.09 milliseconds"
+      ],
+      "Exception": []
+    },
+    {
+      "Turn": 175,
+      "Info": [
+        "Player 1: Moved to (24,41)",
+        "Player 2: Moved to (24,18)",
+        "Turn 175 took 217.75 milliseconds"
+      ],
+      "Exception": []
+    },
+    {
+      "Turn": 176,
+      "Info": [
+        "Player 1: Moved to (23,41)",
+        "Player 2: Moved to (20,16)",
+        "Turn 176 took 216.95 milliseconds"
+      ],
+      "Exception": []
+    },
+    {
+      "Turn": 177,
+      "Info": [
+        "Player 1: Moved to (23,41)",
+        "Player 2: Moved to (21,10)",
+        "Turn 177 took 218.23 milliseconds"
+      ],
+      "Exception": []
+    },
+    {
+      "Turn": 178,
+      "Info": [
+        "Player 1: Moved to (21,42)",
+        "Player 2: Moved to (25,11)",
+        "Turn 178 took 216.97 milliseconds"
+      ],
+      "Exception": []
+    },
+    {
+      "Turn": 179,
+      "Info": [
+        "Player 1: Moved to (19,41)",
+        "Player 2: Moved to (27,16)",
+        "Turn 179 took 217.92 milliseconds"
+      ],
+      "Exception": []
+    },
+    {
+      "Turn": 180,
+      "Info": [
+        "Player 1 has won due to having more money (285.00 > 265.00)",
+        "Player 1 has unlocked the following achievements:",
+        "Not Worth the Dirt He Sows",
+        "A Worthy Heir",
+        "It Ain't Much, but It's Honest Work",
+        "Player 2 has unlocked the following achievements:",
+        "Seedy Business",
+        "Not Worth the Dirt He Sows",
+        "Dust Bowl",
+        "Finished game loop"
+      ],
+      "Exception": []
     }
   ]
 }
