@@ -30,7 +30,7 @@ def distance(pos1: Position, pos2: Position) -> int:
     return abs(pos1.x - pos2.x) + abs(pos1.y - pos2.y)
 
 
-def get_best_move(pos1: Position, pos2: Position, limit=10) -> Position:
+def get_best_move(pos1: Position, pos2: Position, limit=20) -> Position:
     """
     Returns the best possible move we can make with the movement limit of 10
     from: pos1

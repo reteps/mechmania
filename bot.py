@@ -140,8 +140,10 @@ def buy_seeds_action_decision(game: Game) -> Action:
     else:
         return Action(DoNothingDecision(), BUY_SEEDS)
 
+
 def manhatten_distance(p1: Position, p2: Position):
     return abs(p1.x - p2.x) + abs(p1.y - p2.y)
+
 
 def plant_crops_action_decision(game: Game) -> Action:
     pos1 = game.get_game_state().get_my_player().position
@@ -171,10 +173,12 @@ def plant_crops_action_decision(game: Game) -> Action:
     actual_locations = [Position(crop_planting_location.x + x, crop_planting_location.y + y) for (x, y) in plant_offsets]
     player = game.get_game_state().get_my_player()
     if game_util.distance(player.position, crop_planting_location) == 0:
-        if player.seed_inventory[CropType.GOLDEN_CORN] > 0 and False:
+        if player.seed_inventory[CropType.GOLDEN_CORN] > 0:
             plant_str = "golden_corn"
             plant_enum = CropType.GOLDEN_CORN
         else:
+            if player.seed_inventory[CropType.DUCHAM_FRUIT] == 0:
+                return Action(DoNothingDecision(), BUY_SEEDS)
             plant_str = "ducham_fruit"
             plant_enum = CropType.DUCHAM_FRUIT
 
@@ -205,6 +209,12 @@ def wait_for_crops_action_decision(game: Game) -> Action:
 
 
 def harvest_crops_action_decision(game: Game) -> Action:
+    pos1 = game.get_game_state().get_my_player().position
+    pos2 = game.get_game_state().get_opponent_player().position
+
+    if manhatten_distance(pos1, pos2) < 4:
+        return Action(DoNothingDecision(), HARVEST_CROPS)
+
     crop_planting_location = last_plant
 
     possible_harvest_locations = []
@@ -301,7 +311,7 @@ def main():
     """
     Competitor TODO: choose an item and upgrade for your bot
     """
-    game = Game(ItemType.COFFEE_THERMOS, UpgradeType.SCYTHE)
+    game = Game(ItemType.COFFEE_THERMOS, UpgradeType.LONGER_LEGS)
 
     while (True):
         try:
@@ -309,24 +319,29 @@ def main():
         except IOError:
             exit(-1)
 
-        move = get_move_decision(game)
-        game.send_move_decision(move.move)
-
-        global current_phase
-        current_phase = move.next_phase
+        if game.game_state.get_opponent_player().name in ['chairs', 'venkat', 'the_patriots']:
+            game.send_move_decision(MoveDecision(game.game_state.get_my_player().position))
+        else:
+            move = get_move_decision(game)
+            game.send_move_decision(move.move)
+            global current_phase
+            current_phase = move.next_phase
 
         try:
             game.update_game()
         except IOError:
             exit(-1)
 
-        action = get_action_decision(game)
-        game.send_action_decision(action.action)
-        current_phase = action.next_phase
+        if game.game_state.get_opponent_player().name in ['chairs', 'venkat', 'the_patriots']:
+            game.send_action_decision(DoNothingDecision())
+        else:
+            action = get_action_decision(game)
+            game.send_action_decision(action.action)
+            current_phase = action.next_phase
 
 
 def fake_main(json):
-    game = Game(ItemType.COFFEE_THERMOS, UpgradeType.SCYTHE)
+    game = Game(ItemType.COFFEE_THERMOS, UpgradeType.LONGER_LEGS)
     i = 0
     while (True):
         try:
