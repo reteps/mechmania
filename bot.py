@@ -27,6 +27,7 @@ constants = Constants()
 GREEN_GROCER_LOCATION = Position(constants.BOARD_WIDTH // 2, 0)
 SCARECROW_START_LOCATION = Position(constants.BOARD_WIDTH // 2, GREEN_GROCER_LOCATION.y + 20 + 20 - 2)
 SCARECROW_LEFT_PLANT = Position(SCARECROW_START_LOCATION.x - 1, SCARECROW_START_LOCATION.y)
+SCARECROW_DECOY_PLANT = Position(SCARECROW_START_LOCATION.x, SCARECROW_START_LOCATION.y - 2)
 SCARECROW_RIGHT_PLANT = Position(SCARECROW_START_LOCATION.x + 1, SCARECROW_START_LOCATION.y)
 SCARECROW_RUN_LOCATION = Position(SCARECROW_START_LOCATION.x, SCARECROW_START_LOCATION.y - 18)
 last_plant: Position = None
@@ -142,6 +143,10 @@ def scarecrow_move_decision(game: Game) -> Move:
         return Move(move_towards(player.position, SCARECROW_START_LOCATION), SCARECROW_START)
     elif scarecrow_phase == "RUN":
         return Move(move_towards(player.position, SCARECROW_RUN_LOCATION), SCARECROW_START)
+    
+    elif scarecrow_phase == "DECOY_PLANT":
+        return Move(move_towards(player.position, SCARECROW_DECOY_PLANT), SCARECROW_START)
+    
     elif scarecrow_phase == "LEFT_PLANT":
         return Move(move_towards(player.position, SCARECROW_LEFT_PLANT), SCARECROW_START)
     elif scarecrow_phase == "RIGHT_PLANT":
@@ -246,21 +251,32 @@ def wait_for_crops_action_decision(game: Game) -> Action:
 def scarecrow_start_action_decision(game: Game) -> Action:
     global scarecrow_phase
     logger.info(f"SCARECROW ACTION PHASE on turn {game.game_state.turn}: {scarecrow_phase}")
-    my_pos = game.get_game_state().get_my_player().position
+    player = game.get_game_state().get_my_player()
+    my_pos = player.position
     if scarecrow_phase == "BUY_POTATO" and game_util.distance(my_pos, GREEN_GROCER_LOCATION) == 0:
         if game.game_state.turn > 130:
             # FEAT: switch to follow bot?
             return Action(DoNothingDecision(), SCARECROW_START)
         else:
             scarecrow_phase = "PLACE_SCARECROW"
-            return Action(BuyDecision(["potato"],[8]), SCARECROW_START)
+            if game.game_state.turn < 10:
+                # We need 1 more for the decoy strat
+                return Action(BuyDecision(["potato"],[9]), SCARECROW_START)
+
+            return Action(BuyDecision(["potato"],[max(0, 8 - sum(player.seed_inventory.values()))]), SCARECROW_START)
     elif scarecrow_phase == "PLACE_SCARECROW" and game_util.distance(my_pos, SCARECROW_START_LOCATION) == 0:
         scarecrow_phase = "RUN"
         return Action(UseItemDecision(), SCARECROW_START)
     elif scarecrow_phase == "RUN" and game_util.distance(my_pos, SCARECROW_RUN_LOCATION) == 0:
+        if game.game_state.turn > 10:
+            scarecrow_phase = "LEFT_PLANT"
+        else:
+            scarecrow_phase = "DECOY_PLANT"
+        return Action(DoNothingDecision(), SCARECROW_START)
+    elif scarecrow_phase == "DECOY_PLANT" and game_util.distance(my_pos, SCARECROW_DECOY_PLANT) == 0:
 
         scarecrow_phase = "LEFT_PLANT"
-        return Action(DoNothingDecision(), SCARECROW_START)
+        return Action(PlantDecision(["potato"], [SCARECROW_DECOY_PLANT]), SCARECROW_START)
     elif scarecrow_phase == "LEFT_PLANT" and game_util.distance(my_pos, SCARECROW_LEFT_PLANT) == 0:
         plant_offsets = [
             [-1, 0],
