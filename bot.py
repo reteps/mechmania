@@ -147,7 +147,7 @@ def scarecrow_move_decision(game: Game) -> Move:
     elif scarecrow_phase == "RIGHT_PLANT":
         return Move(move_towards(player.position, SCARECROW_RIGHT_PLANT), SCARECROW_START)
     elif scarecrow_phase == "RUN_2":
-        return Move(move_towards(player.position, SCARECROW_RUN_LOCATION, limit=5), SCARECROW_START)
+        return Move(move_towards(player.position, SCARECROW_RUN_LOCATION, limit=6), SCARECROW_START)
     elif scarecrow_phase == "LEFT_HARVEST":
         return Move(move_towards(player.position, SCARECROW_LEFT_PLANT), SCARECROW_START)
     elif scarecrow_phase == "RIGHT_HARVEST":
@@ -248,8 +248,12 @@ def scarecrow_start_action_decision(game: Game) -> Action:
     logger.info(f"SCARECROW ACTION PHASE on turn {game.game_state.turn}: {scarecrow_phase}")
     my_pos = game.get_game_state().get_my_player().position
     if scarecrow_phase == "BUY_POTATO" and game_util.distance(my_pos, GREEN_GROCER_LOCATION) == 0:
-        scarecrow_phase = "PLACE_SCARECROW"
-        return Action(BuyDecision(["potato"],[8]), SCARECROW_START)
+        if game.game_state.turn > 130:
+            # FEAT: switch to follow bot?
+            return Action(DoNothingDecision(), SCARECROW_START)
+        else:
+            scarecrow_phase = "PLACE_SCARECROW"
+            return Action(BuyDecision(["potato"],[8]), SCARECROW_START)
     elif scarecrow_phase == "PLACE_SCARECROW" and game_util.distance(my_pos, SCARECROW_START_LOCATION) == 0:
         scarecrow_phase = "RUN"
         return Action(UseItemDecision(), SCARECROW_START)
@@ -415,8 +419,11 @@ def main():
         except IOError:
             exit(-1)
 
-        if game.game_state.get_opponent_player().name in ['chairs', 'venkat', 'the_patriots']:
-            game.send_move_decision(MoveDecision(game.game_state.get_my_player().position))
+        if game.game_state.get_opponent_player().name in ['chairs', 'venkat', 'the_patriots', 'team-starter-bot']:
+            # game.send_move_decision(MoveDecision(game.game_state.get_my_player().position))
+            move = get_move_decision(game)
+            game.send_move_decision(move.move) # scarecrow move never effects phase
+
         else:
             move = get_move_decision(game)
             game.send_move_decision(move.move)
@@ -428,8 +435,14 @@ def main():
         except IOError:
             exit(-1)
 
-        if game.game_state.get_opponent_player().name in ['chairs', 'venkat', 'the_patriots']:
-            game.send_action_decision(DoNothingDecision())
+        if game.game_state.get_opponent_player().name in ['chairs', 'venkat', 'the_patriots', 'team-starter-bot']:
+            action = get_action_decision(game)
+            game.send_action_decision(action.action)
+            current_phase = action.next_phase
+            if current_phase == BUY_SEEDS:
+                global scarecrow_phase
+                current_phase = SCARECROW_START
+                scarecrow_phase = "BUY_POTATO"
         else:
             action = get_action_decision(game)
             game.send_action_decision(action.action)
