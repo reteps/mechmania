@@ -163,10 +163,10 @@ def scarecrow_move_decision(game: Game) -> Move:
         return Move(move_towards(player.position, SCARECROW_RIGHT_PLANT), SCARECROW_START)
     else:
         logger.debug(f"Unknown phase {scarecrow_phase} in scarecrow")
-
+        raise ValueError("Unknown phase {scarecrow_phase} in scarecrow")
 turn_arrived = None
 enemy_is_stalker_bot = False
-def determine_stalker_move_decision(game: Game) -> Action:
+def determine_stalker_move_decision(game: Game) -> Move:
     global turn_arrived
     global enemy_is_stalker_bot
     # if game.game_state.get_opponent_player().name in ['chairs', 'venkat', 'the_patriots', 'team-starter-bot']:
@@ -181,14 +181,14 @@ def determine_stalker_move_decision(game: Game) -> Action:
         opp_pos = game.get_game_state().get_opponent_player().position
         if game_util.distance(player.position, opp_pos) <= 2:
             enemy_is_stalker_bot = True
-            return Move(move_toward(player.position, GREEN_GROCER_LOCATION), SCARECROW_START)
+            return Move(move_towards(player.position, GREEN_GROCER_LOCATION), SCARECROW_START)
         else:
             enemy_is_stalker_bot = False
-            return Move(move_toward(player.position, GREEN_GROCER_LOCATION), BUY_SEEDS)
+            return Move(move_towards(player.position, GREEN_GROCER_LOCATION), BUY_SEEDS)
     else:
         return Move(move_towards(player.position, stalker_location), SCARECROW_START)
     
-    return Action(DoNothingDecision(), DETERMINE_STALKER)
+    return Move(MoveDecision(player.position), DETERMINE_STALKER)
 phase_to_move_decision = {
     DETERMINE_STALKER: determine_stalker_move_decision,
     SCARECROW_START: scarecrow_move_decision,
@@ -288,7 +288,10 @@ def scarecrow_start_action_decision(game: Game) -> Action:
     my_pos = player.position
     if scarecrow_phase == "BUY_POTATO" and game_util.distance(my_pos, GREEN_GROCER_LOCATION) > 0:
         # Determine amount of harvested seeds
-        potatos_harvested = sum(player.harvested_inventory.values())
+        potatos_harvested = len(player.harvested_inventory)
+        logger.debug(f"Potatos harvested: {potatos_harvested}")
+        logger.debug(f"inventory: {player.harvested_inventory}")
+
     if scarecrow_phase == "BUY_POTATO" and game_util.distance(my_pos, GREEN_GROCER_LOCATION) == 0:
         if game.game_state.turn > 130:
             # FEAT: switch to follow bot?
