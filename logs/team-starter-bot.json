@@ -14,8 +14,8 @@
       "Debug": [
         "[Turn 1] Feedback received from engine: []",
         "Moving towards green grocer",
-        "[Turn 1] Sending MoveDecision: MoveDecision((39,0))",
-        "[Turn 1] Feedback received from engine: ['Failed to move to position (39,0), invalid destination']",
+        "[Turn 1] Sending MoveDecision: MoveDecision((19,0))",
+        "[Turn 1] Feedback received from engine: ['Moved to (19,0)']",
         "Possible harvest locations=[]",
         "Couldn't find anything to do, waiting for move step",
         "[Turn 1] Sending ActionDecision: DoNothingDecision()"
@@ -25,13 +25,13 @@
     {
       "Turn": 2,
       "Info": [
-        "Currently at (29,0)"
+        "Currently at (19,0)"
       ],
       "Debug": [
         "[Turn 2] Feedback received from engine: []",
         "Moving randomly",
-        "[Turn 2] Sending MoveDecision: MoveDecision((29,9))",
-        "[Turn 2] Feedback received from engine: ['Moved to (29,9)']",
+        "[Turn 2] Sending MoveDecision: MoveDecision((16,4))",
+        "[Turn 2] Feedback received from engine: ['Moved to (16,4)']",
         "Possible harvest locations=[]",
         "Couldn't find anything to do, waiting for move step",
         "[Turn 2] Sending ActionDecision: DoNothingDecision()"
@@ -41,45 +41,45 @@
     {
       "Turn": 3,
       "Info": [
-        "Currently at (29,9)"
+        "Currently at (16,4)"
       ],
       "Debug": [
         "[Turn 3] Feedback received from engine: []",
-        "Moving towards green grocer",
-        "[Turn 3] Sending MoveDecision: MoveDecision((39,9))",
-        "[Turn 3] Feedback received from engine: ['Failed to move to position (39,9), invalid destination']",
+        "Moving randomly",
+        "[Turn 3] Sending MoveDecision: MoveDecision((13,0))",
+        "[Turn 3] Feedback received from engine: ['Moved to (13,0)', 'Selling inventory']",
         "Possible harvest locations=[]",
-        "Couldn't find anything to do, waiting for move step",
-        "[Turn 3] Sending ActionDecision: DoNothingDecision()"
+        "Buy 1 of NONE",
+        "[Turn 3] Sending ActionDecision: BuyDecision(NONE:1)"
       ],
       "Exception": []
     },
     {
       "Turn": 4,
       "Info": [
-        "Currently at (29,9)"
+        "Currently at (13,0)"
       ],
       "Debug": [
-        "[Turn 4] Feedback received from engine: []",
+        "[Turn 4] Feedback received from engine: ['Bought 1 NONE seeds for $0.00']",
         "Moving randomly",
-        "[Turn 4] Sending MoveDecision: MoveDecision((28,4))",
-        "[Turn 4] Feedback received from engine: ['Moved to (28,4)']",
+        "[Turn 4] Sending MoveDecision: MoveDecision((16,0))",
+        "[Turn 4] Feedback received from engine: ['Moved to (16,0)', 'Selling inventory']",
         "Possible harvest locations=[]",
-        "Couldn't find anything to do, waiting for move step",
-        "[Turn 4] Sending ActionDecision: DoNothingDecision()"
+        "Buy 1 of NONE",
+        "[Turn 4] Sending ActionDecision: BuyDecision(NONE:1)"
       ],
       "Exception": []
     },
     {
       "Turn": 5,
       "Info": [
-        "Currently at (28,4)"
+        "Currently at (16,0)"
       ],
       "Debug": [
-        "[Turn 5] Feedback received from engine: []",
-        "Moving towards green grocer",
-        "[Turn 5] Sending MoveDecision: MoveDecision((38,4))",
-        "[Turn 5] Feedback received from engine: ['Failed to move to position (38,4), invalid destination']",
+        "[Turn 5] Feedback received from engine: ['Bought 1 NONE seeds for $0.00']",
+        "Moving randomly",
+        "[Turn 5] Sending MoveDecision: MoveDecision((19,2))",
+        "[Turn 5] Feedback received from engine: ['Moved to (19,2)']",
         "Possible harvest locations=[]",
         "Couldn't find anything to do, waiting for move step",
         "[Turn 5] Sending ActionDecision: DoNothingDecision()"
@@ -89,13 +89,13 @@
     {
       "Turn": 6,
       "Info": [
-        "Currently at (28,4)"
+        "Currently at (19,2)"
       ],
       "Debug": [
         "[Turn 6] Feedback received from engine: []",
-        "Moving towards green grocer",
-        "[Turn 6] Sending MoveDecision: MoveDecision((38,4))",
-        "[Turn 6] Feedback received from engine: ['Failed to move to position (38,4), invalid destination']",
+        "Moving randomly",
+        "[Turn 6] Sending MoveDecision: MoveDecision((19,11))",
+        "[Turn 6] Feedback received from engine: ['Moved to (19,11)']",
         "Possible harvest locations=[]",
         "Couldn't find anything to do, waiting for move step",
         "[Turn 6] Sending ActionDecision: DoNothingDecision()"
@@ -105,13 +105,13 @@
     {
       "Turn": 7,
       "Info": [
-        "Currently at (28,4)"
+        "Currently at (19,11)"
       ],
       "Debug": [
         "[Turn 7] Feedback received from engine: []",
-        "Moving towards green grocer",
-        "[Turn 7] Sending MoveDecision: MoveDecision((38,4))",
-        "[Turn 7] Feedback received from engine: ['Failed to move to position (38,4), invalid destination']",
+        "Moving randomly",
+        "[Turn 7] Sending MoveDecision: MoveDecision((20,4))",
+        "[Turn 7] Feedback received from engine: ['Moved to (20,4)']",
         "Possible harvest locations=[]",
         "Couldn't find anything to do, waiting for move step",
         "[Turn 7] Sending ActionDecision: DoNothingDecision()"
@@ -121,13 +121,13 @@
     {
       "Turn": 8,
       "Info": [
-        "Currently at (28,4)"
+        "Currently at (20,4)"
       ],
       "Debug": [
         "[Turn 8] Feedback received from engine: []",
-        "Moving towards green grocer",
-        "[Turn 8] Sending MoveDecision: MoveDecision((38,4))",
-        "[Turn 8] Feedback received from engine: ['Failed to move to position (38,4), invalid destination']",
+        "Moving randomly",
+        "[Turn 8] Sending MoveDecision: MoveDecision((16,3))",
+        "[Turn 8] Feedback received from engine: ['Moved to (16,3)']",
         "Possible harvest locations=[]",
         "Couldn't find anything to do, waiting for move step",
         "[Turn 8] Sending ActionDecision: DoNothingDecision()"
@@ -137,13 +137,13 @@
     {
       "Turn": 9,
       "Info": [
-        "Currently at (28,4)"
+        "Currently at (16,3)"
       ],
       "Debug": [
         "[Turn 9] Feedback received from engine: []",
         "Moving randomly",
-        "[Turn 9] Sending MoveDecision: MoveDecision((28,8))",
-        "[Turn 9] Feedback received from engine: ['Moved to (28,8)']",
+        "[Turn 9] Sending MoveDecision: MoveDecision((23,1))",
+        "[Turn 9] Feedback received from engine: ['Moved to (23,1)']",
         "Possible harvest locations=[]",
         "Couldn't find anything to do, waiting for move step",
         "[Turn 9] Sending ActionDecision: DoNothingDecision()"
@@ -153,13 +153,13 @@
     {
       "Turn": 10,
       "Info": [
-        "Currently at (28,8)"
+        "Currently at (23,1)"
       ],
       "Debug": [
         "[Turn 10] Feedback received from engine: []",
         "Moving randomly",
-        "[Turn 10] Sending MoveDecision: MoveDecision((29,15))",
-        "[Turn 10] Feedback received from engine: ['Moved to (29,15)']",
+        "[Turn 10] Sending MoveDecision: MoveDecision((16,2))",
+        "[Turn 10] Feedback received from engine: ['Moved to (16,2)']",
         "Possible harvest locations=[]",
         "Couldn't find anything to do, waiting for move step",
         "[Turn 10] Sending ActionDecision: DoNothingDecision()"
@@ -169,13 +169,13 @@
     {
       "Turn": 11,
       "Info": [
-        "Currently at (29,15)"
+        "Currently at (16,2)"
       ],
       "Debug": [
         "[Turn 11] Feedback received from engine: []",
-        "Moving towards green grocer",
-        "[Turn 11] Sending MoveDecision: MoveDecision((39,15))",
-        "[Turn 11] Feedback received from engine: ['Failed to move to position (39,15), invalid destination']",
+        "Moving randomly",
+        "[Turn 11] Sending MoveDecision: MoveDecision((17,5))",
+        "[Turn 11] Feedback received from engine: ['Moved to (17,5)']",
         "Possible harvest locations=[]",
         "Couldn't find anything to do, waiting for move step",
         "[Turn 11] Sending ActionDecision: DoNothingDecision()"
@@ -185,13 +185,13 @@
     {
       "Turn": 12,
       "Info": [
-        "Currently at (29,15)"
+        "Currently at (17,5)"
       ],
       "Debug": [
         "[Turn 12] Feedback received from engine: []",
         "Moving randomly",
-        "[Turn 12] Sending MoveDecision: MoveDecision((24,10))",
-        "[Turn 12] Feedback received from engine: ['Moved to (24,10)']",
+        "[Turn 12] Sending MoveDecision: MoveDecision((18,9))",
+        "[Turn 12] Feedback received from engine: ['Moved to (18,9)']",
         "Possible harvest locations=[]",
         "Couldn't find anything to do, waiting for move step",
         "[Turn 12] Sending ActionDecision: DoNothingDecision()"
@@ -201,13 +201,13 @@
     {
       "Turn": 13,
       "Info": [
-        "Currently at (24,10)"
+        "Currently at (18,9)"
       ],
       "Debug": [
         "[Turn 13] Feedback received from engine: []",
-        "Moving towards green grocer",
-        "[Turn 13] Sending MoveDecision: MoveDecision((33,11))",
-        "[Turn 13] Feedback received from engine: ['Failed to move to position (33,11), invalid destination']",
+        "Moving randomly",
+        "[Turn 13] Sending MoveDecision: MoveDecision((24,11))",
+        "[Turn 13] Feedback received from engine: ['Moved to (24,11)']",
         "Possible harvest locations=[]",
         "Couldn't find anything to do, waiting for move step",
         "[Turn 13] Sending ActionDecision: DoNothingDecision()"
@@ -217,13 +217,13 @@
     {
       "Turn": 14,
       "Info": [
-        "Currently at (24,10)"
+        "Currently at (24,11)"
       ],
       "Debug": [
         "[Turn 14] Feedback received from engine: []",
-        "Moving towards green grocer",
-        "[Turn 14] Sending MoveDecision: MoveDecision((33,11))",
-        "[Turn 14] Feedback received from engine: ['Failed to move to position (33,11), invalid destination']",
+        "Moving randomly",
+        "[Turn 14] Sending MoveDecision: MoveDecision((20,7))",
+        "[Turn 14] Feedback received from engine: ['Moved to (20,7)']",
         "Possible harvest locations=[]",
         "Couldn't find anything to do, waiting for move step",
         "[Turn 14] Sending ActionDecision: DoNothingDecision()"
@@ -233,13 +233,13 @@
     {
       "Turn": 15,
       "Info": [
-        "Currently at (24,10)"
+        "Currently at (20,7)"
       ],
       "Debug": [
         "[Turn 15] Feedback received from engine: []",
         "Moving randomly",
-        "[Turn 15] Sending MoveDecision: MoveDecision((22,15))",
-        "[Turn 15] Feedback received from engine: ['Moved to (22,15)']",
+        "[Turn 15] Sending MoveDecision: MoveDecision((23,13))",
+        "[Turn 15] Feedback received from engine: ['Moved to (23,13)']",
         "Possible harvest locations=[]",
         "Couldn't find anything to do, waiting for move step",
         "[Turn 15] Sending ActionDecision: DoNothingDecision()"
@@ -249,13 +249,13 @@
     {
       "Turn": 16,
       "Info": [
-        "Currently at (22,15)"
+        "Currently at (23,13)"
       ],
       "Debug": [
         "[Turn 16] Feedback received from engine: []",
-        "Moving towards green grocer",
-        "[Turn 16] Sending MoveDecision: MoveDecision((29,18))",
-        "[Turn 16] Feedback received from engine: ['Moved to (29,18)']",
+        "Moving randomly",
+        "[Turn 16] Sending MoveDecision: MoveDecision((21,13))",
+        "[Turn 16] Feedback received from engine: ['Moved to (21,13)']",
         "Possible harvest locations=[]",
         "Couldn't find anything to do, waiting for move step",
         "[Turn 16] Sending ActionDecision: DoNothingDecision()"
@@ -265,13 +265,13 @@
     {
       "Turn": 17,
       "Info": [
-        "Currently at (29,18)"
+        "Currently at (21,13)"
       ],
       "Debug": [
         "[Turn 17] Feedback received from engine: []",
         "Moving randomly",
-        "[Turn 17] Sending MoveDecision: MoveDecision((27,23))",
-        "[Turn 17] Feedback received from engine: ['Moved to (27,23)']",
+        "[Turn 17] Sending MoveDecision: MoveDecision((17,18))",
+        "[Turn 17] Feedback received from engine: ['Moved to (17,18)']",
         "Possible harvest locations=[]",
         "Couldn't find anything to do, waiting for move step",
         "[Turn 17] Sending ActionDecision: DoNothingDecision()"
@@ -281,13 +281,13 @@
     {
       "Turn": 18,
       "Info": [
-        "Currently at (27,23)"
+        "Currently at (17,18)"
       ],
       "Debug": [
         "[Turn 18] Feedback received from engine: []",
         "Moving randomly",
-        "[Turn 18] Sending MoveDecision: MoveDecision((28,22))",
-        "[Turn 18] Feedback received from engine: ['Moved to (28,22)']",
+        "[Turn 18] Sending MoveDecision: MoveDecision((9,20))",
+        "[Turn 18] Feedback received from engine: ['Moved to (9,20)']",
         "Possible harvest locations=[]",
         "Couldn't find anything to do, waiting for move step",
         "[Turn 18] Sending ActionDecision: DoNothingDecision()"
@@ -297,13 +297,13 @@
     {
       "Turn": 19,
       "Info": [
-        "Currently at (28,22)"
+        "Currently at (9,20)"
       ],
       "Debug": [
         "[Turn 19] Feedback received from engine: []",
-        "Moving towards green grocer",
-        "[Turn 19] Sending MoveDecision: MoveDecision((38,22))",
-        "[Turn 19] Feedback received from engine: ['Failed to move to position (38,22), invalid destination']",
+        "Moving randomly",
+        "[Turn 19] Sending MoveDecision: MoveDecision((7,20))",
+        "[Turn 19] Feedback received from engine: ['Moved to (7,20)']",
         "Possible harvest locations=[]",
         "Couldn't find anything to do, waiting for move step",
         "[Turn 19] Sending ActionDecision: DoNothingDecision()"
@@ -313,13 +313,13 @@
     {
       "Turn": 20,
       "Info": [
-        "Currently at (28,22)"
+        "Currently at (7,20)"
       ],
       "Debug": [
         "[Turn 20] Feedback received from engine: []",
-        "Moving towards green grocer",
-        "[Turn 20] Sending MoveDecision: MoveDecision((38,22))",
-        "[Turn 20] Feedback received from engine: ['Failed to move to position (38,22), invalid destination']",
+        "Moving randomly",
+        "[Turn 20] Sending MoveDecision: MoveDecision((6,21))",
+        "[Turn 20] Feedback received from engine: ['Moved to (6,21)']",
         "Possible harvest locations=[]",
         "Couldn't find anything to do, waiting for move step",
         "[Turn 20] Sending ActionDecision: DoNothingDecision()"
@@ -329,13 +329,13 @@
     {
       "Turn": 21,
       "Info": [
-        "Currently at (28,22)"
+        "Currently at (6,21)"
       ],
       "Debug": [
         "[Turn 21] Feedback received from engine: []",
         "Moving randomly",
-        "[Turn 21] Sending MoveDecision: MoveDecision((28,19))",
-        "[Turn 21] Feedback received from engine: ['Moved to (28,19)']",
+        "[Turn 21] Sending MoveDecision: MoveDecision((7,15))",
+        "[Turn 21] Feedback received from engine: ['Moved to (7,15)']",
         "Possible harvest locations=[]",
         "Couldn't find anything to do, waiting for move step",
         "[Turn 21] Sending ActionDecision: DoNothingDecision()"
@@ -345,13 +345,13 @@
     {
       "Turn": 22,
       "Info": [
-        "Currently at (28,19)"
+        "Currently at (7,15)"
       ],
       "Debug": [
         "[Turn 22] Feedback received from engine: []",
         "Moving randomly",
-        "[Turn 22] Sending MoveDecision: MoveDecision((22,17))",
-        "[Turn 22] Feedback received from engine: ['Moved to (22,17)']",
+        "[Turn 22] Sending MoveDecision: MoveDecision((8,12))",
+        "[Turn 22] Feedback received from engine: ['Moved to (8,12)']",
         "Possible harvest locations=[]",
         "Couldn't find anything to do, waiting for move step",
         "[Turn 22] Sending ActionDecision: DoNothingDecision()"
@@ -361,13 +361,13 @@
     {
       "Turn": 23,
       "Info": [
-        "Currently at (22,17)"
+        "Currently at (8,12)"
       ],
       "Debug": [
         "[Turn 23] Feedback received from engine: []",
         "Moving randomly",
-        "[Turn 23] Sending MoveDecision: MoveDecision((23,15))",
-        "[Turn 23] Feedback received from engine: ['Moved to (23,15)']",
+        "[Turn 23] Sending MoveDecision: MoveDecision((4,7))",
+        "[Turn 23] Feedback received from engine: ['Moved to (4,7)']",
         "Possible harvest locations=[]",
         "Couldn't find anything to do, waiting for move step",
         "[Turn 23] Sending ActionDecision: DoNothingDecision()"
@@ -377,29 +377,29 @@
     {
       "Turn": 24,
       "Info": [
-        "Currently at (23,15)"
+        "Currently at (4,7)"
       ],
       "Debug": [
         "[Turn 24] Feedback received from engine: []",
         "Moving randomly",
-        "[Turn 24] Sending MoveDecision: MoveDecision((26,18))",
-        "[Turn 24] Feedback received from engine: ['Moved to (26,18)']",
+        "[Turn 24] Sending MoveDecision: MoveDecision((6,6))",
+        "[Turn 24] Feedback received from engine: ['Moved to (6,6)']",
         "Possible harvest locations=[]",
-        "Couldn't find anything to do, waiting for move step",
-        "[Turn 24] Sending ActionDecision: DoNothingDecision()"
+        "Deciding to try to plant at position (6,6)",
+        "[Turn 24] Sending ActionDecision: PlantDecision(NONE:(6,6))"
       ],
       "Exception": []
     },
     {
       "Turn": 25,
       "Info": [
-        "Currently at (26,18)"
+        "Currently at (6,6)"
       ],
       "Debug": [
-        "[Turn 25] Feedback received from engine: []",
+        "[Turn 25] Feedback received from engine: ['Planted NONE at (6,6)']",
         "Moving randomly",
-        "[Turn 25] Sending MoveDecision: MoveDecision((28,20))",
-        "[Turn 25] Feedback received from engine: ['Moved to (28,20)']",
+        "[Turn 25] Sending MoveDecision: MoveDecision((6,14))",
+        "[Turn 25] Feedback received from engine: ['Moved to (6,14)']",
         "Possible harvest locations=[]",
         "Couldn't find anything to do, waiting for move step",
         "[Turn 25] Sending ActionDecision: DoNothingDecision()"
@@ -409,13 +409,13 @@
     {
       "Turn": 26,
       "Info": [
-        "Currently at (28,20)"
+        "Currently at (6,14)"
       ],
       "Debug": [
         "[Turn 26] Feedback received from engine: []",
         "Moving randomly",
-        "[Turn 26] Sending MoveDecision: MoveDecision((27,16))",
-        "[Turn 26] Feedback received from engine: ['Moved to (27,16)']",
+        "[Turn 26] Sending MoveDecision: MoveDecision((7,18))",
+        "[Turn 26] Feedback received from engine: ['Moved to (7,18)']",
         "Possible harvest locations=[]",
         "Couldn't find anything to do, waiting for move step",
         "[Turn 26] Sending ActionDecision: DoNothingDecision()"
@@ -425,13 +425,13 @@
     {
       "Turn": 27,
       "Info": [
-        "Currently at (27,16)"
+        "Currently at (7,18)"
       ],
       "Debug": [
         "[Turn 27] Feedback received from engine: []",
         "Moving randomly",
-        "[Turn 27] Sending MoveDecision: MoveDecision((24,22))",
-        "[Turn 27] Feedback received from engine: ['Moved to (24,22)']",
+        "[Turn 27] Sending MoveDecision: MoveDecision((3,15))",
+        "[Turn 27] Feedback received from engine: ['Moved to (3,15)']",
         "Possible harvest locations=[]",
         "Couldn't find anything to do, waiting for move step",
         "[Turn 27] Sending ActionDecision: DoNothingDecision()"
@@ -441,13 +441,13 @@
     {
       "Turn": 28,
       "Info": [
-        "Currently at (24,22)"
+        "Currently at (3,15)"
       ],
       "Debug": [
         "[Turn 28] Feedback received from engine: []",
         "Moving randomly",
-        "[Turn 28] Sending MoveDecision: MoveDecision((21,17))",
-        "[Turn 28] Feedback received from engine: ['Moved to (21,17)']",
+        "[Turn 28] Sending MoveDecision: MoveDecision((3,20))",
+        "[Turn 28] Feedback received from engine: ['Moved to (3,20)']",
         "Possible harvest locations=[]",
         "Couldn't find anything to do, waiting for move step",
         "[Turn 28] Sending ActionDecision: DoNothingDecision()"
@@ -457,13 +457,13 @@
     {
       "Turn": 29,
       "Info": [
-        "Currently at (21,17)"
+        "Currently at (3,20)"
       ],
       "Debug": [
         "[Turn 29] Feedback received from engine: []",
         "Moving randomly",
-        "[Turn 29] Sending MoveDecision: MoveDecision((22,16))",
-        "[Turn 29] Feedback received from engine: ['Moved to (22,16)']",
+        "[Turn 29] Sending MoveDecision: MoveDecision((0,23))",
+        "[Turn 29] Feedback received from engine: ['Moved to (0,23)']",
         "Possible harvest locations=[]",
         "Couldn't find anything to do, waiting for move step",
         "[Turn 29] Sending ActionDecision: DoNothingDecision()"
@@ -473,13 +473,13 @@
     {
       "Turn": 30,
       "Info": [
-        "Currently at (22,16)"
+        "Currently at (0,23)"
       ],
       "Debug": [
         "[Turn 30] Feedback received from engine: []",
-        "Moving towards green grocer",
-        "[Turn 30] Sending MoveDecision: MoveDecision((29,19))",
-        "[Turn 30] Feedback received from engine: ['Moved to (29,19)']",
+        "Moving randomly",
+        "[Turn 30] Sending MoveDecision: MoveDecision((1,31))",
+        "[Turn 30] Feedback received from engine: ['Moved to (1,31)']",
         "Possible harvest locations=[]",
         "Couldn't find anything to do, waiting for move step",
         "[Turn 30] Sending ActionDecision: DoNothingDecision()"
@@ -489,13 +489,13 @@
     {
       "Turn": 31,
       "Info": [
-        "Currently at (29,19)"
+        "Currently at (1,31)"
       ],
       "Debug": [
         "[Turn 31] Feedback received from engine: []",
-        "Moving towards green grocer",
-        "[Turn 31] Sending MoveDecision: MoveDecision((39,19))",
-        "[Turn 31] Feedback received from engine: ['Failed to move to position (39,19), invalid destination']",
+        "Moving randomly",
+        "[Turn 31] Sending MoveDecision: MoveDecision((3,24))",
+        "[Turn 31] Feedback received from engine: ['Moved to (3,24)']",
         "Possible harvest locations=[]",
         "Couldn't find anything to do, waiting for move step",
         "[Turn 31] Sending ActionDecision: DoNothingDecision()"
@@ -505,13 +505,13 @@
     {
       "Turn": 32,
       "Info": [
-        "Currently at (29,19)"
+        "Currently at (3,24)"
       ],
       "Debug": [
         "[Turn 32] Feedback received from engine: []",
         "Moving randomly",
-        "[Turn 32] Sending MoveDecision: MoveDecision((27,19))",
-        "[Turn 32] Feedback received from engine: ['Moved to (27,19)']",
+        "[Turn 32] Sending MoveDecision: MoveDecision((2,28))",
+        "[Turn 32] Feedback received from engine: ['Moved to (2,28)']",
         "Possible harvest locations=[]",
         "Couldn't find anything to do, waiting for move step",
         "[Turn 32] Sending ActionDecision: DoNothingDecision()"
@@ -521,13 +521,13 @@
     {
       "Turn": 33,
       "Info": [
-        "Currently at (27,19)"
+        "Currently at (2,28)"
       ],
       "Debug": [
         "[Turn 33] Feedback received from engine: []",
         "Moving randomly",
-        "[Turn 33] Sending MoveDecision: MoveDecision((23,15))",
-        "[Turn 33] Feedback received from engine: ['Moved to (23,15)']",
+        "[Turn 33] Sending MoveDecision: MoveDecision((6,23))",
+        "[Turn 33] Feedback received from engine: ['Moved to (6,23)']",
         "Possible harvest locations=[]",
         "Couldn't find anything to do, waiting for move step",
         "[Turn 33] Sending ActionDecision: DoNothingDecision()"
@@ -537,13 +537,13 @@
     {
       "Turn": 34,
       "Info": [
-        "Currently at (23,15)"
+        "Currently at (6,23)"
       ],
       "Debug": [
         "[Turn 34] Feedback received from engine: []",
-        "Moving towards green grocer",
-        "[Turn 34] Sending MoveDecision: MoveDecision((31,17))",
-        "[Turn 34] Feedback received from engine: ['Failed to move to position (31,17), invalid destination']",
+        "Moving randomly",
+        "[Turn 34] Sending MoveDecision: MoveDecision((12,21))",
+        "[Turn 34] Feedback received from engine: ['Moved to (12,21)']",
         "Possible harvest locations=[]",
         "Couldn't find anything to do, waiting for move step",
         "[Turn 34] Sending ActionDecision: DoNothingDecision()"
@@ -553,13 +553,13 @@
     {
       "Turn": 35,
       "Info": [
-        "Currently at (23,15)"
+        "Currently at (12,21)"
       ],
       "Debug": [
         "[Turn 35] Feedback received from engine: []",
         "Moving randomly",
-        "[Turn 35] Sending MoveDecision: MoveDecision((23,20))",
-        "[Turn 35] Feedback received from engine: ['Moved to (23,20)']",
+        "[Turn 35] Sending MoveDecision: MoveDecision((9,17))",
+        "[Turn 35] Feedback received from engine: ['Moved to (9,17)']",
         "Possible harvest locations=[]",
         "Couldn't find anything to do, waiting for move step",
         "[Turn 35] Sending ActionDecision: DoNothingDecision()"
@@ -569,13 +569,13 @@
     {
       "Turn": 36,
       "Info": [
-        "Currently at (23,20)"
+        "Currently at (9,17)"
       ],
       "Debug": [
         "[Turn 36] Feedback received from engine: []",
         "Moving randomly",
-        "[Turn 36] Sending MoveDecision: MoveDecision((22,26))",
-        "[Turn 36] Feedback received from engine: ['Moved to (22,26)']",
+        "[Turn 36] Sending MoveDecision: MoveDecision((6,11))",
+        "[Turn 36] Feedback received from engine: ['Moved to (6,11)']",
         "Possible harvest locations=[]",
         "Couldn't find anything to do, waiting for move step",
         "[Turn 36] Sending ActionDecision: DoNothingDecision()"
@@ -585,29 +585,29 @@
     {
       "Turn": 37,
       "Info": [
-        "Currently at (22,26)"
+        "Currently at (6,11)"
       ],
       "Debug": [
         "[Turn 37] Feedback received from engine: []",
-        "Moving towards green grocer",
-        "[Turn 37] Sending MoveDecision: MoveDecision((29,29))",
-        "[Turn 37] Feedback received from engine: ['Moved to (29,29)']",
+        "Moving randomly",
+        "[Turn 37] Sending MoveDecision: MoveDecision((1,7))",
+        "[Turn 37] Feedback received from engine: ['Moved to (1,7)']",
         "Possible harvest locations=[]",
-        "Couldn't find anything to do, waiting for move step",
-        "[Turn 37] Sending ActionDecision: DoNothingDecision()"
+        "Deciding to try to plant at position (1,7)",
+        "[Turn 37] Sending ActionDecision: PlantDecision(NONE:(1,7))"
       ],
       "Exception": []
     },
     {
       "Turn": 38,
       "Info": [
-        "Currently at (29,29)"
+        "Currently at (1,7)"
       ],
       "Debug": [
-        "[Turn 38] Feedback received from engine: []",
+        "[Turn 38] Feedback received from engine: ['Planted NONE at (1,7)']",
         "Moving randomly",
-        "[Turn 38] Sending MoveDecision: MoveDecision((22,31))",
-        "[Turn 38] Feedback received from engine: ['Moved to (22,31)']",
+        "[Turn 38] Sending MoveDecision: MoveDecision((6,6))",
+        "[Turn 38] Feedback received from engine: ['Moved to (6,6)']",
         "Possible harvest locations=[]",
         "Couldn't find anything to do, waiting for move step",
         "[Turn 38] Sending ActionDecision: DoNothingDecision()"
@@ -617,13 +617,13 @@
     {
       "Turn": 39,
       "Info": [
-        "Currently at (22,31)"
+        "Currently at (6,6)"
       ],
       "Debug": [
         "[Turn 39] Feedback received from engine: []",
-        "Moving towards green grocer",
-        "[Turn 39] Sending MoveDecision: MoveDecision((29,34))",
-        "[Turn 39] Feedback received from engine: ['Moved to (29,34)']",
+        "Moving randomly",
+        "[Turn 39] Sending MoveDecision: MoveDecision((2,9))",
+        "[Turn 39] Feedback received from engine: ['Moved to (2,9)']",
         "Possible harvest locations=[]",
         "Couldn't find anything to do, waiting for move step",
         "[Turn 39] Sending ActionDecision: DoNothingDecision()"
@@ -633,13 +633,13 @@
     {
       "Turn": 40,
       "Info": [
-        "Currently at (29,34)"
+        "Currently at (2,9)"
       ],
       "Debug": [
         "[Turn 40] Feedback received from engine: []",
-        "Moving towards green grocer",
-        "[Turn 40] Sending MoveDecision: MoveDecision((39,34))",
-        "[Turn 40] Feedback received from engine: ['Failed to move to position (39,34), invalid destination']",
+        "Moving randomly",
+        "[Turn 40] Sending MoveDecision: MoveDecision((6,12))",
+        "[Turn 40] Feedback received from engine: ['Moved to (6,12)']",
         "Possible harvest locations=[]",
         "Couldn't find anything to do, waiting for move step",
         "[Turn 40] Sending ActionDecision: DoNothingDecision()"
@@ -649,13 +649,13 @@
     {
       "Turn": 41,
       "Info": [
-        "Currently at (29,34)"
+        "Currently at (6,12)"
       ],
       "Debug": [
         "[Turn 41] Feedback received from engine: []",
         "Moving randomly",
-        "[Turn 41] Sending MoveDecision: MoveDecision((24,37))",
-        "[Turn 41] Feedback received from engine: ['Moved to (24,37)']",
+        "[Turn 41] Sending MoveDecision: MoveDecision((8,18))",
+        "[Turn 41] Feedback received from engine: ['Moved to (8,18)']",
         "Possible harvest locations=[]",
         "Couldn't find anything to do, waiting for move step",
         "[Turn 41] Sending ActionDecision: DoNothingDecision()"
@@ -665,13 +665,13 @@
     {
       "Turn": 42,
       "Info": [
-        "Currently at (24,37)"
+        "Currently at (8,18)"
       ],
       "Debug": [
         "[Turn 42] Feedback received from engine: []",
         "Moving randomly",
-        "[Turn 42] Sending MoveDecision: MoveDecision((19,33))",
-        "[Turn 42] Feedback received from engine: ['Moved to (19,33)']",
+        "[Turn 42] Sending MoveDecision: MoveDecision((1,20))",
+        "[Turn 42] Feedback received from engine: ['Moved to (1,20)']",
         "Possible harvest locations=[]",
         "Couldn't find anything to do, waiting for move step",
         "[Turn 42] Sending ActionDecision: DoNothingDecision()"
@@ -681,13 +681,13 @@
     {
       "Turn": 43,
       "Info": [
-        "Currently at (19,33)"
+        "Currently at (1,20)"
       ],
       "Debug": [
         "[Turn 43] Feedback received from engine: []",
-        "Moving randomly",
-        "[Turn 43] Sending MoveDecision: MoveDecision((23,30))",
-        "[Turn 43] Feedback received from engine: ['Moved to (23,30)']",
+        "Moving towards green grocer",
+        "[Turn 43] Sending MoveDecision: MoveDecision((11,20))",
+        "[Turn 43] Feedback received from engine: ['Moved to (11,20)']",
         "Possible harvest locations=[]",
         "Couldn't find anything to do, waiting for move step",
         "[Turn 43] Sending ActionDecision: DoNothingDecision()"
@@ -697,13 +697,13 @@
     {
       "Turn": 44,
       "Info": [
-        "Currently at (23,30)"
+        "Currently at (11,20)"
       ],
       "Debug": [
         "[Turn 44] Feedback received from engine: []",
-        "Moving towards green grocer",
-        "[Turn 44] Sending MoveDecision: MoveDecision((31,32))",
-        "[Turn 44] Feedback received from engine: ['Failed to move to position (31,32), invalid destination']",
+        "Moving randomly",
+        "[Turn 44] Sending MoveDecision: MoveDecision((10,11))",
+        "[Turn 44] Feedback received from engine: ['Moved to (10,11)']",
         "Possible harvest locations=[]",
         "Couldn't find anything to do, waiting for move step",
         "[Turn 44] Sending ActionDecision: DoNothingDecision()"
@@ -713,13 +713,13 @@
     {
       "Turn": 45,
       "Info": [
-        "Currently at (23,30)"
+        "Currently at (10,11)"
       ],
       "Debug": [
         "[Turn 45] Feedback received from engine: []",
-        "Moving randomly",
-        "[Turn 45] Sending MoveDecision: MoveDecision((18,29))",
-        "[Turn 45] Feedback received from engine: ['Moved to (18,29)']",
+        "Moving towards green grocer",
+        "[Turn 45] Sending MoveDecision: MoveDecision((15,6))",
+        "[Turn 45] Feedback received from engine: ['Moved to (15,6)']",
         "Possible harvest locations=[]",
         "Couldn't find anything to do, waiting for move step",
         "[Turn 45] Sending ActionDecision: DoNothingDecision()"
@@ -729,29 +729,29 @@
     {
       "Turn": 46,
       "Info": [
-        "Currently at (18,29)"
+        "Currently at (15,6)"
       ],
       "Debug": [
         "[Turn 46] Feedback received from engine: []",
-        "Moving randomly",
-        "[Turn 46] Sending MoveDecision: MoveDecision((17,23))",
-        "[Turn 46] Feedback received from engine: ['Moved to (17,23)']",
+        "Moving towards green grocer",
+        "[Turn 46] Sending MoveDecision: MoveDecision((15,0))",
+        "[Turn 46] Feedback received from engine: ['Moved to (15,0)', 'Selling inventory']",
         "Possible harvest locations=[]",
-        "Couldn't find anything to do, waiting for move step",
-        "[Turn 46] Sending ActionDecision: DoNothingDecision()"
+        "Buy 1 of NONE",
+        "[Turn 46] Sending ActionDecision: BuyDecision(NONE:1)"
       ],
       "Exception": []
     },
     {
       "Turn": 47,
       "Info": [
-        "Currently at (17,23)"
+        "Currently at (15,0)"
       ],
       "Debug": [
-        "[Turn 47] Feedback received from engine: []",
-        "Moving towards green grocer",
-        "[Turn 47] Sending MoveDecision: MoveDecision((19,31))",
-        "[Turn 47] Feedback received from engine: ['Moved to (19,31)']",
+        "[Turn 47] Feedback received from engine: ['Bought 1 NONE seeds for $0.00']",
+        "Moving randomly",
+        "[Turn 47] Sending MoveDecision: MoveDecision((16,1))",
+        "[Turn 47] Feedback received from engine: ['Moved to (16,1)']",
         "Possible harvest locations=[]",
         "Couldn't find anything to do, waiting for move step",
         "[Turn 47] Sending ActionDecision: DoNothingDecision()"
@@ -761,13 +761,13 @@
     {
       "Turn": 48,
       "Info": [
-        "Currently at (19,31)"
+        "Currently at (16,1)"
       ],
       "Debug": [
         "[Turn 48] Feedback received from engine: []",
-        "Moving towards green grocer",
-        "[Turn 48] Sending MoveDecision: MoveDecision((23,37))",
-        "[Turn 48] Feedback received from engine: ['Moved to (23,37)']",
+        "Moving randomly",
+        "[Turn 48] Sending MoveDecision: MoveDecision((18,0))",
+        "[Turn 48] Feedback received from engine: ['Moved to (18,0)']",
         "Possible harvest locations=[]",
         "Couldn't find anything to do, waiting for move step",
         "[Turn 48] Sending ActionDecision: DoNothingDecision()"
@@ -777,13 +777,13 @@
     {
       "Turn": 49,
       "Info": [
-        "Currently at (23,37)"
+        "Currently at (18,0)"
       ],
       "Debug": [
         "[Turn 49] Feedback received from engine: []",
         "Moving randomly",
-        "[Turn 49] Sending MoveDecision: MoveDecision((22,28))",
-        "[Turn 49] Feedback received from engine: ['Moved to (22,28)']",
+        "[Turn 49] Sending MoveDecision: MoveDecision((18,2))",
+        "[Turn 49] Feedback received from engine: ['Moved to (18,2)']",
         "Possible harvest locations=[]",
         "Couldn't find anything to do, waiting for move step",
         "[Turn 49] Sending ActionDecision: DoNothingDecision()"
@@ -793,13 +793,13 @@
     {
       "Turn": 50,
       "Info": [
-        "Currently at (22,28)"
+        "Currently at (18,2)"
       ],
       "Debug": [
         "[Turn 50] Feedback received from engine: []",
         "Moving randomly",
-        "[Turn 50] Sending MoveDecision: MoveDecision((15,25))",
-        "[Turn 50] Feedback received from engine: ['Moved to (15,25)']",
+        "[Turn 50] Sending MoveDecision: MoveDecision((20,6))",
+        "[Turn 50] Feedback received from engine: ['Moved to (20,6)']",
         "Possible harvest locations=[]",
         "Couldn't find anything to do, waiting for move step",
         "[Turn 50] Sending ActionDecision: DoNothingDecision()"
@@ -809,29 +809,28 @@
     {
       "Turn": 51,
       "Info": [
-        "Currently at (15,25)"
+        "Currently at (20,6)"
       ],
       "Debug": [
         "[Turn 51] Feedback received from engine: []",
         "Moving randomly",
-        "[Turn 51] Sending MoveDecision: MoveDecision((14,25))",
-        "[Turn 51] Feedback received from engine: ['Moved to (14,25)']",
-        "Possible harvest locations=[]",
-        "Couldn't find anything to do, waiting for move step",
-        "[Turn 51] Sending ActionDecision: DoNothingDecision()"
+        "[Turn 51] Sending MoveDecision: MoveDecision((16,7))",
+        "[Turn 51] Feedback received from engine: ['Moved to (16,7)']",
+        "Possible harvest locations=[<model.position.Position object at 0x7fded8430790>]",
+        "[Turn 51] Sending ActionDecision: HarvestDecision((17,11))"
       ],
       "Exception": []
     },
     {
       "Turn": 52,
       "Info": [
-        "Currently at (14,25)"
+        "Currently at (16,7)"
       ],
       "Debug": [
-        "[Turn 52] Feedback received from engine: []",
+        "[Turn 52] Feedback received from engine: ['Attempted to harvest an unripe crop at (17,11)']",
         "Moving randomly",
-        "[Turn 52] Sending MoveDecision: MoveDecision((23,25))",
-        "[Turn 52] Feedback received from engine: ['Moved to (23,25)']",
+        "[Turn 52] Sending MoveDecision: MoveDecision((13,5))",
+        "[Turn 52] Feedback received from engine: ['Moved to (13,5)']",
         "Possible harvest locations=[]",
         "Couldn't find anything to do, waiting for move step",
         "[Turn 52] Sending ActionDecision: DoNothingDecision()"
@@ -841,29 +840,29 @@
     {
       "Turn": 53,
       "Info": [
-        "Currently at (23,25)"
+        "Currently at (13,5)"
       ],
       "Debug": [
         "[Turn 53] Feedback received from engine: []",
         "Moving randomly",
-        "[Turn 53] Sending MoveDecision: MoveDecision((16,28))",
-        "[Turn 53] Feedback received from engine: ['Moved to (16,28)']",
+        "[Turn 53] Sending MoveDecision: MoveDecision((10,8))",
+        "[Turn 53] Feedback received from engine: ['Moved to (10,8)']",
         "Possible harvest locations=[]",
-        "Couldn't find anything to do, waiting for move step",
-        "[Turn 53] Sending ActionDecision: DoNothingDecision()"
+        "Deciding to try to plant at position (10,8)",
+        "[Turn 53] Sending ActionDecision: PlantDecision(NONE:(10,8))"
       ],
       "Exception": []
     },
     {
       "Turn": 54,
       "Info": [
-        "Currently at (16,28)"
+        "Currently at (10,8)"
       ],
       "Debug": [
-        "[Turn 54] Feedback received from engine: []",
+        "[Turn 54] Feedback received from engine: ['Planted NONE at (10,8)']",
         "Moving towards green grocer",
-        "[Turn 54] Sending MoveDecision: MoveDecision((17,37))",
-        "[Turn 54] Feedback received from engine: ['Moved to (17,37)']",
+        "[Turn 54] Sending MoveDecision: MoveDecision((15,3))",
+        "[Turn 54] Feedback received from engine: ['Moved to (15,3)']",
         "Possible harvest locations=[]",
         "Couldn't find anything to do, waiting for move step",
         "[Turn 54] Sending ActionDecision: DoNothingDecision()"
@@ -873,45 +872,45 @@
     {
       "Turn": 55,
       "Info": [
-        "Currently at (17,37)"
+        "Currently at (15,3)"
       ],
       "Debug": [
         "[Turn 55] Feedback received from engine: []",
         "Moving towards green grocer",
-        "[Turn 55] Sending MoveDecision: MoveDecision((19,45))",
-        "[Turn 55] Feedback received from engine: ['Moved to (19,45)']",
+        "[Turn 55] Sending MoveDecision: MoveDecision((15,0))",
+        "[Turn 55] Feedback received from engine: ['Moved to (15,0)', 'Selling inventory']",
         "Possible harvest locations=[]",
-        "Couldn't find anything to do, waiting for move step",
-        "[Turn 55] Sending ActionDecision: DoNothingDecision()"
+        "Buy 1 of QUADROTRITICALE",
+        "[Turn 55] Sending ActionDecision: BuyDecision(QUADROTRITICALE:1)"
       ],
       "Exception": []
     },
     {
       "Turn": 56,
       "Info": [
-        "Currently at (19,45)"
+        "Currently at (15,0)"
       ],
       "Debug": [
-        "[Turn 56] Feedback received from engine: []",
+        "[Turn 56] Feedback received from engine: ['Bought 1 QUADROTRITICALE seeds for $30.00']",
         "Moving randomly",
-        "[Turn 56] Sending MoveDecision: MoveDecision((23,47))",
-        "[Turn 56] Feedback received from engine: ['Moved to (23,47)']",
+        "[Turn 56] Sending MoveDecision: MoveDecision((16,0))",
+        "[Turn 56] Feedback received from engine: ['Moved to (16,0)', 'Selling inventory']",
         "Possible harvest locations=[]",
-        "Couldn't find anything to do, waiting for move step",
-        "[Turn 56] Sending ActionDecision: DoNothingDecision()"
+        "Buy 1 of QUADROTRITICALE",
+        "[Turn 56] Sending ActionDecision: BuyDecision(QUADROTRITICALE:1)"
       ],
       "Exception": []
     },
     {
       "Turn": 57,
       "Info": [
-        "Currently at (23,47)"
+        "Currently at (16,0)"
       ],
       "Debug": [
-        "[Turn 57] Feedback received from engine: []",
+        "[Turn 57] Feedback received from engine: ['Bought 1 QUADROTRITICALE seeds for $30.00']",
         "Moving randomly",
-        "[Turn 57] Sending MoveDecision: MoveDecision((23,46))",
-        "[Turn 57] Feedback received from engine: ['Moved to (23,46)']",
+        "[Turn 57] Sending MoveDecision: MoveDecision((9,1))",
+        "[Turn 57] Feedback received from engine: ['Moved to (9,1)']",
         "Possible harvest locations=[]",
         "Couldn't find anything to do, waiting for move step",
         "[Turn 57] Sending ActionDecision: DoNothingDecision()"
@@ -921,13 +920,13 @@
     {
       "Turn": 58,
       "Info": [
-        "Currently at (23,46)"
+        "Currently at (9,1)"
       ],
       "Debug": [
         "[Turn 58] Feedback received from engine: []",
         "Moving randomly",
-        "[Turn 58] Sending MoveDecision: MoveDecision((17,46))",
-        "[Turn 58] Feedback received from engine: ['Moved to (17,46)']",
+        "[Turn 58] Sending MoveDecision: MoveDecision((7,1))",
+        "[Turn 58] Feedback received from engine: ['Moved to (7,1)']",
         "Possible harvest locations=[]",
         "Couldn't find anything to do, waiting for move step",
         "[Turn 58] Sending ActionDecision: DoNothingDecision()"
@@ -937,13 +936,13 @@
     {
       "Turn": 59,
       "Info": [
-        "Currently at (17,46)"
+        "Currently at (7,1)"
       ],
       "Debug": [
         "[Turn 59] Feedback received from engine: []",
         "Moving randomly",
-        "[Turn 59] Sending MoveDecision: MoveDecision((22,46))",
-        "[Turn 59] Feedback received from engine: ['Moved to (22,46)']",
+        "[Turn 59] Sending MoveDecision: MoveDecision((7,4))",
+        "[Turn 59] Feedback received from engine: ['Moved to (7,4)']",
         "Possible harvest locations=[]",
         "Couldn't find anything to do, waiting for move step",
         "[Turn 59] Sending ActionDecision: DoNothingDecision()"
@@ -953,13 +952,13 @@
     {
       "Turn": 60,
       "Info": [
-        "Currently at (22,46)"
+        "Currently at (7,4)"
       ],
       "Debug": [
         "[Turn 60] Feedback received from engine: []",
         "Moving randomly",
-        "[Turn 60] Sending MoveDecision: MoveDecision((14,47))",
-        "[Turn 60] Feedback received from engine: ['Moved to (14,47)']",
+        "[Turn 60] Sending MoveDecision: MoveDecision((7,9))",
+        "[Turn 60] Feedback received from engine: ['Moved to (7,9)']",
         "Possible harvest locations=[]",
         "Couldn't find anything to do, waiting for move step",
         "[Turn 60] Sending ActionDecision: DoNothingDecision()"
@@ -969,77 +968,75 @@
     {
       "Turn": 61,
       "Info": [
-        "Currently at (14,47)"
+        "Currently at (7,9)"
       ],
       "Debug": [
         "[Turn 61] Feedback received from engine: []",
-        "Moving towards green grocer",
-        "[Turn 61] Sending MoveDecision: MoveDecision((15,56))",
-        "[Turn 61] Feedback received from engine: ['Failed to move to position (15,56), invalid destination']",
+        "Moving randomly",
+        "[Turn 61] Sending MoveDecision: MoveDecision((4,16))",
+        "[Turn 61] Feedback received from engine: ['Moved to (4,16)']",
         "Possible harvest locations=[]",
-        "Couldn't find anything to do, waiting for move step",
-        "[Turn 61] Sending ActionDecision: DoNothingDecision()"
+        "Deciding to try to plant at position (4,16)",
+        "[Turn 61] Sending ActionDecision: PlantDecision(QUADROTRITICALE:(4,16))"
       ],
       "Exception": []
     },
     {
       "Turn": 62,
       "Info": [
-        "Currently at (14,47)"
+        "Currently at (4,16)"
       ],
       "Debug": [
-        "[Turn 62] Feedback received from engine: []",
-        "Moving towards green grocer",
-        "[Turn 62] Sending MoveDecision: MoveDecision((15,56))",
-        "[Turn 62] Feedback received from engine: ['Failed to move to position (15,56), invalid destination']",
+        "[Turn 62] Feedback received from engine: ['Planted QUADROTRITICALE at (4,16)']",
+        "Moving randomly",
+        "[Turn 62] Sending MoveDecision: MoveDecision((4,14))",
+        "[Turn 62] Feedback received from engine: ['Moved to (4,14)']",
         "Possible harvest locations=[]",
-        "Couldn't find anything to do, waiting for move step",
-        "[Turn 62] Sending ActionDecision: DoNothingDecision()"
+        "Deciding to try to plant at position (4,14)",
+        "[Turn 62] Sending ActionDecision: PlantDecision(QUADROTRITICALE:(4,14))"
       ],
       "Exception": []
     },
     {
       "Turn": 63,
       "Info": [
-        "Currently at (14,47)"
+        "Currently at (4,14)"
       ],
       "Debug": [
-        "[Turn 63] Feedback received from engine: []",
+        "[Turn 63] Feedback received from engine: ['Planted QUADROTRITICALE at (4,14)']",
         "Moving randomly",
-        "[Turn 63] Sending MoveDecision: MoveDecision((7,46))",
-        "[Turn 63] Feedback received from engine: ['Moved to (7,46)']",
-        "Possible harvest locations=[]",
-        "Couldn't find anything to do, waiting for move step",
-        "[Turn 63] Sending ActionDecision: DoNothingDecision()"
+        "[Turn 63] Sending MoveDecision: MoveDecision((3,17))",
+        "[Turn 63] Feedback received from engine: ['Moved to (3,17)']",
+        "Possible harvest locations=[<model.position.Position object at 0x7fdec80f99d0>]",
+        "[Turn 63] Sending ActionDecision: HarvestDecision((4,16))"
       ],
       "Exception": []
     },
     {
       "Turn": 64,
       "Info": [
-        "Currently at (7,46)"
+        "Currently at (3,17)"
       ],
       "Debug": [
-        "[Turn 64] Feedback received from engine: []",
-        "Moving towards green grocer",
-        "[Turn 64] Sending MoveDecision: MoveDecision((15,48))",
-        "[Turn 64] Feedback received from engine: ['Moved to (15,48)']",
-        "Possible harvest locations=[]",
-        "Couldn't find anything to do, waiting for move step",
-        "[Turn 64] Sending ActionDecision: DoNothingDecision()"
+        "[Turn 64] Feedback received from engine: ['Attempted to harvest an unripe crop at (4,16)']",
+        "Moving randomly",
+        "[Turn 64] Sending MoveDecision: MoveDecision((3,16))",
+        "[Turn 64] Feedback received from engine: ['Moved to (3,16)']",
+        "Possible harvest locations=[<model.position.Position object at 0x7fdeb80bd4f0>, <model.position.Position object at 0x7fdeb80bdaf0>]",
+        "[Turn 64] Sending ActionDecision: HarvestDecision((4,14),(4,16))"
       ],
       "Exception": []
     },
     {
       "Turn": 65,
       "Info": [
-        "Currently at (15,48)"
+        "Currently at (3,16)"
       ],
       "Debug": [
-        "[Turn 65] Feedback received from engine: []",
+        "[Turn 65] Feedback received from engine: ['Attempted to harvest an unripe crop at (4,14)', 'Attempted to harvest an unripe crop at (4,16)']",
         "Moving randomly",
-        "[Turn 65] Sending MoveDecision: MoveDecision((18,46))",
-        "[Turn 65] Feedback received from engine: ['Moved to (18,46)']",
+        "[Turn 65] Sending MoveDecision: MoveDecision((4,22))",
+        "[Turn 65] Feedback received from engine: ['Moved to (4,22)']",
         "Possible harvest locations=[]",
         "Couldn't find anything to do, waiting for move step",
         "[Turn 65] Sending ActionDecision: DoNothingDecision()"
@@ -1049,13 +1046,13 @@
     {
       "Turn": 66,
       "Info": [
-        "Currently at (18,46)"
+        "Currently at (4,22)"
       ],
       "Debug": [
         "[Turn 66] Feedback received from engine: []",
         "Moving randomly",
-        "[Turn 66] Sending MoveDecision: MoveDecision((18,39))",
-        "[Turn 66] Feedback received from engine: ['Moved to (18,39)']",
+        "[Turn 66] Sending MoveDecision: MoveDecision((2,21))",
+        "[Turn 66] Feedback received from engine: ['Moved to (2,21)']",
         "Possible harvest locations=[]",
         "Couldn't find anything to do, waiting for move step",
         "[Turn 66] Sending ActionDecision: DoNothingDecision()"
@@ -1065,29 +1062,28 @@
     {
       "Turn": 67,
       "Info": [
-        "Currently at (18,39)"
+        "Currently at (2,21)"
       ],
       "Debug": [
         "[Turn 67] Feedback received from engine: []",
         "Moving randomly",
-        "[Turn 67] Sending MoveDecision: MoveDecision((11,41))",
-        "[Turn 67] Feedback received from engine: ['Moved to (11,41)']",
-        "Possible harvest locations=[]",
-        "Couldn't find anything to do, waiting for move step",
-        "[Turn 67] Sending ActionDecision: DoNothingDecision()"
+        "[Turn 67] Sending MoveDecision: MoveDecision((2,13))",
+        "[Turn 67] Feedback received from engine: ['Moved to (2,13)']",
+        "Possible harvest locations=[<model.position.Position object at 0x7fdec80f8a90>, <model.position.Position object at 0x7fded8437190>]",
+        "[Turn 67] Sending ActionDecision: HarvestDecision((4,14),(4,16))"
       ],
       "Exception": []
     },
     {
       "Turn": 68,
       "Info": [
-        "Currently at (11,41)"
+        "Currently at (2,13)"
       ],
       "Debug": [
-        "[Turn 68] Feedback received from engine: []",
+        "[Turn 68] Feedback received from engine: ['Attempted to harvest an unripe crop at (4,14)', 'Attempted to harvest an unripe crop at (4,16)']",
         "Moving towards green grocer",
-        "[Turn 68] Sending MoveDecision: MoveDecision((15,47))",
-        "[Turn 68] Feedback received from engine: ['Moved to (15,47)']",
+        "[Turn 68] Sending MoveDecision: MoveDecision((12,13))",
+        "[Turn 68] Feedback received from engine: ['Moved to (12,13)']",
         "Possible harvest locations=[]",
         "Couldn't find anything to do, waiting for move step",
         "[Turn 68] Sending ActionDecision: DoNothingDecision()"
@@ -1097,13 +1093,13 @@
     {
       "Turn": 69,
       "Info": [
-        "Currently at (15,47)"
+        "Currently at (12,13)"
       ],
       "Debug": [
         "[Turn 69] Feedback received from engine: []",
         "Moving towards green grocer",
-        "[Turn 69] Sending MoveDecision: MoveDecision((15,37))",
-        "[Turn 69] Feedback received from engine: ['Moved to (15,37)']",
+        "[Turn 69] Sending MoveDecision: MoveDecision((15,6))",
+        "[Turn 69] Feedback received from engine: ['Moved to (15,6)']",
         "Possible harvest locations=[]",
         "Couldn't find anything to do, waiting for move step",
         "[Turn 69] Sending ActionDecision: DoNothingDecision()"
@@ -1113,13 +1109,13 @@
     {
       "Turn": 70,
       "Info": [
-        "Currently at (15,37)"
+        "Currently at (15,6)"
       ],
       "Debug": [
         "[Turn 70] Feedback received from engine: []",
-        "Moving towards green grocer",
-        "[Turn 70] Sending MoveDecision: MoveDecision((15,27))",
-        "[Turn 70] Feedback received from engine: ['Moved to (15,27)']",
+        "Moving randomly",
+        "[Turn 70] Sending MoveDecision: MoveDecision((12,0))",
+        "[Turn 70] Feedback received from engine: ['Moved to (12,0)']",
         "Possible harvest locations=[]",
         "Couldn't find anything to do, waiting for move step",
         "[Turn 70] Sending ActionDecision: DoNothingDecision()"
@@ -1129,13 +1125,13 @@
     {
       "Turn": 71,
       "Info": [
-        "Currently at (15,27)"
+        "Currently at (12,0)"
       ],
       "Debug": [
         "[Turn 71] Feedback received from engine: []",
         "Moving randomly",
-        "[Turn 71] Sending MoveDecision: MoveDecision((16,27))",
-        "[Turn 71] Feedback received from engine: ['Moved to (16,27)']",
+        "[Turn 71] Sending MoveDecision: MoveDecision((14,1))",
+        "[Turn 71] Feedback received from engine: ['Moved to (14,1)']",
         "Possible harvest locations=[]",
         "Couldn't find anything to do, waiting for move step",
         "[Turn 71] Sending ActionDecision: DoNothingDecision()"
@@ -1145,13 +1141,13 @@
     {
       "Turn": 72,
       "Info": [
-        "Currently at (16,27)"
+        "Currently at (14,1)"
       ],
       "Debug": [
         "[Turn 72] Feedback received from engine: []",
         "Moving randomly",
-        "[Turn 72] Sending MoveDecision: MoveDecision((12,25))",
-        "[Turn 72] Feedback received from engine: ['Moved to (12,25)']",
+        "[Turn 72] Sending MoveDecision: MoveDecision((12,3))",
+        "[Turn 72] Feedback received from engine: ['Moved to (12,3)']",
         "Possible harvest locations=[]",
         "Couldn't find anything to do, waiting for move step",
         "[Turn 72] Sending ActionDecision: DoNothingDecision()"
@@ -1161,45 +1157,45 @@
     {
       "Turn": 73,
       "Info": [
-        "Currently at (12,25)"
+        "Currently at (12,3)"
       ],
       "Debug": [
         "[Turn 73] Feedback received from engine: []",
         "Moving towards green grocer",
-        "[Turn 73] Sending MoveDecision: MoveDecision((15,32))",
-        "[Turn 73] Feedback received from engine: ['Moved to (15,32)']",
+        "[Turn 73] Sending MoveDecision: MoveDecision((15,0))",
+        "[Turn 73] Feedback received from engine: ['Moved to (15,0)', 'Selling inventory']",
         "Possible harvest locations=[]",
-        "Couldn't find anything to do, waiting for move step",
-        "[Turn 73] Sending ActionDecision: DoNothingDecision()"
+        "Buy 1 of QUADROTRITICALE",
+        "[Turn 73] Sending ActionDecision: BuyDecision(QUADROTRITICALE:1)"
       ],
       "Exception": []
     },
     {
       "Turn": 74,
       "Info": [
-        "Currently at (15,32)"
+        "Currently at (15,0)"
       ],
       "Debug": [
-        "[Turn 74] Feedback received from engine: []",
+        "[Turn 74] Feedback received from engine: ['Bought 1 QUADROTRITICALE seeds for $30.00']",
         "Moving randomly",
-        "[Turn 74] Sending MoveDecision: MoveDecision((16,27))",
-        "[Turn 74] Feedback received from engine: ['Moved to (16,27)']",
+        "[Turn 74] Sending MoveDecision: MoveDecision((16,0))",
+        "[Turn 74] Feedback received from engine: ['Moved to (16,0)', 'Selling inventory']",
         "Possible harvest locations=[]",
-        "Couldn't find anything to do, waiting for move step",
-        "[Turn 74] Sending ActionDecision: DoNothingDecision()"
+        "Buy 1 of QUADROTRITICALE",
+        "[Turn 74] Sending ActionDecision: BuyDecision(QUADROTRITICALE:1)"
       ],
       "Exception": []
     },
     {
       "Turn": 75,
       "Info": [
-        "Currently at (16,27)"
+        "Currently at (16,0)"
       ],
       "Debug": [
-        "[Turn 75] Feedback received from engine: []",
-        "Moving towards green grocer",
-        "[Turn 75] Sending MoveDecision: MoveDecision((17,36))",
-        "[Turn 75] Feedback received from engine: ['Moved to (17,36)']",
+        "[Turn 75] Feedback received from engine: ['Bought 1 QUADROTRITICALE seeds for $30.00']",
+        "Moving randomly",
+        "[Turn 75] Sending MoveDecision: MoveDecision((13,4))",
+        "[Turn 75] Feedback received from engine: ['Moved to (13,4)']",
         "Possible harvest locations=[]",
         "Couldn't find anything to do, waiting for move step",
         "[Turn 75] Sending ActionDecision: DoNothingDecision()"
@@ -1209,29 +1205,29 @@
     {
       "Turn": 76,
       "Info": [
-        "Currently at (17,36)"
+        "Currently at (13,4)"
       ],
       "Debug": [
         "[Turn 76] Feedback received from engine: []",
         "Moving randomly",
-        "[Turn 76] Sending MoveDecision: MoveDecision((15,38))",
-        "[Turn 76] Feedback received from engine: ['Moved to (15,38)']",
+        "[Turn 76] Sending MoveDecision: MoveDecision((17,0))",
+        "[Turn 76] Feedback received from engine: ['Moved to (17,0)', 'Selling inventory']",
         "Possible harvest locations=[]",
-        "Couldn't find anything to do, waiting for move step",
-        "[Turn 76] Sending ActionDecision: DoNothingDecision()"
+        "Buy 1 of QUADROTRITICALE",
+        "[Turn 76] Sending ActionDecision: BuyDecision(QUADROTRITICALE:1)"
       ],
       "Exception": []
     },
     {
       "Turn": 77,
       "Info": [
-        "Currently at (15,38)"
+        "Currently at (17,0)"
       ],
       "Debug": [
-        "[Turn 77] Feedback received from engine: []",
-        "Moving towards green grocer",
-        "[Turn 77] Sending MoveDecision: MoveDecision((15,28))",
-        "[Turn 77] Feedback received from engine: ['Moved to (15,28)']",
+        "[Turn 77] Feedback received from engine: ['Bought 1 QUADROTRITICALE seeds for $30.00']",
+        "Moving randomly",
+        "[Turn 77] Sending MoveDecision: MoveDecision((12,1))",
+        "[Turn 77] Feedback received from engine: ['Moved to (12,1)']",
         "Possible harvest locations=[]",
         "Couldn't find anything to do, waiting for move step",
         "[Turn 77] Sending ActionDecision: DoNothingDecision()"
@@ -1241,13 +1237,13 @@
     {
       "Turn": 78,
       "Info": [
-        "Currently at (15,28)"
+        "Currently at (12,1)"
       ],
       "Debug": [
         "[Turn 78] Feedback received from engine: []",
         "Moving randomly",
-        "[Turn 78] Sending MoveDecision: MoveDecision((15,36))",
-        "[Turn 78] Feedback received from engine: ['Moved to (15,36)']",
+        "[Turn 78] Sending MoveDecision: MoveDecision((17,4))",
+        "[Turn 78] Feedback received from engine: ['Moved to (17,4)']",
         "Possible harvest locations=[]",
         "Couldn't find anything to do, waiting for move step",
         "[Turn 78] Sending ActionDecision: DoNothingDecision()"
@@ -1257,13 +1253,13 @@
     {
       "Turn": 79,
       "Info": [
-        "Currently at (15,36)"
+        "Currently at (17,4)"
       ],
       "Debug": [
         "[Turn 79] Feedback received from engine: []",
-        "Moving towards green grocer",
-        "[Turn 79] Sending MoveDecision: MoveDecision((15,26))",
-        "[Turn 79] Feedback received from engine: ['Moved to (15,26)']",
+        "Moving randomly",
+        "[Turn 79] Sending MoveDecision: MoveDecision((18,2))",
+        "[Turn 79] Feedback received from engine: ['Moved to (18,2)']",
         "Possible harvest locations=[]",
         "Couldn't find anything to do, waiting for move step",
         "[Turn 79] Sending ActionDecision: DoNothingDecision()"
@@ -1273,13 +1269,13 @@
     {
       "Turn": 80,
       "Info": [
-        "Currently at (15,26)"
+        "Currently at (18,2)"
       ],
       "Debug": [
         "[Turn 80] Feedback received from engine: []",
         "Moving randomly",
-        "[Turn 80] Sending MoveDecision: MoveDecision((22,25))",
-        "[Turn 80] Feedback received from engine: ['Moved to (22,25)']",
+        "[Turn 80] Sending MoveDecision: MoveDecision((16,2))",
+        "[Turn 80] Feedback received from engine: ['Moved to (16,2)']",
         "Possible harvest locations=[]",
         "Couldn't find anything to do, waiting for move step",
         "[Turn 80] Sending ActionDecision: DoNothingDecision()"
@@ -1289,13 +1285,13 @@
     {
       "Turn": 81,
       "Info": [
-        "Currently at (22,25)"
+        "Currently at (16,2)"
       ],
       "Debug": [
         "[Turn 81] Feedback received from engine: []",
         "Moving randomly",
-        "[Turn 81] Sending MoveDecision: MoveDecision((16,28))",
-        "[Turn 81] Feedback received from engine: ['Moved to (16,28)']",
+        "[Turn 81] Sending MoveDecision: MoveDecision((8,3))",
+        "[Turn 81] Feedback received from engine: ['Moved to (8,3)']",
         "Possible harvest locations=[]",
         "Couldn't find anything to do, waiting for move step",
         "[Turn 81] Sending ActionDecision: DoNothingDecision()"
@@ -1305,13 +1301,13 @@
     {
       "Turn": 82,
       "Info": [
-        "Currently at (16,28)"
+        "Currently at (8,3)"
       ],
       "Debug": [
         "[Turn 82] Feedback received from engine: []",
-        "Moving towards green grocer",
-        "[Turn 82] Sending MoveDecision: MoveDecision((17,37))",
-        "[Turn 82] Feedback received from engine: ['Moved to (17,37)']",
+        "Moving randomly",
+        "[Turn 82] Sending MoveDecision: MoveDecision((11,0))",
+        "[Turn 82] Feedback received from engine: ['Moved to (11,0)']",
         "Possible harvest locations=[]",
         "Couldn't find anything to do, waiting for move step",
         "[Turn 82] Sending ActionDecision: DoNothingDecision()"
@@ -1321,13 +1317,13 @@
     {
       "Turn": 83,
       "Info": [
-        "Currently at (17,37)"
+        "Currently at (11,0)"
       ],
       "Debug": [
         "[Turn 83] Feedback received from engine: []",
-        "Moving towards green grocer",
-        "[Turn 83] Sending MoveDecision: MoveDecision((19,45))",
-        "[Turn 83] Feedback received from engine: ['Moved to (19,45)']",
+        "Moving randomly",
+        "[Turn 83] Sending MoveDecision: MoveDecision((7,0))",
+        "[Turn 83] Feedback received from engine: ['Moved to (7,0)']",
         "Possible harvest locations=[]",
         "Couldn't find anything to do, waiting for move step",
         "[Turn 83] Sending ActionDecision: DoNothingDecision()"
@@ -1337,13 +1333,13 @@
     {
       "Turn": 84,
       "Info": [
-        "Currently at (19,45)"
+        "Currently at (7,0)"
       ],
       "Debug": [
         "[Turn 84] Feedback received from engine: []",
         "Moving randomly",
-        "[Turn 84] Sending MoveDecision: MoveDecision((27,44))",
-        "[Turn 84] Feedback received from engine: ['Moved to (27,44)']",
+        "[Turn 84] Sending MoveDecision: MoveDecision((1,2))",
+        "[Turn 84] Feedback received from engine: ['Moved to (1,2)']",
         "Possible harvest locations=[]",
         "Couldn't find anything to do, waiting for move step",
         "[Turn 84] Sending ActionDecision: DoNothingDecision()"
@@ -1353,13 +1349,13 @@
     {
       "Turn": 85,
       "Info": [
-        "Currently at (27,44)"
+        "Currently at (1,2)"
       ],
       "Debug": [
         "[Turn 85] Feedback received from engine: []",
         "Moving randomly",
-        "[Turn 85] Sending MoveDecision: MoveDecision((23,45))",
-        "[Turn 85] Feedback received from engine: ['Moved to (23,45)']",
+        "[Turn 85] Sending MoveDecision: MoveDecision((4,1))",
+        "[Turn 85] Feedback received from engine: ['Moved to (4,1)']",
         "Possible harvest locations=[]",
         "Couldn't find anything to do, waiting for move step",
         "[Turn 85] Sending ActionDecision: DoNothingDecision()"
@@ -1369,13 +1365,13 @@
     {
       "Turn": 86,
       "Info": [
-        "Currently at (23,45)"
+        "Currently at (4,1)"
       ],
       "Debug": [
         "[Turn 86] Feedback received from engine: []",
         "Moving randomly",
-        "[Turn 86] Sending MoveDecision: MoveDecision((26,48))",
-        "[Turn 86] Feedback received from engine: ['Moved to (26,48)']",
+        "[Turn 86] Sending MoveDecision: MoveDecision((2,7))",
+        "[Turn 86] Feedback received from engine: ['Moved to (2,7)']",
         "Possible harvest locations=[]",
         "Couldn't find anything to do, waiting for move step",
         "[Turn 86] Sending ActionDecision: DoNothingDecision()"
@@ -1385,13 +1381,13 @@
     {
       "Turn": 87,
       "Info": [
-        "Currently at (26,48)"
+        "Currently at (2,7)"
       ],
       "Debug": [
         "[Turn 87] Feedback received from engine: []",
         "Moving randomly",
-        "[Turn 87] Sending MoveDecision: MoveDecision((26,40))",
-        "[Turn 87] Feedback received from engine: ['Moved to (26,40)']",
+        "[Turn 87] Sending MoveDecision: MoveDecision((6,8))",
+        "[Turn 87] Feedback received from engine: ['Moved to (6,8)']",
         "Possible harvest locations=[]",
         "Couldn't find anything to do, waiting for move step",
         "[Turn 87] Sending ActionDecision: DoNothingDecision()"
@@ -1401,13 +1397,13 @@
     {
       "Turn": 88,
       "Info": [
-        "Currently at (26,40)"
+        "Currently at (6,8)"
       ],
       "Debug": [
         "[Turn 88] Feedback received from engine: []",
-        "Moving towards green grocer",
-        "[Turn 88] Sending MoveDecision: MoveDecision((36,40))",
-        "[Turn 88] Feedback received from engine: ['Failed to move to position (36,40), invalid destination']",
+        "Moving randomly",
+        "[Turn 88] Sending MoveDecision: MoveDecision((7,14))",
+        "[Turn 88] Feedback received from engine: ['Moved to (7,14)']",
         "Possible harvest locations=[]",
         "Couldn't find anything to do, waiting for move step",
         "[Turn 88] Sending ActionDecision: DoNothingDecision()"
@@ -1417,77 +1413,76 @@
     {
       "Turn": 89,
       "Info": [
-        "Currently at (26,40)"
+        "Currently at (7,14)"
       ],
       "Debug": [
         "[Turn 89] Feedback received from engine: []",
         "Moving randomly",
-        "[Turn 89] Sending MoveDecision: MoveDecision((19,39))",
-        "[Turn 89] Feedback received from engine: ['Moved to (19,39)']",
+        "[Turn 89] Sending MoveDecision: MoveDecision((5,20))",
+        "[Turn 89] Feedback received from engine: ['Moved to (5,20)']",
         "Possible harvest locations=[]",
-        "Couldn't find anything to do, waiting for move step",
-        "[Turn 89] Sending ActionDecision: DoNothingDecision()"
+        "Deciding to try to plant at position (5,20)",
+        "[Turn 89] Sending ActionDecision: PlantDecision(QUADROTRITICALE:(5,20))"
       ],
       "Exception": []
     },
     {
       "Turn": 90,
       "Info": [
-        "Currently at (19,39)"
+        "Currently at (5,20)"
       ],
       "Debug": [
-        "[Turn 90] Feedback received from engine: []",
-        "Moving towards green grocer",
-        "[Turn 90] Sending MoveDecision: MoveDecision((23,45))",
-        "[Turn 90] Feedback received from engine: ['Moved to (23,45)']",
+        "[Turn 90] Feedback received from engine: ['Planted QUADROTRITICALE at (5,20)']",
+        "Moving randomly",
+        "[Turn 90] Sending MoveDecision: MoveDecision((1,22))",
+        "[Turn 90] Feedback received from engine: ['Moved to (1,22)']",
         "Possible harvest locations=[]",
-        "Couldn't find anything to do, waiting for move step",
-        "[Turn 90] Sending ActionDecision: DoNothingDecision()"
+        "Deciding to try to plant at position (1,22)",
+        "[Turn 90] Sending ActionDecision: PlantDecision(QUADROTRITICALE:(1,22))"
       ],
       "Exception": []
     },
     {
       "Turn": 91,
       "Info": [
-        "Currently at (23,45)"
+        "Currently at (1,22)"
       ],
       "Debug": [
-        "[Turn 91] Feedback received from engine: []",
-        "Moving towards green grocer",
-        "[Turn 91] Sending MoveDecision: MoveDecision((31,47))",
-        "[Turn 91] Feedback received from engine: ['Failed to move to position (31,47), invalid destination']",
+        "[Turn 91] Feedback received from engine: ['Planted QUADROTRITICALE at (1,22)']",
+        "Moving randomly",
+        "[Turn 91] Sending MoveDecision: MoveDecision((2,29))",
+        "[Turn 91] Feedback received from engine: ['Moved to (2,29)']",
         "Possible harvest locations=[]",
-        "Couldn't find anything to do, waiting for move step",
-        "[Turn 91] Sending ActionDecision: DoNothingDecision()"
+        "Deciding to try to plant at position (2,29)",
+        "[Turn 91] Sending ActionDecision: PlantDecision(QUADROTRITICALE:(2,29))"
       ],
       "Exception": []
     },
     {
       "Turn": 92,
       "Info": [
-        "Currently at (23,45)"
+        "Currently at (2,29)"
       ],
       "Debug": [
-        "[Turn 92] Feedback received from engine: []",
+        "[Turn 92] Feedback received from engine: ['Planted QUADROTRITICALE at (2,29)']",
         "Moving randomly",
-        "[Turn 92] Sending MoveDecision: MoveDecision((16,43))",
-        "[Turn 92] Feedback received from engine: ['Moved to (16,43)']",
-        "Possible harvest locations=[]",
-        "Couldn't find anything to do, waiting for move step",
-        "[Turn 92] Sending ActionDecision: DoNothingDecision()"
+        "[Turn 92] Sending MoveDecision: MoveDecision((3,22))",
+        "[Turn 92] Feedback received from engine: ['Moved to (3,22)']",
+        "Possible harvest locations=[<model.position.Position object at 0x7fdec8051b50>]",
+        "[Turn 92] Sending ActionDecision: HarvestDecision((1,22))"
       ],
       "Exception": []
     },
     {
       "Turn": 93,
       "Info": [
-        "Currently at (16,43)"
+        "Currently at (3,22)"
       ],
       "Debug": [
-        "[Turn 93] Feedback received from engine: []",
+        "[Turn 93] Feedback received from engine: ['Attempted to harvest an unripe crop at (1,22)']",
         "Moving towards green grocer",
-        "[Turn 93] Sending MoveDecision: MoveDecision((17,52))",
-        "[Turn 93] Feedback received from engine: ['Failed to move to position (17,52), invalid destination']",
+        "[Turn 93] Sending MoveDecision: MoveDecision((13,22))",
+        "[Turn 93] Feedback received from engine: ['Moved to (13,22)']",
         "Possible harvest locations=[]",
         "Couldn't find anything to do, waiting for move step",
         "[Turn 93] Sending ActionDecision: DoNothingDecision()"
@@ -1497,13 +1492,13 @@
     {
       "Turn": 94,
       "Info": [
-        "Currently at (16,43)"
+        "Currently at (13,22)"
       ],
       "Debug": [
         "[Turn 94] Feedback received from engine: []",
-        "Moving towards green grocer",
-        "[Turn 94] Sending MoveDecision: MoveDecision((17,52))",
-        "[Turn 94] Feedback received from engine: ['Failed to move to position (17,52), invalid destination']",
+        "Moving randomly",
+        "[Turn 94] Sending MoveDecision: MoveDecision((14,30))",
+        "[Turn 94] Feedback received from engine: ['Moved to (14,30)']",
         "Possible harvest locations=[]",
         "Couldn't find anything to do, waiting for move step",
         "[Turn 94] Sending ActionDecision: DoNothingDecision()"
@@ -1513,13 +1508,13 @@
     {
       "Turn": 95,
       "Info": [
-        "Currently at (16,43)"
+        "Currently at (14,30)"
       ],
       "Debug": [
         "[Turn 95] Feedback received from engine: []",
         "Moving randomly",
-        "[Turn 95] Sending MoveDecision: MoveDecision((18,48))",
-        "[Turn 95] Feedback received from engine: ['Moved to (18,48)']",
+        "[Turn 95] Sending MoveDecision: MoveDecision((10,26))",
+        "[Turn 95] Feedback received from engine: ['Moved to (10,26)']",
         "Possible harvest locations=[]",
         "Couldn't find anything to do, waiting for move step",
         "[Turn 95] Sending ActionDecision: DoNothingDecision()"
@@ -1529,13 +1524,13 @@
     {
       "Turn": 96,
       "Info": [
-        "Currently at (18,48)"
+        "Currently at (10,26)"
       ],
       "Debug": [
         "[Turn 96] Feedback received from engine: []",
-        "Moving randomly",
-        "[Turn 96] Sending MoveDecision: MoveDecision((18,42))",
-        "[Turn 96] Feedback received from engine: ['Moved to (18,42)']",
+        "Moving towards green grocer",
+        "[Turn 96] Sending MoveDecision: MoveDecision((15,21))",
+        "[Turn 96] Feedback received from engine: ['Moved to (15,21)']",
         "Possible harvest locations=[]",
         "Couldn't find anything to do, waiting for move step",
         "[Turn 96] Sending ActionDecision: DoNothingDecision()"
@@ -1545,13 +1540,13 @@
     {
       "Turn": 97,
       "Info": [
-        "Currently at (18,42)"
+        "Currently at (15,21)"
       ],
       "Debug": [
         "[Turn 97] Feedback received from engine: []",
-        "Moving randomly",
-        "[Turn 97] Sending MoveDecision: MoveDecision((15,44))",
-        "[Turn 97] Feedback received from engine: ['Moved to (15,44)']",
+        "Moving towards green grocer",
+        "[Turn 97] Sending MoveDecision: MoveDecision((15,11))",
+        "[Turn 97] Feedback received from engine: ['Moved to (15,11)']",
         "Possible harvest locations=[]",
         "Couldn't find anything to do, waiting for move step",
         "[Turn 97] Sending ActionDecision: DoNothingDecision()"
@@ -1561,13 +1556,13 @@
     {
       "Turn": 98,
       "Info": [
-        "Currently at (15,44)"
+        "Currently at (15,11)"
       ],
       "Debug": [
         "[Turn 98] Feedback received from engine: []",
         "Moving randomly",
-        "[Turn 98] Sending MoveDecision: MoveDecision((9,45))",
-        "[Turn 98] Feedback received from engine: ['Moved to (9,45)']",
+        "[Turn 98] Sending MoveDecision: MoveDecision((16,14))",
+        "[Turn 98] Feedback received from engine: ['Moved to (16,14)']",
         "Possible harvest locations=[]",
         "Couldn't find anything to do, waiting for move step",
         "[Turn 98] Sending ActionDecision: DoNothingDecision()"
@@ -1577,13 +1572,13 @@
     {
       "Turn": 99,
       "Info": [
-        "Currently at (9,45)"
+        "Currently at (16,14)"
       ],
       "Debug": [
         "[Turn 99] Feedback received from engine: []",
-        "Moving towards green grocer",
-        "[Turn 99] Sending MoveDecision: MoveDecision((15,49))",
-        "[Turn 99] Feedback received from engine: ['Moved to (15,49)']",
+        "Moving randomly",
+        "[Turn 99] Sending MoveDecision: MoveDecision((17,8))",
+        "[Turn 99] Feedback received from engine: ['Moved to (17,8)']",
         "Possible harvest locations=[]",
         "Couldn't find anything to do, waiting for move step",
         "[Turn 99] Sending ActionDecision: DoNothingDecision()"
@@ -1593,13 +1588,13 @@
     {
       "Turn": 100,
       "Info": [
-        "Currently at (15,49)"
+        "Currently at (17,8)"
       ],
       "Debug": [
         "[Turn 100] Feedback received from engine: []",
-        "Moving towards green grocer",
-        "[Turn 100] Sending MoveDecision: MoveDecision((15,39))",
-        "[Turn 100] Feedback received from engine: ['Moved to (15,39)']",
+        "Moving randomly",
+        "[Turn 100] Sending MoveDecision: MoveDecision((17,1))",
+        "[Turn 100] Feedback received from engine: ['Moved to (17,1)']",
         "Possible harvest locations=[]",
         "Couldn't find anything to do, waiting for move step",
         "[Turn 100] Sending ActionDecision: DoNothingDecision()"
@@ -1609,13 +1604,13 @@
     {
       "Turn": 101,
       "Info": [
-        "Currently at (15,39)"
+        "Currently at (17,1)"
       ],
       "Debug": [
         "[Turn 101] Feedback received from engine: []",
-        "Moving towards green grocer",
-        "[Turn 101] Sending MoveDecision: MoveDecision((15,29))",
-        "[Turn 101] Feedback received from engine: ['Moved to (15,29)']",
+        "Moving randomly",
+        "[Turn 101] Sending MoveDecision: MoveDecision((20,7))",
+        "[Turn 101] Feedback received from engine: ['Moved to (20,7)']",
         "Possible harvest locations=[]",
         "Couldn't find anything to do, waiting for move step",
         "[Turn 101] Sending ActionDecision: DoNothingDecision()"
@@ -1625,13 +1620,13 @@
     {
       "Turn": 102,
       "Info": [
-        "Currently at (15,29)"
+        "Currently at (20,7)"
       ],
       "Debug": [
         "[Turn 102] Feedback received from engine: []",
         "Moving randomly",
-        "[Turn 102] Sending MoveDecision: MoveDecision((16,26))",
-        "[Turn 102] Feedback received from engine: ['Moved to (16,26)']",
+        "[Turn 102] Sending MoveDecision: MoveDecision((23,7))",
+        "[Turn 102] Feedback received from engine: ['Moved to (23,7)']",
         "Possible harvest locations=[]",
         "Couldn't find anything to do, waiting for move step",
         "[Turn 102] Sending ActionDecision: DoNothingDecision()"
@@ -1641,13 +1636,13 @@
     {
       "Turn": 103,
       "Info": [
-        "Currently at (16,26)"
+        "Currently at (23,7)"
       ],
       "Debug": [
         "[Turn 103] Feedback received from engine: []",
         "Moving towards green grocer",
-        "[Turn 103] Sending MoveDecision: MoveDecision((17,35))",
-        "[Turn 103] Feedback received from engine: ['Moved to (17,35)']",
+        "[Turn 103] Sending MoveDecision: MoveDecision((15,5))",
+        "[Turn 103] Feedback received from engine: ['Moved to (15,5)']",
         "Possible harvest locations=[]",
         "Couldn't find anything to do, waiting for move step",
         "[Turn 103] Sending ActionDecision: DoNothingDecision()"
@@ -1657,13 +1652,13 @@
     {
       "Turn": 104,
       "Info": [
-        "Currently at (17,35)"
+        "Currently at (15,5)"
       ],
       "Debug": [
         "[Turn 104] Feedback received from engine: []",
-        "Moving randomly",
-        "[Turn 104] Sending MoveDecision: MoveDecision((17,36))",
-        "[Turn 104] Feedback received from engine: ['Moved to (17,36)']",
+        "Moving towards green grocer",
+        "[Turn 104] Sending MoveDecision: MoveDecision((15,0))",
+        "[Turn 104] Feedback received from engine: ['Moved to (15,0)', 'Selling inventory']",
         "Possible harvest locations=[]",
         "Couldn't find anything to do, waiting for move step",
         "[Turn 104] Sending ActionDecision: DoNothingDecision()"
@@ -1673,13 +1668,13 @@
     {
       "Turn": 105,
       "Info": [
-        "Currently at (17,36)"
+        "Currently at (15,0)"
       ],
       "Debug": [
         "[Turn 105] Feedback received from engine: []",
         "Moving randomly",
-        "[Turn 105] Sending MoveDecision: MoveDecision((12,41))",
-        "[Turn 105] Feedback received from engine: ['Moved to (12,41)']",
+        "[Turn 105] Sending MoveDecision: MoveDecision((15,7))",
+        "[Turn 105] Feedback received from engine: ['Moved to (15,7)']",
         "Possible harvest locations=[]",
         "Couldn't find anything to do, waiting for move step",
         "[Turn 105] Sending ActionDecision: DoNothingDecision()"
@@ -1689,13 +1684,13 @@
     {
       "Turn": 106,
       "Info": [
-        "Currently at (12,41)"
+        "Currently at (15,7)"
       ],
       "Debug": [
         "[Turn 106] Feedback received from engine: []",
-        "Moving towards green grocer",
-        "[Turn 106] Sending MoveDecision: MoveDecision((15,48))",
-        "[Turn 106] Feedback received from engine: ['Moved to (15,48)']",
+        "Moving randomly",
+        "[Turn 106] Sending MoveDecision: MoveDecision((12,10))",
+        "[Turn 106] Feedback received from engine: ['Moved to (12,10)']",
         "Possible harvest locations=[]",
         "Couldn't find anything to do, waiting for move step",
         "[Turn 106] Sending ActionDecision: DoNothingDecision()"
@@ -1705,13 +1700,13 @@
     {
       "Turn": 107,
       "Info": [
-        "Currently at (15,48)"
+        "Currently at (12,10)"
       ],
       "Debug": [
         "[Turn 107] Feedback received from engine: []",
         "Moving randomly",
-        "[Turn 107] Sending MoveDecision: MoveDecision((13,45))",
-        "[Turn 107] Feedback received from engine: ['Moved to (13,45)']",
+        "[Turn 107] Sending MoveDecision: MoveDecision((15,11))",
+        "[Turn 107] Feedback received from engine: ['Moved to (15,11)']",
         "Possible harvest locations=[]",
         "Couldn't find anything to do, waiting for move step",
         "[Turn 107] Sending ActionDecision: DoNothingDecision()"
@@ -1721,13 +1716,13 @@
     {
       "Turn": 108,
       "Info": [
-        "Currently at (13,45)"
+        "Currently at (15,11)"
       ],
       "Debug": [
         "[Turn 108] Feedback received from engine: []",
-        "Moving randomly",
-        "[Turn 108] Sending MoveDecision: MoveDecision((16,40))",
-        "[Turn 108] Feedback received from engine: ['Moved to (16,40)']",
+        "Moving towards green grocer",
+        "[Turn 108] Sending MoveDecision: MoveDecision((15,1))",
+        "[Turn 108] Feedback received from engine: ['Moved to (15,1)']",
         "Possible harvest locations=[]",
         "Couldn't find anything to do, waiting for move step",
         "[Turn 108] Sending ActionDecision: DoNothingDecision()"
@@ -1737,29 +1732,29 @@
     {
       "Turn": 109,
       "Info": [
-        "Currently at (16,40)"
+        "Currently at (15,1)"
       ],
       "Debug": [
         "[Turn 109] Feedback received from engine: []",
         "Moving towards green grocer",
-        "[Turn 109] Sending MoveDecision: MoveDecision((17,49))",
-        "[Turn 109] Feedback received from engine: ['Moved to (17,49)']",
+        "[Turn 109] Sending MoveDecision: MoveDecision((15,0))",
+        "[Turn 109] Feedback received from engine: ['Moved to (15,0)', 'Selling inventory']",
         "Possible harvest locations=[]",
-        "Couldn't find anything to do, waiting for move step",
-        "[Turn 109] Sending ActionDecision: DoNothingDecision()"
+        "Buy 1 of QUADROTRITICALE",
+        "[Turn 109] Sending ActionDecision: BuyDecision(QUADROTRITICALE:1)"
       ],
       "Exception": []
     },
     {
       "Turn": 110,
       "Info": [
-        "Currently at (17,49)"
+        "Currently at (15,0)"
       ],
       "Debug": [
-        "[Turn 110] Feedback received from engine: []",
-        "Moving towards green grocer",
-        "[Turn 110] Sending MoveDecision: MoveDecision((19,57))",
-        "[Turn 110] Feedback received from engine: ['Failed to move to position (19,57), invalid destination']",
+        "[Turn 110] Feedback received from engine: ['Bought 1 QUADROTRITICALE seeds for $30.00']",
+        "Moving randomly",
+        "[Turn 110] Sending MoveDecision: MoveDecision((8,2))",
+        "[Turn 110] Feedback received from engine: ['Moved to (8,2)']",
         "Possible harvest locations=[]",
         "Couldn't find anything to do, waiting for move step",
         "[Turn 110] Sending ActionDecision: DoNothingDecision()"
@@ -1769,13 +1764,13 @@
     {
       "Turn": 111,
       "Info": [
-        "Currently at (17,49)"
+        "Currently at (8,2)"
       ],
       "Debug": [
         "[Turn 111] Feedback received from engine: []",
         "Moving randomly",
-        "[Turn 111] Sending MoveDecision: MoveDecision((23,49))",
-        "[Turn 111] Feedback received from engine: ['Moved to (23,49)']",
+        "[Turn 111] Sending MoveDecision: MoveDecision((7,1))",
+        "[Turn 111] Feedback received from engine: ['Moved to (7,1)']",
         "Possible harvest locations=[]",
         "Couldn't find anything to do, waiting for move step",
         "[Turn 111] Sending ActionDecision: DoNothingDecision()"
@@ -1785,13 +1780,13 @@
     {
       "Turn": 112,
       "Info": [
-        "Currently at (23,49)"
+        "Currently at (7,1)"
       ],
       "Debug": [
         "[Turn 112] Feedback received from engine: []",
         "Moving randomly",
-        "[Turn 112] Sending MoveDecision: MoveDecision((27,44))",
-        "[Turn 112] Feedback received from engine: ['Moved to (27,44)']",
+        "[Turn 112] Sending MoveDecision: MoveDecision((0,0))",
+        "[Turn 112] Feedback received from engine: ['Moved to (0,0)']",
         "Possible harvest locations=[]",
         "Couldn't find anything to do, waiting for move step",
         "[Turn 112] Sending ActionDecision: DoNothingDecision()"
@@ -1801,13 +1796,13 @@
     {
       "Turn": 113,
       "Info": [
-        "Currently at (27,44)"
+        "Currently at (0,0)"
       ],
       "Debug": [
         "[Turn 113] Feedback received from engine: []",
-        "Moving towards green grocer",
-        "[Turn 113] Sending MoveDecision: MoveDecision((37,44))",
-        "[Turn 113] Feedback received from engine: ['Failed to move to position (37,44), invalid destination']",
+        "Moving randomly",
+        "[Turn 113] Sending MoveDecision: MoveDecision((0,2))",
+        "[Turn 113] Feedback received from engine: ['Moved to (0,2)']",
         "Possible harvest locations=[]",
         "Couldn't find anything to do, waiting for move step",
         "[Turn 113] Sending ActionDecision: DoNothingDecision()"
@@ -1817,13 +1812,13 @@
     {
       "Turn": 114,
       "Info": [
-        "Currently at (27,44)"
+        "Currently at (0,2)"
       ],
       "Debug": [
         "[Turn 114] Feedback received from engine: []",
         "Moving randomly",
-        "[Turn 114] Sending MoveDecision: MoveDecision((28,43))",
-        "[Turn 114] Feedback received from engine: ['Moved to (28,43)']",
+        "[Turn 114] Sending MoveDecision: MoveDecision((5,0))",
+        "[Turn 114] Feedback received from engine: ['Moved to (5,0)']",
         "Possible harvest locations=[]",
         "Couldn't find anything to do, waiting for move step",
         "[Turn 114] Sending ActionDecision: DoNothingDecision()"
@@ -1833,13 +1828,13 @@
     {
       "Turn": 115,
       "Info": [
-        "Currently at (28,43)"
+        "Currently at (5,0)"
       ],
       "Debug": [
         "[Turn 115] Feedback received from engine: []",
         "Moving randomly",
-        "[Turn 115] Sending MoveDecision: MoveDecision((27,36))",
-        "[Turn 115] Feedback received from engine: ['Moved to (27,36)']",
+        "[Turn 115] Sending MoveDecision: MoveDecision((2,6))",
+        "[Turn 115] Feedback received from engine: ['Moved to (2,6)']",
         "Possible harvest locations=[]",
         "Couldn't find anything to do, waiting for move step",
         "[Turn 115] Sending ActionDecision: DoNothingDecision()"
@@ -1849,13 +1844,13 @@
     {
       "Turn": 116,
       "Info": [
-        "Currently at (27,36)"
+        "Currently at (2,6)"
       ],
       "Debug": [
         "[Turn 116] Feedback received from engine: []",
         "Moving randomly",
-        "[Turn 116] Sending MoveDecision: MoveDecision((29,40))",
-        "[Turn 116] Feedback received from engine: ['Moved to (29,40)']",
+        "[Turn 116] Sending MoveDecision: MoveDecision((1,13))",
+        "[Turn 116] Feedback received from engine: ['Moved to (1,13)']",
         "Possible harvest locations=[]",
         "Couldn't find anything to do, waiting for move step",
         "[Turn 116] Sending ActionDecision: DoNothingDecision()"
@@ -1865,13 +1860,13 @@
     {
       "Turn": 117,
       "Info": [
-        "Currently at (29,40)"
+        "Currently at (1,13)"
       ],
       "Debug": [
         "[Turn 117] Feedback received from engine: []",
         "Moving randomly",
-        "[Turn 117] Sending MoveDecision: MoveDecision((27,38))",
-        "[Turn 117] Feedback received from engine: ['Moved to (27,38)']",
+        "[Turn 117] Sending MoveDecision: MoveDecision((4,12))",
+        "[Turn 117] Feedback received from engine: ['Moved to (4,12)']",
         "Possible harvest locations=[]",
         "Couldn't find anything to do, waiting for move step",
         "[Turn 117] Sending ActionDecision: DoNothingDecision()"
@@ -1881,13 +1876,13 @@
     {
       "Turn": 118,
       "Info": [
-        "Currently at (27,38)"
+        "Currently at (4,12)"
       ],
       "Debug": [
         "[Turn 118] Feedback received from engine: []",
         "Moving randomly",
-        "[Turn 118] Sending MoveDecision: MoveDecision((24,36))",
-        "[Turn 118] Feedback received from engine: ['Moved to (24,36)']",
+        "[Turn 118] Sending MoveDecision: MoveDecision((8,14))",
+        "[Turn 118] Feedback received from engine: ['Moved to (8,14)']",
         "Possible harvest locations=[]",
         "Couldn't find anything to do, waiting for move step",
         "[Turn 118] Sending ActionDecision: DoNothingDecision()"
@@ -1897,13 +1892,13 @@
     {
       "Turn": 119,
       "Info": [
-        "Currently at (24,36)"
+        "Currently at (8,14)"
       ],
       "Debug": [
         "[Turn 119] Feedback received from engine: []",
         "Moving randomly",
-        "[Turn 119] Sending MoveDecision: MoveDecision((22,38))",
-        "[Turn 119] Feedback received from engine: ['Moved to (22,38)']",
+        "[Turn 119] Sending MoveDecision: MoveDecision((10,14))",
+        "[Turn 119] Feedback received from engine: ['Moved to (10,14)']",
         "Possible harvest locations=[]",
         "Couldn't find anything to do, waiting for move step",
         "[Turn 119] Sending ActionDecision: DoNothingDecision()"
@@ -1913,13 +1908,13 @@
     {
       "Turn": 120,
       "Info": [
-        "Currently at (22,38)"
+        "Currently at (10,14)"
       ],
       "Debug": [
         "[Turn 120] Feedback received from engine: []",
-        "Moving towards green grocer",
-        "[Turn 120] Sending MoveDecision: MoveDecision((29,41))",
-        "[Turn 120] Feedback received from engine: ['Moved to (29,41)']",
+        "Moving randomly",
+        "[Turn 120] Sending MoveDecision: MoveDecision((9,20))",
+        "[Turn 120] Feedback received from engine: ['Moved to (9,20)']",
         "Possible harvest locations=[]",
         "Couldn't find anything to do, waiting for move step",
         "[Turn 120] Sending ActionDecision: DoNothingDecision()"
@@ -1929,13 +1924,13 @@
     {
       "Turn": 121,
       "Info": [
-        "Currently at (29,41)"
+        "Currently at (9,20)"
       ],
       "Debug": [
         "[Turn 121] Feedback received from engine: []",
         "Moving randomly",
-        "[Turn 121] Sending MoveDecision: MoveDecision((24,37))",
-        "[Turn 121] Feedback received from engine: ['Moved to (24,37)']",
+        "[Turn 121] Sending MoveDecision: MoveDecision((15,21))",
+        "[Turn 121] Feedback received from engine: ['Moved to (15,21)']",
         "Possible harvest locations=[]",
         "Couldn't find anything to do, waiting for move step",
         "[Turn 121] Sending ActionDecision: DoNothingDecision()"
@@ -1945,13 +1940,13 @@
     {
       "Turn": 122,
       "Info": [
-        "Currently at (24,37)"
+        "Currently at (15,21)"
       ],
       "Debug": [
         "[Turn 122] Feedback received from engine: []",
         "Moving randomly",
-        "[Turn 122] Sending MoveDecision: MoveDecision((27,43))",
-        "[Turn 122] Feedback received from engine: ['Moved to (27,43)']",
+        "[Turn 122] Sending MoveDecision: MoveDecision((12,26))",
+        "[Turn 122] Feedback received from engine: ['Moved to (12,26)']",
         "Possible harvest locations=[]",
         "Couldn't find anything to do, waiting for move step",
         "[Turn 122] Sending ActionDecision: DoNothingDecision()"
@@ -1961,13 +1956,13 @@
     {
       "Turn": 123,
       "Info": [
-        "Currently at (27,43)"
+        "Currently at (12,26)"
       ],
       "Debug": [
         "[Turn 123] Feedback received from engine: []",
         "Moving randomly",
-        "[Turn 123] Sending MoveDecision: MoveDecision((29,39))",
-        "[Turn 123] Feedback received from engine: ['Moved to (29,39)']",
+        "[Turn 123] Sending MoveDecision: MoveDecision((6,22))",
+        "[Turn 123] Feedback received from engine: ['Moved to (6,22)']",
         "Possible harvest locations=[]",
         "Couldn't find anything to do, waiting for move step",
         "[Turn 123] Sending ActionDecision: DoNothingDecision()"
@@ -1977,13 +1972,13 @@
     {
       "Turn": 124,
       "Info": [
-        "Currently at (29,39)"
+        "Currently at (6,22)"
       ],
       "Debug": [
         "[Turn 124] Feedback received from engine: []",
         "Moving randomly",
-        "[Turn 124] Sending MoveDecision: MoveDecision((28,42))",
-        "[Turn 124] Feedback received from engine: ['Moved to (28,42)']",
+        "[Turn 124] Sending MoveDecision: MoveDecision((1,21))",
+        "[Turn 124] Feedback received from engine: ['Moved to (1,21)']",
         "Possible harvest locations=[]",
         "Couldn't find anything to do, waiting for move step",
         "[Turn 124] Sending ActionDecision: DoNothingDecision()"
@@ -1993,13 +1988,13 @@
     {
       "Turn": 125,
       "Info": [
-        "Currently at (28,42)"
+        "Currently at (1,21)"
       ],
       "Debug": [
         "[Turn 125] Feedback received from engine: []",
         "Moving randomly",
-        "[Turn 125] Sending MoveDecision: MoveDecision((26,49))",
-        "[Turn 125] Feedback received from engine: ['Moved to (26,49)']",
+        "[Turn 125] Sending MoveDecision: MoveDecision((6,19))",
+        "[Turn 125] Feedback received from engine: ['Moved to (6,19)']",
         "Possible harvest locations=[]",
         "Couldn't find anything to do, waiting for move step",
         "[Turn 125] Sending ActionDecision: DoNothingDecision()"
@@ -2009,13 +2004,13 @@
     {
       "Turn": 126,
       "Info": [
-        "Currently at (26,49)"
+        "Currently at (6,19)"
       ],
       "Debug": [
         "[Turn 126] Feedback received from engine: []",
         "Moving randomly",
-        "[Turn 126] Sending MoveDecision: MoveDecision((21,46))",
-        "[Turn 126] Feedback received from engine: ['Moved to (21,46)']",
+        "[Turn 126] Sending MoveDecision: MoveDecision((4,26))",
+        "[Turn 126] Feedback received from engine: ['Moved to (4,26)']",
         "Possible harvest locations=[]",
         "Couldn't find anything to do, waiting for move step",
         "[Turn 126] Sending ActionDecision: DoNothingDecision()"
@@ -2025,13 +2020,13 @@
     {
       "Turn": 127,
       "Info": [
-        "Currently at (21,46)"
+        "Currently at (4,26)"
       ],
       "Debug": [
         "[Turn 127] Feedback received from engine: []",
-        "Moving towards green grocer",
-        "[Turn 127] Sending MoveDecision: MoveDecision((27,50))",
-        "[Turn 127] Feedback received from engine: ['Failed to move to position (27,50), invalid destination']",
+        "Moving randomly",
+        "[Turn 127] Sending MoveDecision: MoveDecision((4,22))",
+        "[Turn 127] Feedback received from engine: ['Moved to (4,22)']",
         "Possible harvest locations=[]",
         "Couldn't find anything to do, waiting for move step",
         "[Turn 127] Sending ActionDecision: DoNothingDecision()"
@@ -2041,13 +2036,13 @@
     {
       "Turn": 128,
       "Info": [
-        "Currently at (21,46)"
+        "Currently at (4,22)"
       ],
       "Debug": [
         "[Turn 128] Feedback received from engine: []",
-        "Moving towards green grocer",
-        "[Turn 128] Sending MoveDecision: MoveDecision((27,50))",
-        "[Turn 128] Feedback received from engine: ['Failed to move to position (27,50), invalid destination']",
+        "Moving randomly",
+        "[Turn 128] Sending MoveDecision: MoveDecision((4,24))",
+        "[Turn 128] Feedback received from engine: ['Moved to (4,24)']",
         "Possible harvest locations=[]",
         "Couldn't find anything to do, waiting for move step",
         "[Turn 128] Sending ActionDecision: DoNothingDecision()"
@@ -2057,13 +2052,13 @@
     {
       "Turn": 129,
       "Info": [
-        "Currently at (21,46)"
+        "Currently at (4,24)"
       ],
       "Debug": [
         "[Turn 129] Feedback received from engine: []",
-        "Moving towards green grocer",
-        "[Turn 129] Sending MoveDecision: MoveDecision((27,50))",
-        "[Turn 129] Feedback received from engine: ['Failed to move to position (27,50), invalid destination']",
+        "Moving randomly",
+        "[Turn 129] Sending MoveDecision: MoveDecision((6,20))",
+        "[Turn 129] Feedback received from engine: ['Moved to (6,20)']",
         "Possible harvest locations=[]",
         "Couldn't find anything to do, waiting for move step",
         "[Turn 129] Sending ActionDecision: DoNothingDecision()"
@@ -2073,13 +2068,13 @@
     {
       "Turn": 130,
       "Info": [
-        "Currently at (21,46)"
+        "Currently at (6,20)"
       ],
       "Debug": [
         "[Turn 130] Feedback received from engine: []",
         "Moving randomly",
-        "[Turn 130] Sending MoveDecision: MoveDecision((16,45))",
-        "[Turn 130] Feedback received from engine: ['Moved to (16,45)']",
+        "[Turn 130] Sending MoveDecision: MoveDecision((4,21))",
+        "[Turn 130] Feedback received from engine: ['Moved to (4,21)']",
         "Possible harvest locations=[]",
         "Couldn't find anything to do, waiting for move step",
         "[Turn 130] Sending ActionDecision: DoNothingDecision()"
@@ -2089,13 +2084,13 @@
     {
       "Turn": 131,
       "Info": [
-        "Currently at (16,45)"
+        "Currently at (4,21)"
       ],
       "Debug": [
         "[Turn 131] Feedback received from engine: []",
         "Moving randomly",
-        "[Turn 131] Sending MoveDecision: MoveDecision((14,44))",
-        "[Turn 131] Feedback received from engine: ['Moved to (14,44)']",
+        "[Turn 131] Sending MoveDecision: MoveDecision((11,20))",
+        "[Turn 131] Feedback received from engine: ['Moved to (11,20)']",
         "Possible harvest locations=[]",
         "Couldn't find anything to do, waiting for move step",
         "[Turn 131] Sending ActionDecision: DoNothingDecision()"
@@ -2105,13 +2100,13 @@
     {
       "Turn": 132,
       "Info": [
-        "Currently at (14,44)"
+        "Currently at (11,20)"
       ],
       "Debug": [
         "[Turn 132] Feedback received from engine: []",
         "Moving randomly",
-        "[Turn 132] Sending MoveDecision: MoveDecision((15,47))",
-        "[Turn 132] Feedback received from engine: ['Moved to (15,47)']",
+        "[Turn 132] Sending MoveDecision: MoveDecision((10,14))",
+        "[Turn 132] Feedback received from engine: ['Moved to (10,14)']",
         "Possible harvest locations=[]",
         "Couldn't find anything to do, waiting for move step",
         "[Turn 132] Sending ActionDecision: DoNothingDecision()"
@@ -2121,13 +2116,13 @@
     {
       "Turn": 133,
       "Info": [
-        "Currently at (15,47)"
+        "Currently at (10,14)"
       ],
       "Debug": [
         "[Turn 133] Feedback received from engine: []",
-        "Moving towards green grocer",
-        "[Turn 133] Sending MoveDecision: MoveDecision((15,37))",
-        "[Turn 133] Feedback received from engine: ['Moved to (15,37)']",
+        "Moving randomly",
+        "[Turn 133] Sending MoveDecision: MoveDecision((11,17))",
+        "[Turn 133] Feedback received from engine: ['Moved to (11,17)']",
         "Possible harvest locations=[]",
         "Couldn't find anything to do, waiting for move step",
         "[Turn 133] Sending ActionDecision: DoNothingDecision()"
@@ -2137,13 +2132,13 @@
     {
       "Turn": 134,
       "Info": [
-        "Currently at (15,37)"
+        "Currently at (11,17)"
       ],
       "Debug": [
         "[Turn 134] Feedback received from engine: []",
-        "Moving towards green grocer",
-        "[Turn 134] Sending MoveDecision: MoveDecision((15,27))",
-        "[Turn 134] Feedback received from engine: ['Moved to (15,27)']",
+        "Moving randomly",
+        "[Turn 134] Sending MoveDecision: MoveDecision((9,15))",
+        "[Turn 134] Feedback received from engine: ['Moved to (9,15)']",
         "Possible harvest locations=[]",
         "Couldn't find anything to do, waiting for move step",
         "[Turn 134] Sending ActionDecision: DoNothingDecision()"
@@ -2153,13 +2148,13 @@
     {
       "Turn": 135,
       "Info": [
-        "Currently at (15,27)"
+        "Currently at (9,15)"
       ],
       "Debug": [
         "[Turn 135] Feedback received from engine: []",
-        "Moving towards green grocer",
-        "[Turn 135] Sending MoveDecision: MoveDecision((15,17))",
-        "[Turn 135] Feedback received from engine: ['Moved to (15,17)']",
+        "Moving randomly",
+        "[Turn 135] Sending MoveDecision: MoveDecision((5,21))",
+        "[Turn 135] Feedback received from engine: ['Moved to (5,21)']",
         "Possible harvest locations=[]",
         "Couldn't find anything to do, waiting for move step",
         "[Turn 135] Sending ActionDecision: DoNothingDecision()"
@@ -2169,13 +2164,13 @@
     {
       "Turn": 136,
       "Info": [
-        "Currently at (15,17)"
+        "Currently at (5,21)"
       ],
       "Debug": [
         "[Turn 136] Feedback received from engine: []",
-        "Moving towards green grocer",
-        "[Turn 136] Sending MoveDecision: MoveDecision((15,7))",
-        "[Turn 136] Feedback received from engine: ['Moved to (15,7)']",
+        "Moving randomly",
+        "[Turn 136] Sending MoveDecision: MoveDecision((6,16))",
+        "[Turn 136] Feedback received from engine: ['Moved to (6,16)']",
         "Possible harvest locations=[]",
         "Couldn't find anything to do, waiting for move step",
         "[Turn 136] Sending ActionDecision: DoNothingDecision()"
@@ -2185,13 +2180,13 @@
     {
       "Turn": 137,
       "Info": [
-        "Currently at (15,7)"
+        "Currently at (6,16)"
       ],
       "Debug": [
         "[Turn 137] Feedback received from engine: []",
         "Moving randomly",
-        "[Turn 137] Sending MoveDecision: MoveDecision((18,5))",
-        "[Turn 137] Feedback received from engine: ['Moved to (18,5)']",
+        "[Turn 137] Sending MoveDecision: MoveDecision((4,11))",
+        "[Turn 137] Feedback received from engine: ['Moved to (4,11)']",
         "Possible harvest locations=[]",
         "Couldn't find anything to do, waiting for move step",
         "[Turn 137] Sending ActionDecision: DoNothingDecision()"
@@ -2201,13 +2196,13 @@
     {
       "Turn": 138,
       "Info": [
-        "Currently at (18,5)"
+        "Currently at (4,11)"
       ],
       "Debug": [
         "[Turn 138] Feedback received from engine: []",
         "Moving randomly",
-        "[Turn 138] Sending MoveDecision: MoveDecision((21,0))",
-        "[Turn 138] Feedback received from engine: ['Moved to (21,0)']",
+        "[Turn 138] Sending MoveDecision: MoveDecision((2,12))",
+        "[Turn 138] Feedback received from engine: ['Moved to (2,12)']",
         "Possible harvest locations=[]",
         "Couldn't find anything to do, waiting for move step",
         "[Turn 138] Sending ActionDecision: DoNothingDecision()"
@@ -2217,13 +2212,13 @@
     {
       "Turn": 139,
       "Info": [
-        "Currently at (21,0)"
+        "Currently at (2,12)"
       ],
       "Debug": [
         "[Turn 139] Feedback received from engine: []",
         "Moving randomly",
-        "[Turn 139] Sending MoveDecision: MoveDecision((28,1))",
-        "[Turn 139] Feedback received from engine: ['Moved to (28,1)']",
+        "[Turn 139] Sending MoveDecision: MoveDecision((0,15))",
+        "[Turn 139] Feedback received from engine: ['Moved to (0,15)']",
         "Possible harvest locations=[]",
         "Couldn't find anything to do, waiting for move step",
         "[Turn 139] Sending ActionDecision: DoNothingDecision()"
@@ -2233,13 +2228,13 @@
     {
       "Turn": 140,
       "Info": [
-        "Currently at (28,1)"
+        "Currently at (0,15)"
       ],
       "Debug": [
         "[Turn 140] Feedback received from engine: []",
         "Moving randomly",
-        "[Turn 140] Sending MoveDecision: MoveDecision((21,0))",
-        "[Turn 140] Feedback received from engine: ['Moved to (21,0)']",
+        "[Turn 140] Sending MoveDecision: MoveDecision((2,12))",
+        "[Turn 140] Feedback received from engine: ['Moved to (2,12)']",
         "Possible harvest locations=[]",
         "Couldn't find anything to do, waiting for move step",
         "[Turn 140] Sending ActionDecision: DoNothingDecision()"
@@ -2249,13 +2244,13 @@
     {
       "Turn": 141,
       "Info": [
-        "Currently at (21,0)"
+        "Currently at (2,12)"
       ],
       "Debug": [
         "[Turn 141] Feedback received from engine: []",
         "Moving randomly",
-        "[Turn 141] Sending MoveDecision: MoveDecision((22,8))",
-        "[Turn 141] Feedback received from engine: ['Moved to (22,8)']",
+        "[Turn 141] Sending MoveDecision: MoveDecision((4,5))",
+        "[Turn 141] Feedback received from engine: ['Moved to (4,5)']",
         "Possible harvest locations=[]",
         "Couldn't find anything to do, waiting for move step",
         "[Turn 141] Sending ActionDecision: DoNothingDecision()"
@@ -2265,13 +2260,13 @@
     {
       "Turn": 142,
       "Info": [
-        "Currently at (22,8)"
+        "Currently at (4,5)"
       ],
       "Debug": [
         "[Turn 142] Feedback received from engine: []",
-        "Moving towards green grocer",
-        "[Turn 142] Sending MoveDecision: MoveDecision((29,11))",
-        "[Turn 142] Feedback received from engine: ['Moved to (29,11)']",
+        "Moving randomly",
+        "[Turn 142] Sending MoveDecision: MoveDecision((3,6))",
+        "[Turn 142] Feedback received from engine: ['Moved to (3,6)']",
         "Possible harvest locations=[]",
         "Couldn't find anything to do, waiting for move step",
         "[Turn 142] Sending ActionDecision: DoNothingDecision()"
@@ -2281,13 +2276,13 @@
     {
       "Turn": 143,
       "Info": [
-        "Currently at (29,11)"
+        "Currently at (3,6)"
       ],
       "Debug": [
         "[Turn 143] Feedback received from engine: []",
         "Moving randomly",
-        "[Turn 143] Sending MoveDecision: MoveDecision((25,8))",
-        "[Turn 143] Feedback received from engine: ['Moved to (25,8)']",
+        "[Turn 143] Sending MoveDecision: MoveDecision((1,12))",
+        "[Turn 143] Feedback received from engine: ['Moved to (1,12)']",
         "Possible harvest locations=[]",
         "Couldn't find anything to do, waiting for move step",
         "[Turn 143] Sending ActionDecision: DoNothingDecision()"
@@ -2297,13 +2292,13 @@
     {
       "Turn": 144,
       "Info": [
-        "Currently at (25,8)"
+        "Currently at (1,12)"
       ],
       "Debug": [
         "[Turn 144] Feedback received from engine: []",
         "Moving randomly",
-        "[Turn 144] Sending MoveDecision: MoveDecision((24,7))",
-        "[Turn 144] Feedback received from engine: ['Moved to (24,7)']",
+        "[Turn 144] Sending MoveDecision: MoveDecision((1,5))",
+        "[Turn 144] Feedback received from engine: ['Moved to (1,5)']",
         "Possible harvest locations=[]",
         "Couldn't find anything to do, waiting for move step",
         "[Turn 144] Sending ActionDecision: DoNothingDecision()"
@@ -2313,13 +2308,13 @@
     {
       "Turn": 145,
       "Info": [
-        "Currently at (24,7)"
+        "Currently at (1,5)"
       ],
       "Debug": [
         "[Turn 145] Feedback received from engine: []",
         "Moving randomly",
-        "[Turn 145] Sending MoveDecision: MoveDecision((27,7))",
-        "[Turn 145] Feedback received from engine: ['Moved to (27,7)']",
+        "[Turn 145] Sending MoveDecision: MoveDecision((9,6))",
+        "[Turn 145] Feedback received from engine: ['Moved to (9,6)']",
         "Possible harvest locations=[]",
         "Couldn't find anything to do, waiting for move step",
         "[Turn 145] Sending ActionDecision: DoNothingDecision()"
@@ -2329,13 +2324,13 @@
     {
       "Turn": 146,
       "Info": [
-        "Currently at (27,7)"
+        "Currently at (9,6)"
       ],
       "Debug": [
         "[Turn 146] Feedback received from engine: []",
         "Moving randomly",
-        "[Turn 146] Sending MoveDecision: MoveDecision((26,2))",
-        "[Turn 146] Feedback received from engine: ['Moved to (26,2)']",
+        "[Turn 146] Sending MoveDecision: MoveDecision((12,4))",
+        "[Turn 146] Feedback received from engine: ['Moved to (12,4)']",
         "Possible harvest locations=[]",
         "Couldn't find anything to do, waiting for move step",
         "[Turn 146] Sending ActionDecision: DoNothingDecision()"
@@ -2345,13 +2340,13 @@
     {
       "Turn": 147,
       "Info": [
-        "Currently at (26,2)"
+        "Currently at (12,4)"
       ],
       "Debug": [
         "[Turn 147] Feedback received from engine: []",
         "Moving randomly",
-        "[Turn 147] Sending MoveDecision: MoveDecision((21,3))",
-        "[Turn 147] Feedback received from engine: ['Moved to (21,3)']",
+        "[Turn 147] Sending MoveDecision: MoveDecision((21,4))",
+        "[Turn 147] Feedback received from engine: ['Moved to (21,4)']",
         "Possible harvest locations=[]",
         "Couldn't find anything to do, waiting for move step",
         "[Turn 147] Sending ActionDecision: DoNothingDecision()"
@@ -2361,13 +2356,13 @@
     {
       "Turn": 148,
       "Info": [
-        "Currently at (21,3)"
+        "Currently at (21,4)"
       ],
       "Debug": [
         "[Turn 148] Feedback received from engine: []",
         "Moving randomly",
-        "[Turn 148] Sending MoveDecision: MoveDecision((26,1))",
-        "[Turn 148] Feedback received from engine: ['Moved to (26,1)']",
+        "[Turn 148] Sending MoveDecision: MoveDecision((28,3))",
+        "[Turn 148] Feedback received from engine: ['Moved to (28,3)']",
         "Possible harvest locations=[]",
         "Couldn't find anything to do, waiting for move step",
         "[Turn 148] Sending ActionDecision: DoNothingDecision()"
@@ -2377,13 +2372,13 @@
     {
       "Turn": 149,
       "Info": [
-        "Currently at (26,1)"
+        "Currently at (28,3)"
       ],
       "Debug": [
         "[Turn 149] Feedback received from engine: []",
         "Moving randomly",
-        "[Turn 149] Sending MoveDecision: MoveDecision((17,2))",
-        "[Turn 149] Feedback received from engine: ['Moved to (17,2)']",
+        "[Turn 149] Sending MoveDecision: MoveDecision((24,5))",
+        "[Turn 149] Feedback received from engine: ['Moved to (24,5)']",
         "Possible harvest locations=[]",
         "Couldn't find anything to do, waiting for move step",
         "[Turn 149] Sending ActionDecision: DoNothingDecision()"
@@ -2393,13 +2388,13 @@
     {
       "Turn": 150,
       "Info": [
-        "Currently at (17,2)"
+        "Currently at (24,5)"
       ],
       "Debug": [
         "[Turn 150] Feedback received from engine: []",
         "Moving randomly",
-        "[Turn 150] Sending MoveDecision: MoveDecision((23,2))",
-        "[Turn 150] Feedback received from engine: ['Moved to (23,2)']",
+        "[Turn 150] Sending MoveDecision: MoveDecision((26,9))",
+        "[Turn 150] Feedback received from engine: ['Moved to (26,9)']",
         "Possible harvest locations=[]",
         "Couldn't find anything to do, waiting for move step",
         "[Turn 150] Sending ActionDecision: DoNothingDecision()"
@@ -2409,29 +2404,29 @@
     {
       "Turn": 151,
       "Info": [
-        "Currently at (23,2)"
+        "Currently at (26,9)"
       ],
       "Debug": [
         "[Turn 151] Feedback received from engine: []",
-        "Moving towards green grocer",
-        "[Turn 151] Sending MoveDecision: MoveDecision((15,0))",
-        "[Turn 151] Feedback received from engine: ['Moved to (15,0)', 'Selling inventory']",
+        "Moving randomly",
+        "[Turn 151] Sending MoveDecision: MoveDecision((27,6))",
+        "[Turn 151] Feedback received from engine: ['Moved to (27,6)']",
         "Possible harvest locations=[]",
-        "Buy 1 of DUCHAM_FRUIT",
-        "[Turn 151] Sending ActionDecision: BuyDecision(DUCHAM_FRUIT:1)"
+        "Couldn't find anything to do, waiting for move step",
+        "[Turn 151] Sending ActionDecision: DoNothingDecision()"
       ],
       "Exception": []
     },
     {
       "Turn": 152,
       "Info": [
-        "Currently at (15,0)"
+        "Currently at (27,6)"
       ],
       "Debug": [
-        "[Turn 152] Feedback received from engine: ['Bought 1 DUCHAM_FRUIT seeds for $100.00']",
+        "[Turn 152] Feedback received from engine: []",
         "Moving randomly",
-        "[Turn 152] Sending MoveDecision: MoveDecision((17,5))",
-        "[Turn 152] Feedback received from engine: ['Moved to (17,5)']",
+        "[Turn 152] Sending MoveDecision: MoveDecision((23,0))",
+        "[Turn 152] Feedback received from engine: ['Moved to (23,0)']",
         "Possible harvest locations=[]",
         "Couldn't find anything to do, waiting for move step",
         "[Turn 152] Sending ActionDecision: DoNothingDecision()"
@@ -2441,13 +2436,13 @@
     {
       "Turn": 153,
       "Info": [
-        "Currently at (17,5)"
+        "Currently at (23,0)"
       ],
       "Debug": [
         "[Turn 153] Feedback received from engine: []",
         "Moving randomly",
-        "[Turn 153] Sending MoveDecision: MoveDecision((13,8))",
-        "[Turn 153] Feedback received from engine: ['Moved to (13,8)']",
+        "[Turn 153] Sending MoveDecision: MoveDecision((16,2))",
+        "[Turn 153] Feedback received from engine: ['Moved to (16,2)']",
         "Possible harvest locations=[]",
         "Couldn't find anything to do, waiting for move step",
         "[Turn 153] Sending ActionDecision: DoNothingDecision()"
@@ -2457,13 +2452,13 @@
     {
       "Turn": 154,
       "Info": [
-        "Currently at (13,8)"
+        "Currently at (16,2)"
       ],
       "Debug": [
         "[Turn 154] Feedback received from engine: []",
         "Moving randomly",
-        "[Turn 154] Sending MoveDecision: MoveDecision((16,2))",
-        "[Turn 154] Feedback received from engine: ['Moved to (16,2)']",
+        "[Turn 154] Sending MoveDecision: MoveDecision((14,8))",
+        "[Turn 154] Feedback received from engine: ['Moved to (14,8)']",
         "Possible harvest locations=[]",
         "Couldn't find anything to do, waiting for move step",
         "[Turn 154] Sending ActionDecision: DoNothingDecision()"
@@ -2473,13 +2468,13 @@
     {
       "Turn": 155,
       "Info": [
-        "Currently at (16,2)"
+        "Currently at (14,8)"
       ],
       "Debug": [
         "[Turn 155] Feedback received from engine: []",
         "Moving randomly",
-        "[Turn 155] Sending MoveDecision: MoveDecision((15,1))",
-        "[Turn 155] Feedback received from engine: ['Moved to (15,1)']",
+        "[Turn 155] Sending MoveDecision: MoveDecision((22,8))",
+        "[Turn 155] Feedback received from engine: ['Moved to (22,8)']",
         "Possible harvest locations=[]",
         "Couldn't find anything to do, waiting for move step",
         "[Turn 155] Sending ActionDecision: DoNothingDecision()"
@@ -2489,13 +2484,13 @@
     {
       "Turn": 156,
       "Info": [
-        "Currently at (15,1)"
+        "Currently at (22,8)"
       ],
       "Debug": [
         "[Turn 156] Feedback received from engine: []",
         "Moving randomly",
-        "[Turn 156] Sending MoveDecision: MoveDecision((19,1))",
-        "[Turn 156] Feedback received from engine: ['Moved to (19,1)']",
+        "[Turn 156] Sending MoveDecision: MoveDecision((21,4))",
+        "[Turn 156] Feedback received from engine: ['Moved to (21,4)']",
         "Possible harvest locations=[]",
         "Couldn't find anything to do, waiting for move step",
         "[Turn 156] Sending ActionDecision: DoNothingDecision()"
@@ -2505,13 +2500,13 @@
     {
       "Turn": 157,
       "Info": [
-        "Currently at (19,1)"
+        "Currently at (21,4)"
       ],
       "Debug": [
         "[Turn 157] Feedback received from engine: []",
         "Moving randomly",
-        "[Turn 157] Sending MoveDecision: MoveDecision((21,1))",
-        "[Turn 157] Feedback received from engine: ['Moved to (21,1)']",
+        "[Turn 157] Sending MoveDecision: MoveDecision((19,2))",
+        "[Turn 157] Feedback received from engine: ['Moved to (19,2)']",
         "Possible harvest locations=[]",
         "Couldn't find anything to do, waiting for move step",
         "[Turn 157] Sending ActionDecision: DoNothingDecision()"
@@ -2521,13 +2516,13 @@
     {
       "Turn": 158,
       "Info": [
-        "Currently at (21,1)"
+        "Currently at (19,2)"
       ],
       "Debug": [
         "[Turn 158] Feedback received from engine: []",
         "Moving randomly",
-        "[Turn 158] Sending MoveDecision: MoveDecision((19,4))",
-        "[Turn 158] Feedback received from engine: ['Moved to (19,4)']",
+        "[Turn 158] Sending MoveDecision: MoveDecision((21,1))",
+        "[Turn 158] Feedback received from engine: ['Moved to (21,1)']",
         "Possible harvest locations=[]",
         "Couldn't find anything to do, waiting for move step",
         "[Turn 158] Sending ActionDecision: DoNothingDecision()"
@@ -2537,13 +2532,13 @@
     {
       "Turn": 159,
       "Info": [
-        "Currently at (19,4)"
+        "Currently at (21,1)"
       ],
       "Debug": [
         "[Turn 159] Feedback received from engine: []",
         "Moving randomly",
-        "[Turn 159] Sending MoveDecision: MoveDecision((15,2))",
-        "[Turn 159] Feedback received from engine: ['Moved to (15,2)']",
+        "[Turn 159] Sending MoveDecision: MoveDecision((20,6))",
+        "[Turn 159] Feedback received from engine: ['Moved to (20,6)']",
         "Possible harvest locations=[]",
         "Couldn't find anything to do, waiting for move step",
         "[Turn 159] Sending ActionDecision: DoNothingDecision()"
@@ -2553,13 +2548,13 @@
     {
       "Turn": 160,
       "Info": [
-        "Currently at (15,2)"
+        "Currently at (20,6)"
       ],
       "Debug": [
         "[Turn 160] Feedback received from engine: []",
         "Moving randomly",
-        "[Turn 160] Sending MoveDecision: MoveDecision((13,4))",
-        "[Turn 160] Feedback received from engine: ['Moved to (13,4)']",
+        "[Turn 160] Sending MoveDecision: MoveDecision((16,3))",
+        "[Turn 160] Feedback received from engine: ['Moved to (16,3)']",
         "Possible harvest locations=[]",
         "Couldn't find anything to do, waiting for move step",
         "[Turn 160] Sending ActionDecision: DoNothingDecision()"
@@ -2569,13 +2564,13 @@
     {
       "Turn": 161,
       "Info": [
-        "Currently at (13,4)"
+        "Currently at (16,3)"
       ],
       "Debug": [
         "[Turn 161] Feedback received from engine: []",
         "Moving randomly",
-        "[Turn 161] Sending MoveDecision: MoveDecision((19,6))",
-        "[Turn 161] Feedback received from engine: ['Moved to (19,6)']",
+        "[Turn 161] Sending MoveDecision: MoveDecision((17,9))",
+        "[Turn 161] Feedback received from engine: ['Moved to (17,9)']",
         "Possible harvest locations=[]",
         "Couldn't find anything to do, waiting for move step",
         "[Turn 161] Sending ActionDecision: DoNothingDecision()"
@@ -2585,29 +2580,29 @@
     {
       "Turn": 162,
       "Info": [
-        "Currently at (19,6)"
+        "Currently at (17,9)"
       ],
       "Debug": [
         "[Turn 162] Feedback received from engine: []",
         "Moving randomly",
-        "[Turn 162] Sending MoveDecision: MoveDecision((15,0))",
-        "[Turn 162] Feedback received from engine: ['Moved to (15,0)', 'Selling inventory']",
+        "[Turn 162] Sending MoveDecision: MoveDecision((17,8))",
+        "[Turn 162] Feedback received from engine: ['Moved to (17,8)']",
         "Possible harvest locations=[]",
-        "Buy 1 of DUCHAM_FRUIT",
-        "[Turn 162] Sending ActionDecision: BuyDecision(DUCHAM_FRUIT:1)"
+        "Couldn't find anything to do, waiting for move step",
+        "[Turn 162] Sending ActionDecision: DoNothingDecision()"
       ],
       "Exception": []
     },
     {
       "Turn": 163,
       "Info": [
-        "Currently at (15,0)"
+        "Currently at (17,8)"
       ],
       "Debug": [
-        "[Turn 163] Feedback received from engine: ['Bought 1 DUCHAM_FRUIT seeds for $100.00']",
+        "[Turn 163] Feedback received from engine: []",
         "Moving randomly",
-        "[Turn 163] Sending MoveDecision: MoveDecision((13,4))",
-        "[Turn 163] Feedback received from engine: ['Moved to (13,4)']",
+        "[Turn 163] Sending MoveDecision: MoveDecision((17,16))",
+        "[Turn 163] Feedback received from engine: ['Moved to (17,16)']",
         "Possible harvest locations=[]",
         "Couldn't find anything to do, waiting for move step",
         "[Turn 163] Sending ActionDecision: DoNothingDecision()"
@@ -2617,13 +2612,13 @@
     {
       "Turn": 164,
       "Info": [
-        "Currently at (13,4)"
+        "Currently at (17,16)"
       ],
       "Debug": [
         "[Turn 164] Feedback received from engine: []",
         "Moving randomly",
-        "[Turn 164] Sending MoveDecision: MoveDecision((16,2))",
-        "[Turn 164] Feedback received from engine: ['Moved to (16,2)']",
+        "[Turn 164] Sending MoveDecision: MoveDecision((14,16))",
+        "[Turn 164] Feedback received from engine: ['Moved to (14,16)']",
         "Possible harvest locations=[]",
         "Couldn't find anything to do, waiting for move step",
         "[Turn 164] Sending ActionDecision: DoNothingDecision()"
@@ -2633,13 +2628,13 @@
     {
       "Turn": 165,
       "Info": [
-        "Currently at (16,2)"
+        "Currently at (14,16)"
       ],
       "Debug": [
         "[Turn 165] Feedback received from engine: []",
         "Moving randomly",
-        "[Turn 165] Sending MoveDecision: MoveDecision((13,6))",
-        "[Turn 165] Feedback received from engine: ['Moved to (13,6)']",
+        "[Turn 165] Sending MoveDecision: MoveDecision((13,21))",
+        "[Turn 165] Feedback received from engine: ['Moved to (13,21)']",
         "Possible harvest locations=[]",
         "Couldn't find anything to do, waiting for move step",
         "[Turn 165] Sending ActionDecision: DoNothingDecision()"
@@ -2649,29 +2644,29 @@
     {
       "Turn": 166,
       "Info": [
-        "Currently at (13,6)"
+        "Currently at (13,21)"
       ],
       "Debug": [
         "[Turn 166] Feedback received from engine: []",
         "Moving randomly",
-        "[Turn 166] Sending MoveDecision: MoveDecision((16,0))",
-        "[Turn 166] Feedback received from engine: ['Moved to (16,0)', 'Selling inventory']",
+        "[Turn 166] Sending MoveDecision: MoveDecision((20,20))",
+        "[Turn 166] Feedback received from engine: ['Moved to (20,20)']",
         "Possible harvest locations=[]",
-        "Buy 1 of DUCHAM_FRUIT",
-        "[Turn 166] Sending ActionDecision: BuyDecision(DUCHAM_FRUIT:1)"
+        "Couldn't find anything to do, waiting for move step",
+        "[Turn 166] Sending ActionDecision: DoNothingDecision()"
       ],
       "Exception": []
     },
     {
       "Turn": 167,
       "Info": [
-        "Currently at (16,0)"
+        "Currently at (20,20)"
       ],
       "Debug": [
-        "[Turn 167] Feedback received from engine: ['Bought 1 DUCHAM_FRUIT seeds for $100.00']",
+        "[Turn 167] Feedback received from engine: []",
         "Moving randomly",
-        "[Turn 167] Sending MoveDecision: MoveDecision((16,0))",
-        "[Turn 167] Feedback received from engine: ['Moved to (16,0)', 'Selling inventory']",
+        "[Turn 167] Sending MoveDecision: MoveDecision((24,16))",
+        "[Turn 167] Feedback received from engine: ['Moved to (24,16)']",
         "Possible harvest locations=[]",
         "Couldn't find anything to do, waiting for move step",
         "[Turn 167] Sending ActionDecision: DoNothingDecision()"
@@ -2681,13 +2676,13 @@
     {
       "Turn": 168,
       "Info": [
-        "Currently at (16,0)"
+        "Currently at (24,16)"
       ],
       "Debug": [
         "[Turn 168] Feedback received from engine: []",
         "Moving randomly",
-        "[Turn 168] Sending MoveDecision: MoveDecision((14,8))",
-        "[Turn 168] Feedback received from engine: ['Moved to (14,8)']",
+        "[Turn 168] Sending MoveDecision: MoveDecision((25,18))",
+        "[Turn 168] Feedback received from engine: ['Moved to (25,18)']",
         "Possible harvest locations=[]",
         "Couldn't find anything to do, waiting for move step",
         "[Turn 168] Sending ActionDecision: DoNothingDecision()"
@@ -2697,13 +2692,13 @@
     {
       "Turn": 169,
       "Info": [
-        "Currently at (14,8)"
+        "Currently at (25,18)"
       ],
       "Debug": [
         "[Turn 169] Feedback received from engine: []",
         "Moving randomly",
-        "[Turn 169] Sending MoveDecision: MoveDecision((10,6))",
-        "[Turn 169] Feedback received from engine: ['Moved to (10,6)']",
+        "[Turn 169] Sending MoveDecision: MoveDecision((27,23))",
+        "[Turn 169] Feedback received from engine: ['Moved to (27,23)']",
         "Possible harvest locations=[]",
         "Couldn't find anything to do, waiting for move step",
         "[Turn 169] Sending ActionDecision: DoNothingDecision()"
@@ -2713,13 +2708,13 @@
     {
       "Turn": 170,
       "Info": [
-        "Currently at (10,6)"
+        "Currently at (27,23)"
       ],
       "Debug": [
         "[Turn 170] Feedback received from engine: []",
         "Moving randomly",
-        "[Turn 170] Sending MoveDecision: MoveDecision((6,5))",
-        "[Turn 170] Feedback received from engine: ['Moved to (6,5)']",
+        "[Turn 170] Sending MoveDecision: MoveDecision((26,20))",
+        "[Turn 170] Feedback received from engine: ['Moved to (26,20)']",
         "Possible harvest locations=[]",
         "Couldn't find anything to do, waiting for move step",
         "[Turn 170] Sending ActionDecision: DoNothingDecision()"
@@ -2729,13 +2724,13 @@
     {
       "Turn": 171,
       "Info": [
-        "Currently at (6,5)"
+        "Currently at (26,20)"
       ],
       "Debug": [
         "[Turn 171] Feedback received from engine: []",
         "Moving randomly",
-        "[Turn 171] Sending MoveDecision: MoveDecision((5,0))",
-        "[Turn 171] Feedback received from engine: ['Moved to (5,0)']",
+        "[Turn 171] Sending MoveDecision: MoveDecision((29,19))",
+        "[Turn 171] Feedback received from engine: ['Moved to (29,19)']",
         "Possible harvest locations=[]",
         "Couldn't find anything to do, waiting for move step",
         "[Turn 171] Sending ActionDecision: DoNothingDecision()"
@@ -2745,13 +2740,13 @@
     {
       "Turn": 172,
       "Info": [
-        "Currently at (5,0)"
+        "Currently at (29,19)"
       ],
       "Debug": [
         "[Turn 172] Feedback received from engine: []",
         "Moving randomly",
-        "[Turn 172] Sending MoveDecision: MoveDecision((7,5))",
-        "[Turn 172] Feedback received from engine: ['Moved to (7,5)']",
+        "[Turn 172] Sending MoveDecision: MoveDecision((24,14))",
+        "[Turn 172] Feedback received from engine: ['Moved to (24,14)']",
         "Possible harvest locations=[]",
         "Couldn't find anything to do, waiting for move step",
         "[Turn 172] Sending ActionDecision: DoNothingDecision()"
@@ -2761,13 +2756,13 @@
     {
       "Turn": 173,
       "Info": [
-        "Currently at (7,5)"
+        "Currently at (24,14)"
       ],
       "Debug": [
         "[Turn 173] Feedback received from engine: []",
         "Moving randomly",
-        "[Turn 173] Sending MoveDecision: MoveDecision((1,2))",
-        "[Turn 173] Feedback received from engine: ['Moved to (1,2)']",
+        "[Turn 173] Sending MoveDecision: MoveDecision((24,18))",
+        "[Turn 173] Feedback received from engine: ['Moved to (24,18)']",
         "Possible harvest locations=[]",
         "Couldn't find anything to do, waiting for move step",
         "[Turn 173] Sending ActionDecision: DoNothingDecision()"
@@ -2777,13 +2772,13 @@
     {
       "Turn": 174,
       "Info": [
-        "Currently at (1,2)"
+        "Currently at (24,18)"
       ],
       "Debug": [
         "[Turn 174] Feedback received from engine: []",
         "Moving randomly",
-        "[Turn 174] Sending MoveDecision: MoveDecision((9,1))",
-        "[Turn 174] Feedback received from engine: ['Moved to (9,1)']",
+        "[Turn 174] Sending MoveDecision: MoveDecision((22,18))",
+        "[Turn 174] Feedback received from engine: ['Moved to (22,18)']",
         "Possible harvest locations=[]",
         "Couldn't find anything to do, waiting for move step",
         "[Turn 174] Sending ActionDecision: DoNothingDecision()"
@@ -2793,13 +2788,13 @@
     {
       "Turn": 175,
       "Info": [
-        "Currently at (9,1)"
+        "Currently at (22,18)"
       ],
       "Debug": [
         "[Turn 175] Feedback received from engine: []",
         "Moving randomly",
-        "[Turn 175] Sending MoveDecision: MoveDecision((11,7))",
-        "[Turn 175] Feedback received from engine: ['Moved to (11,7)']",
+        "[Turn 175] Sending MoveDecision: MoveDecision((20,18))",
+        "[Turn 175] Feedback received from engine: ['Moved to (20,18)']",
         "Possible harvest locations=[]",
         "Couldn't find anything to do, waiting for move step",
         "[Turn 175] Sending ActionDecision: DoNothingDecision()"
@@ -2809,13 +2804,13 @@
     {
       "Turn": 176,
       "Info": [
-        "Currently at (11,7)"
+        "Currently at (20,18)"
       ],
       "Debug": [
         "[Turn 176] Feedback received from engine: []",
         "Moving randomly",
-        "[Turn 176] Sending MoveDecision: MoveDecision((15,5))",
-        "[Turn 176] Feedback received from engine: ['Moved to (15,5)']",
+        "[Turn 176] Sending MoveDecision: MoveDecision((12,20))",
+        "[Turn 176] Feedback received from engine: ['Moved to (12,20)']",
         "Possible harvest locations=[]",
         "Couldn't find anything to do, waiting for move step",
         "[Turn 176] Sending ActionDecision: DoNothingDecision()"
@@ -2825,13 +2820,13 @@
     {
       "Turn": 177,
       "Info": [
-        "Currently at (15,5)"
+        "Currently at (12,20)"
       ],
       "Debug": [
         "[Turn 177] Feedback received from engine: []",
         "Moving randomly",
-        "[Turn 177] Sending MoveDecision: MoveDecision((16,6))",
-        "[Turn 177] Feedback received from engine: ['Moved to (16,6)']",
+        "[Turn 177] Sending MoveDecision: MoveDecision((8,25))",
+        "[Turn 177] Feedback received from engine: ['Moved to (8,25)']",
         "Possible harvest locations=[]",
         "Couldn't find anything to do, waiting for move step",
         "[Turn 177] Sending ActionDecision: DoNothingDecision()"
@@ -2841,13 +2836,13 @@
     {
       "Turn": 178,
       "Info": [
-        "Currently at (16,6)"
+        "Currently at (8,25)"
       ],
       "Debug": [
         "[Turn 178] Feedback received from engine: []",
         "Moving randomly",
-        "[Turn 178] Sending MoveDecision: MoveDecision((19,9))",
-        "[Turn 178] Feedback received from engine: ['Moved to (19,9)']",
+        "[Turn 178] Sending MoveDecision: MoveDecision((7,31))",
+        "[Turn 178] Feedback received from engine: ['Moved to (7,31)']",
         "Possible harvest locations=[]",
         "Couldn't find anything to do, waiting for move step",
         "[Turn 178] Sending ActionDecision: DoNothingDecision()"
@@ -2857,13 +2852,13 @@
     {
       "Turn": 179,
       "Info": [
-        "Currently at (19,9)"
+        "Currently at (7,31)"
       ],
       "Debug": [
         "[Turn 179] Feedback received from engine: []",
         "Moving randomly",
-        "[Turn 179] Sending MoveDecision: MoveDecision((14,11))",
-        "[Turn 179] Feedback received from engine: ['Moved to (14,11)']",
+        "[Turn 179] Sending MoveDecision: MoveDecision((10,35))",
+        "[Turn 179] Feedback received from engine: ['Moved to (10,35)']",
         "Possible harvest locations=[]",
         "Couldn't find anything to do, waiting for move step",
         "[Turn 179] Sending ActionDecision: DoNothingDecision()"

@@ -36,6 +36,8 @@ def get_best_move(pos1: Position, pos2: Position, limit=10) -> Position:
     from: pos1
     to: pos2
     """
+    # (25, 0) -> (1, 49)
+
     if (distance(pos1, pos2) <= limit):
         return pos2
 
@@ -46,6 +48,10 @@ def get_best_move(pos1: Position, pos2: Position, limit=10) -> Position:
 
     x_change_performed = min(x_change, limit)
     y_change_performed = min(y_change, limit - x_change_performed)
+    if pos1.x - pos2.x > 0:
+        x_change_performed *= -1
+    if pos1.y - pos2.y > 0:
+        y_change_performed *= -1
     out = Position(pos1.x + x_change_performed, pos1.y + y_change_performed)
     assert distance(pos1, out) <= limit
     return out
@@ -99,7 +105,12 @@ def within_harvest_range(game_state: GameState, name: str) -> List[Position]:
                 res.append(pos)
     return res
 
-
+def center_fertility_row(game_state: GameState) -> int:
+    if game_state.turn < 25:
+        return 0
+    # 25 -> 3
+    # 28 -> 4
+    return ((game_state.turn - 25) // 3) + 3
 def tile_type_on_turn(turn: int, game_state: GameState, coord: Position) -> TileType:
     """
     Get the type of the tile on given turn. This is useful for figuring out whether
