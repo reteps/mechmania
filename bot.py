@@ -28,6 +28,7 @@ GREEN_GROCER_LOCATION = Position(constants.BOARD_WIDTH // 2, 0)
 SCARECROW_START_LOCATION = Position(constants.BOARD_WIDTH // 2, GREEN_GROCER_LOCATION.y + 20 + 20 - 2)
 SCARECROW_LEFT_PLANT = Position(SCARECROW_START_LOCATION.x - 1, SCARECROW_START_LOCATION.y)
 SCARECROW_DECOY_PLANT = Position(SCARECROW_START_LOCATION.x, SCARECROW_START_LOCATION.y - 2)
+SCARECROW_DECOY_HARVEST_FROM = Position(SCARECROW_START_LOCATION.x, SCARECROW_START_LOCATION.y - 3)
 SCARECROW_RIGHT_PLANT = Position(SCARECROW_START_LOCATION.x + 1, SCARECROW_START_LOCATION.y)
 SCARECROW_RUN_LOCATION = Position(SCARECROW_START_LOCATION.x, SCARECROW_START_LOCATION.y - 18)
 last_plant: Position = None
@@ -152,7 +153,9 @@ def scarecrow_move_decision(game: Game) -> Move:
     elif scarecrow_phase == "RIGHT_PLANT":
         return Move(move_towards(player.position, SCARECROW_RIGHT_PLANT), SCARECROW_START)
     elif scarecrow_phase == "RUN_2":
-        return Move(move_towards(player.position, SCARECROW_RUN_LOCATION, limit=6), SCARECROW_START)
+        return Move(move_towards(player.position, SCARECROW_RUN_LOCATION, limit=7), SCARECROW_START)
+    elif scarecrow_phase == "DECOY_HARVEST":
+        return Move(move_towards(player.position, SCARECROW_DECOY_HARVEST_FROM), SCARECROW_START)
     elif scarecrow_phase == "LEFT_HARVEST":
         return Move(move_towards(player.position, SCARECROW_LEFT_PLANT), SCARECROW_START)
     elif scarecrow_phase == "RIGHT_HARVEST":
@@ -299,8 +302,17 @@ def scarecrow_start_action_decision(game: Game) -> Action:
         return Action(PlantDecision(["potato" for _ in range(len(actual_locations))], actual_locations), SCARECROW_START)
 
     elif scarecrow_phase == "RUN_2" and game_util.distance(my_pos, SCARECROW_RUN_LOCATION) == 0:
-        scarecrow_phase = "LEFT_HARVEST"
+        pos2 = game.get_game_state().get_opponent_player().position
+
+        if game_util.distance(SCARECROW_DECOY_PLANT, pos2) > 2:
+            scarecrow_phase = "DECOY_HARVEST"
+        else:
+            scarecrow_phase = "LEFT_HARVEST"
         return Action(DoNothingDecision(), SCARECROW_START)
+    elif scarecrow_phase == "DECOY_HARVEST" and game_util.distance(my_pos, SCARECROW_DECOY_HARVEST_FROM) == 0:
+        scarecrow_phase = "LEFT_HARVEST"
+        return Action(HarvestDecision([SCARECROW_DECOY_PLANT]), SCARECROW_START)
+
     elif scarecrow_phase == "LEFT_HARVEST" and game_util.distance(my_pos, SCARECROW_LEFT_PLANT) == 0:
         plant_offsets = [
             [-1, 0],
