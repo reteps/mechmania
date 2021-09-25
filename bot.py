@@ -8,6 +8,7 @@ from model.decisions.buy_decision import BuyDecision
 from model.decisions.harvest_decision import HarvestDecision
 from model.decisions.plant_decision import PlantDecision
 from model.decisions.do_nothing_decision import DoNothingDecision
+from model.decisions.use_item_decision import UseItemDecision
 from model.item_type import ItemType
 from model.crop_type import CropType
 from model.upgrade_type import UpgradeType
@@ -24,11 +25,15 @@ import json
 logger = Logger()
 constants = Constants()
 GREEN_GROCER_LOCATION = Position(constants.BOARD_WIDTH // 2, 0)
-
+SCARECROW_START_LOCATION = Position(constants.BOARD_WIDTH // 2, GREEN_GROCER_LOCATION.y + 20 + 20 - 2)
+SCARECROW_LEFT_PLANT = Position(SCARECROW_START_LOCATION.x - 1, SCARECROW_START_LOCATION.y)
+SCARECROW_RIGHT_PLANT = Position(SCARECROW_START_LOCATION.x + 1, SCARECROW_START_LOCATION.y)
+SCARECROW_RUN_LOCATION = Position(SCARECROW_START_LOCATION.x, SCARECROW_START_LOCATION.y - 18)
 last_plant: Position = None
 
 
 class TOP_LEVEL_ACTION(Enum):
+    SCARECROW_START = 'Anti-follow scarecrow strat'
     BUY_SEEDS = 'Buying Seeds'
     PLANT_CROPS = 'Planting Crops'
     WAIT_FOR_CROPS = 'Waiting for crops to finish growing'
@@ -36,6 +41,7 @@ class TOP_LEVEL_ACTION(Enum):
     DODGE_OTHER_PLAYER = 'Move Away From Player'
 
 
+SCARECROW_START = TOP_LEVEL_ACTION.SCARECROW_START
 BUY_SEEDS = TOP_LEVEL_ACTION.BUY_SEEDS
 PLANT_CROPS = TOP_LEVEL_ACTION.PLANT_CROPS
 WAIT_FOR_CROPS = TOP_LEVEL_ACTION.WAIT_FOR_CROPS
@@ -51,8 +57,8 @@ def get_decision_action_maker(phase: TOP_LEVEL_ACTION):
     return phase_to_action_decision[phase]
 
 
-current_phase: TOP_LEVEL_ACTION = BUY_SEEDS
-
+current_phase: TOP_LEVEL_ACTION = SCARECROW_START
+scarecrow_phase = "BUY_POTATO"
 
 @dataclass
 class Move:
@@ -77,6 +83,16 @@ def get_grocer_move(pos: Position) -> MoveDecision:
         decision = MoveDecision(game_util.get_best_move(pos, GREEN_GROCER_LOCATION))
         return decision
 
+def move_towards(pos: Position, to: Position, limit: int = 20) -> MoveDecision:
+    '''
+    Return the move to the grocer
+    '''
+
+    if game_util.distance(pos, to) == 0:
+        return MoveDecision(pos)
+    else:
+        decision = MoveDecision(game_util.get_best_move(pos, to, limit=limit))
+        return decision
 
 def buy_seeds_move_decision(game: Game) -> Move:
     global last_plant
@@ -117,8 +133,29 @@ def harvest_crops_move_decision(game: Game) -> Move:
         decision = MoveDecision(game_util.get_best_move(player.position, crop_planting_location))
         return Move(decision, HARVEST_CROPS)
 
-
+def scarecrow_move_decision(game: Game) -> Move:
+    player = game.get_game_state().get_my_player()
+    logger.info(f"SCARECROW MOVE PHASE on turn {game.game_state.turn}: {scarecrow_phase}")
+    if scarecrow_phase == "BUY_POTATO":
+        return Move(move_towards(player.position, GREEN_GROCER_LOCATION), SCARECROW_START)
+    elif scarecrow_phase == "PLACE_SCARECROW":
+        return Move(move_towards(player.position, SCARECROW_START_LOCATION), SCARECROW_START)
+    elif scarecrow_phase == "RUN":
+        return Move(move_towards(player.position, SCARECROW_RUN_LOCATION), SCARECROW_START)
+    elif scarecrow_phase == "LEFT_PLANT":
+        return Move(move_towards(player.position, SCARECROW_LEFT_PLANT), SCARECROW_START)
+    elif scarecrow_phase == "RIGHT_PLANT":
+        return Move(move_towards(player.position, SCARECROW_RIGHT_PLANT), SCARECROW_START)
+    elif scarecrow_phase == "RUN_2":
+        return Move(move_towards(player.position, SCARECROW_RUN_LOCATION, limit=5), SCARECROW_START)
+    elif scarecrow_phase == "LEFT_HARVEST":
+        return Move(move_towards(player.position, SCARECROW_LEFT_PLANT), SCARECROW_START)
+    elif scarecrow_phase == "RIGHT_HARVEST":
+        return Move(move_towards(player.position, SCARECROW_RIGHT_PLANT), SCARECROW_START)
+    else:
+        logger.debug(f"Unknown phase {scarecrow_phase} in scarecrow")
 phase_to_move_decision = {
+    SCARECROW_START: scarecrow_move_decision,
     BUY_SEEDS: buy_seeds_move_decision,
     PLANT_CROPS: plant_crops_move_decision,
     WAIT_FOR_CROPS: wait_for_crops_move_decision,
@@ -144,7 +181,8 @@ def buy_seeds_action_decision(game: Game) -> Action:
 def manhatten_distance(p1: Position, p2: Position):
     return abs(p1.x - p2.x) + abs(p1.y - p2.y)
 
-
+def generate_plant_locations(offsets, plant_center: Position):
+    return [Position(plant_center.x + x, plant_center.y + y) for (x, y) in offsets]
 def plant_crops_action_decision(game: Game) -> Action:
     pos1 = game.get_game_state().get_my_player().position
     pos2 = game.get_game_state().get_opponent_player().position
@@ -167,10 +205,8 @@ def plant_crops_action_decision(game: Game) -> Action:
         [0, 1],
         [0, -1]
     ]
-    # global last_plant
-    # last_plant = crop_planting_location
 
-    actual_locations = [Position(crop_planting_location.x + x, crop_planting_location.y + y) for (x, y) in plant_offsets]
+    actual_locations = generate_plant_locations(plant_offsets, crop_planting_location)
     player = game.get_game_state().get_my_player()
     if game_util.distance(player.position, crop_planting_location) == 0:
         if player.seed_inventory[CropType.GOLDEN_CORN] > 0:
@@ -207,7 +243,66 @@ def wait_for_crops_action_decision(game: Game) -> Action:
     else:
         return Action(DoNothingDecision(), WAIT_FOR_CROPS)
 
+def scarecrow_start_action_decision(game: Game) -> Action:
+    global scarecrow_phase
+    logger.info(f"SCARECROW ACTION PHASE on turn {game.game_state.turn}: {scarecrow_phase}")
+    my_pos = game.get_game_state().get_my_player().position
+    if scarecrow_phase == "BUY_POTATO" and game_util.distance(my_pos, GREEN_GROCER_LOCATION) == 0:
+        scarecrow_phase = "PLACE_SCARECROW"
+        return Action(BuyDecision(["potato"],[8]), SCARECROW_START)
+    elif scarecrow_phase == "PLACE_SCARECROW" and game_util.distance(my_pos, SCARECROW_START_LOCATION) == 0:
+        scarecrow_phase = "RUN"
+        return Action(UseItemDecision(), SCARECROW_START)
+    elif scarecrow_phase == "RUN" and game_util.distance(my_pos, SCARECROW_RUN_LOCATION) == 0:
 
+        scarecrow_phase = "LEFT_PLANT"
+        return Action(DoNothingDecision(), SCARECROW_START)
+    elif scarecrow_phase == "LEFT_PLANT" and game_util.distance(my_pos, SCARECROW_LEFT_PLANT) == 0:
+        plant_offsets = [
+            [-1, 0],
+            [0, 1],
+            [0, 0],
+            [0, -1]
+        ]
+        actual_locations = generate_plant_locations(plant_offsets, SCARECROW_LEFT_PLANT)
+        scarecrow_phase = "RIGHT_PLANT"
+        return Action(PlantDecision(["potato" for _ in range(len(actual_locations))], actual_locations), SCARECROW_START)
+    elif scarecrow_phase == "RIGHT_PLANT" and game_util.distance(my_pos, SCARECROW_RIGHT_PLANT) == 0:
+        plant_offsets = [
+            [1, 0],
+            [0, 1],
+            [0, -1],
+            [0, 0]
+        ]
+        actual_locations = generate_plant_locations(plant_offsets, SCARECROW_RIGHT_PLANT)
+        scarecrow_phase = "RUN_2"
+        return Action(PlantDecision(["potato" for _ in range(len(actual_locations))], actual_locations), SCARECROW_START)
+
+    elif scarecrow_phase == "RUN_2" and game_util.distance(my_pos, SCARECROW_RUN_LOCATION) == 0:
+        scarecrow_phase = "LEFT_HARVEST"
+        return Action(DoNothingDecision(), SCARECROW_START)
+    elif scarecrow_phase == "LEFT_HARVEST" and game_util.distance(my_pos, SCARECROW_LEFT_PLANT) == 0:
+        plant_offsets = [
+            [-1, 0],
+            [0, 1],
+            [0, 0],
+            [0, -1]
+        ]
+        actual_locations = generate_plant_locations(plant_offsets, SCARECROW_LEFT_PLANT)
+        scarecrow_phase = "RIGHT_HARVEST"
+        return Action(HarvestDecision(actual_locations), SCARECROW_START)
+    elif scarecrow_phase == "RIGHT_HARVEST" and game_util.distance(my_pos, SCARECROW_RIGHT_PLANT) == 0:
+        plant_offsets = [
+            [1, 0],
+            [0, 1],
+            [0, -1],
+            [0, 0]
+        ]
+        actual_locations = generate_plant_locations(plant_offsets, SCARECROW_RIGHT_PLANT)
+        return Action(HarvestDecision(actual_locations), BUY_SEEDS)
+    else:
+        logger.debug("No actions required, doing nothing.")
+        return Action(DoNothingDecision(), SCARECROW_START)
 def harvest_crops_action_decision(game: Game) -> Action:
     pos1 = game.get_game_state().get_my_player().position
     pos2 = game.get_game_state().get_opponent_player().position
@@ -234,6 +329,7 @@ def harvest_crops_action_decision(game: Game) -> Action:
 
 
 phase_to_action_decision = {
+    SCARECROW_START: scarecrow_start_action_decision,
     BUY_SEEDS: buy_seeds_action_decision,
     PLANT_CROPS: plant_crops_action_decision,
     WAIT_FOR_CROPS: wait_for_crops_action_decision,
@@ -311,7 +407,7 @@ def main():
     """
     Competitor TODO: choose an item and upgrade for your bot
     """
-    game = Game(ItemType.COFFEE_THERMOS, UpgradeType.LONGER_LEGS)
+    game = Game(ItemType.SCARECROW, UpgradeType.LONGER_LEGS)
 
     while (True):
         try:
@@ -341,7 +437,7 @@ def main():
 
 
 def fake_main(json):
-    game = Game(ItemType.COFFEE_THERMOS, UpgradeType.LONGER_LEGS)
+    game = Game(ItemType.SCARECROW, UpgradeType.LONGER_LEGS)
     i = 0
     while (True):
         try:
