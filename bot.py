@@ -32,9 +32,10 @@ SCARECROW_DECOY_HARVEST_FROM = Position(SCARECROW_START_LOCATION.x, SCARECROW_ST
 SCARECROW_RIGHT_PLANT = Position(SCARECROW_START_LOCATION.x + 1, SCARECROW_START_LOCATION.y)
 SCARECROW_RUN_LOCATION = Position(SCARECROW_START_LOCATION.x, SCARECROW_START_LOCATION.y - 18)
 last_plant: Position = None
-
+scarecrow_seed_limit = 9
 
 class TOP_LEVEL_ACTION(Enum):
+    DETERMINE_STALKER = 'Determine if the other bot is a stalker'
     SCARECROW_START = 'Anti-follow scarecrow strat'
     BUY_SEEDS = 'Buying Seeds'
     PLANT_CROPS = 'Planting Crops'
@@ -42,7 +43,7 @@ class TOP_LEVEL_ACTION(Enum):
     HARVEST_CROPS = 'Harvesting crops'
     DODGE_OTHER_PLAYER = 'Move Away From Player'
 
-
+DETERMINE_STALKER = TOP_LEVEL_ACTION.DETERMINE_STALKER
 SCARECROW_START = TOP_LEVEL_ACTION.SCARECROW_START
 BUY_SEEDS = TOP_LEVEL_ACTION.BUY_SEEDS
 PLANT_CROPS = TOP_LEVEL_ACTION.PLANT_CROPS
@@ -59,7 +60,7 @@ def get_decision_action_maker(phase: TOP_LEVEL_ACTION):
     return phase_to_action_decision[phase]
 
 
-current_phase: TOP_LEVEL_ACTION = SCARECROW_START
+current_phase: TOP_LEVEL_ACTION = DETERMINE_STALKER
 scarecrow_phase = "BUY_POTATO"
 
 @dataclass
@@ -162,7 +163,34 @@ def scarecrow_move_decision(game: Game) -> Move:
         return Move(move_towards(player.position, SCARECROW_RIGHT_PLANT), SCARECROW_START)
     else:
         logger.debug(f"Unknown phase {scarecrow_phase} in scarecrow")
+
+turn_arrived = None
+enemy_is_stalker_bot = False
+def determine_stalker_move_decision(game: Game) -> Action:
+    global turn_arrived
+    global enemy_is_stalker_bot
+    # if game.game_state.get_opponent_player().name in ['chairs', 'venkat', 'the_patriots', 'team-starter-bot']:
+    #     enemy_is_stalker_bot = True
+    #     return Move(move_toward(player.position, GREEN_GROCER_LOCATION), SCARECROW_START)
+    player = game.game_state.get_my_player()
+    turn = game.game_state.turn
+    stalker_location = Position(constants.BOARD_WIDTH // 2 - 5, 5)
+    if game_util.distance(player.position, stalker_location) == 0 and turn_arrived is None:
+        turn_arrived = turn
+    elif turn_arrived is not None and turn - turn_arrived >= 3:
+        opp_pos = game.get_game_state().get_opponent_player().position
+        if game_util.distance(player.position, opp_pos) <= 2:
+            enemy_is_stalker_bot = True
+            return Move(move_toward(player.position, GREEN_GROCER_LOCATION), SCARECROW_START)
+        else:
+            enemy_is_stalker_bot = False
+            return Move(move_toward(player.position, GREEN_GROCER_LOCATION), BUY_SEEDS)
+    else:
+        return Move(move_towards(player.position, stalker_location), SCARECROW_START)
+    
+    return Action(DoNothingDecision(), DETERMINE_STALKER)
 phase_to_move_decision = {
+    DETERMINE_STALKER: determine_stalker_move_decision,
     SCARECROW_START: scarecrow_move_decision,
     BUY_SEEDS: buy_seeds_move_decision,
     PLANT_CROPS: plant_crops_move_decision,
@@ -251,11 +279,16 @@ def wait_for_crops_action_decision(game: Game) -> Action:
     else:
         return Action(DoNothingDecision(), WAIT_FOR_CROPS)
 
+potatos_harvested = 0
 def scarecrow_start_action_decision(game: Game) -> Action:
+    global potatos_harvested
     global scarecrow_phase
     logger.info(f"SCARECROW ACTION PHASE on turn {game.game_state.turn}: {scarecrow_phase}")
     player = game.get_game_state().get_my_player()
     my_pos = player.position
+    if scarecrow_phase == "BUY_POTATO" and game_util.distance(my_pos, GREEN_GROCER_LOCATION) > 0:
+        # Determine amount of harvested seeds
+        potatos_harvested = sum(player.harvested_inventory.values())
     if scarecrow_phase == "BUY_POTATO" and game_util.distance(my_pos, GREEN_GROCER_LOCATION) == 0:
         if game.game_state.turn > 130:
             # FEAT: switch to follow bot?
@@ -265,11 +298,20 @@ def scarecrow_start_action_decision(game: Game) -> Action:
             if game.game_state.turn < 10:
                 # We need 1 more for the decoy strat
                 return Action(BuyDecision(["potato"],[9]), SCARECROW_START)
-
-            return Action(BuyDecision(["potato"],[max(0, 8 - sum(player.seed_inventory.values()))]), SCARECROW_START)
+                # Set new seed limit
+            return Action(BuyDecision(["potato"],[potatos_harvested]), SCARECROW_START)
     elif scarecrow_phase == "PLACE_SCARECROW" and game_util.distance(my_pos, SCARECROW_START_LOCATION) == 0:
         scarecrow_phase = "RUN"
-        return Action(UseItemDecision(), SCARECROW_START)
+        if game.game_state.turn > 5:
+            # get_tile(SCARECROW_START).item == Scarecrow:
+            plant_offsets = [
+                [1, 0],
+                [-1, 0],
+            ]
+            actual_locations = generate_plant_locations(plant_offsets, SCARECROW_START_LOCATION)
+            return Action(HarvestDecision(actual_locations), BUY_SEEDS)
+        else:
+            return Action(UseItemDecision(), SCARECROW_START)
     elif scarecrow_phase == "RUN" and game_util.distance(my_pos, SCARECROW_RUN_LOCATION) == 0:
         if game.game_state.turn > 10:
             scarecrow_phase = "LEFT_PLANT"
@@ -359,8 +401,10 @@ def harvest_crops_action_decision(game: Game) -> Action:
     else:
         return Action(DoNothingDecision(), HARVEST_CROPS)
 
-
+def determine_stalker_action_decision(game: Game) -> Action:
+    return Action(DoNothingDecision(), DETERMINE_STALKER)
 phase_to_action_decision = {
+    DETERMINE_STALKER: determine_stalker_action_decision,
     SCARECROW_START: scarecrow_start_action_decision,
     BUY_SEEDS: buy_seeds_action_decision,
     PLANT_CROPS: plant_crops_action_decision,
@@ -447,35 +491,24 @@ def main():
         except IOError:
             exit(-1)
 
-        if game.game_state.get_opponent_player().name in ['chairs', 'venkat', 'the_patriots', 'team-starter-bot']:
-            # game.send_move_decision(MoveDecision(game.game_state.get_my_player().position))
-            move = get_move_decision(game)
-            game.send_move_decision(move.move) # scarecrow move never effects phase
+        move = get_move_decision(game)
+        game.send_move_decision(move.move)
+        global current_phase
+        current_phase = move.next_phase
 
-        else:
-            move = get_move_decision(game)
-            game.send_move_decision(move.move)
-            global current_phase
-            current_phase = move.next_phase
 
         try:
             game.update_game()
         except IOError:
             exit(-1)
 
-        if game.game_state.get_opponent_player().name in ['chairs', 'venkat', 'the_patriots', 'team-starter-bot']:
-            action = get_action_decision(game)
-            game.send_action_decision(action.action)
-            current_phase = action.next_phase
-            if current_phase == BUY_SEEDS:
-                global scarecrow_phase
-                current_phase = SCARECROW_START
-                scarecrow_phase = "BUY_POTATO"
-        else:
-            action = get_action_decision(game)
-            game.send_action_decision(action.action)
-            current_phase = action.next_phase
-
+        action = get_action_decision(game)
+        game.send_action_decision(action.action)
+        current_phase = action.next_phase
+        if enemy_is_stalker_bot and current_phase == BUY_SEEDS:
+            global scarecrow_phase
+            current_phase = SCARECROW_START
+            scarecrow_phase = "BUY_POTATO"
 
 def fake_main(json):
     game = Game(ItemType.SCARECROW, UpgradeType.LONGER_LEGS)
